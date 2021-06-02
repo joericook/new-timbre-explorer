@@ -1,0 +1,346 @@
+.body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #canvas {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    font-family: "Verdana";
+    background-color: rgb(211, 211, 211); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    display: block;
+  }
+
+  /* All app sliders */
+  .slider {
+    -webkit-appearance: none;   /* Override default CSS styles */
+    appearance: none;
+  
+    width: 100%;
+    height: 25px;
+    margin: 0.5vw 0;
+    background: #d3d3d3;      /* Grey background */
+    outline: none;              /* Remove outline */
+    opacity: 0.8;               /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+    /* Slider Mouse-over effect */
+    .slider:hover {
+      opacity: 1;                 /* Fully shown on mouse-over */
+    }
+  
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+  
+      padding-top: 4vh;          /* Positioning */
+      margin-top: -0.8vw;
+      width: 1.6vw;              /* Set a specific slider handle width */
+      height: 2vw;               /* Slider handle height */
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+      border: 0.1vw solid #7e7e7e;
+      border-radius: 0.9vw;
+      background: #000000;    /* Black background */
+      cursor: pointer;          /* Cursor on hover */
+    }
+  
+    .slider::-moz-range-thumb {
+      padding-top: 4vh;
+      margin-top: -0.8vw;
+      width: 1.6vw;             /* Set a specific slider handle width */
+      height: 2vw;              /* Slider handle height */
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+      border: 0.1vw solid #7e7e7e;
+      border-radius: 0.9vw;
+      background: #000000;    /* Black background */
+      cursor: pointer;          /* Cursor on hover */
+    }
+  
+    /* Range tracks */
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 0.8vw;
+      cursor: pointer;
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+      background: #505050;
+      border-radius: 0.7vw;
+      border: 0.05vw solid #010101;
+    }
+  
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #5d5d5d;
+    }
+  
+    input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 0.8vw;
+      cursor: pointer;
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+      background: #505050;
+      border-radius: 0.7vw;
+      border: 0.05vw solid #010101;
+    }
+  
+    /*
+    TODO: ms styling may be necessary for IE and Edge?
+    input[type=range]::-ms-track {
+      width: 100%;
+      height: 0.8vw;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+  
+    input[type=range]::-ms-fill-lower {
+      background: #434343;
+      border: 0.02vw solid #010101;
+      border-radius: 0.8vw;
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+    }
+  
+    input[type=range]::-ms-fill-upper {
+      background: #505050;
+      border: 0.02vw solid #010101;
+      border-radius: 0.8vw;
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+    }
+  
+    input[type=range]::-ms-thumb {
+      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+      border: 0.15vw solid #ff8c00;
+      height: 2.8vw;
+      width: 4vw;
+      border-radius: 0.9vw;
+      background: #ff8c00;
+      cursor: pointer;
+      height: 2.8vw;
+    }
+  
+    input[type=range]:focus::-ms-fill-lower {
+      background: #505050;
+    }
+  
+    input[type=range]:focus::-ms-fill-upper {
+      background: #5d5d5d;
+    }
+    */
+  
+  /* Container for 4 timbre sliders */
+  .slidersUIContainer {
+    position: fixed;
+    width: 98%;
+    height: 31%;
+    left: 1%;
+    top: 1.5%;
+    border-radius: 2vw;
+    border: solid #666666 0.2vw;
+    box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+    /*background-color: #cfcfcf;
+    opacity: 0.7;*/
+  }
+  
+    /* Individual timbre slider containers */
+    .spectrumslidecontainer {
+      width: 23%;
+      height: 28%;
+      position: fixed;
+      left: 2.5%;
+      top: 2%;
+      text-align: center;
+      font-family: "Verdana";
+      font-size: 150%;
+    }
+    .brightnessslidecontainer {
+      width: 23%;
+      height: 28%;
+      position: fixed;
+      left: 26.5%;
+      top: 2%;
+      text-align: center;
+      font-family: "Verdana";
+      font-size: 150%;
+    }
+    .articulationslidecontainer {
+      width: 23%;
+      height: 28%;
+      position: fixed;
+      left: 50.5%;
+      top: 2%;
+      text-align: center;
+      font-family: "Verdana";
+      font-size: 150%;
+    }
+    .envelopeslidecontainer {
+      width: 23%;
+      height: 28%;
+      position: fixed;
+      left: 74.5%;
+      top: 2%;
+      text-align: center;
+      font-family: "Verdana";
+      font-size: 150%;
+    }
+  
+    #specSlider {
+      background: #FF0000;
+      border-radius: 2vw;
+      height: 7%;
+    }
+    #brigSlider {
+      background: #FFFF00;
+      border-radius: 2vw;
+      height: 2.4vh;
+    }
+    #artiSlider {
+      background: #00FF00;
+      border-radius: 2vw;
+      height: 2.4vh;
+    }
+    #enveSlider {
+      background: #0000FF;
+      border-radius: 2vw;
+      height: 2.4vh;
+    }
+  
+  /* Container for FFT canvas graph */
+  .FFTUIContainer {
+    position: fixed;
+    width: 31%;
+    height: 31%;
+    left: 68%;
+    top: 34%;
+    border-radius: 2vw;
+    border: solid #666666 0.2vw;
+    box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+  }
+  
+  .pianoUIContainer {
+    position: fixed;
+    width: 31%;
+    height: 12%;
+    left: 68%;
+    top: 66.5%;
+    border-radius: 2vw;
+    border: solid #666666 0.2vw;
+    box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;  
+  }
+  
+  .preset-volUIContainer {
+    position: fixed;
+    width: 31%;
+    height: 11%;
+    left: 68%;
+    top: 80%;
+    border-radius: 2vw;
+    border: solid #666666 0.2vw;
+    box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;  
+  }
+  
+    .presetMenu {
+      position: absolute;
+      left: 5%;
+      top: 1%;
+      font-family: "Verdana";
+    }
+  
+    select {
+      height: 50%;
+      border: 1px solid;
+      border-radius: 0.25em;
+      cursor: pointer;
+    }
+  
+    #presetSubmit {
+      cursor: pointer;
+    }
+  
+    .volumeSliderContainer {
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      width: 60%;
+      text-align: center;
+      font-family: "Verdana";
+    }
+  
+      #voluSlider {
+        background: #000000;
+        border-radius: 2vw;
+        height: 2.4vh;
+      }
+  
+  
+  .qmulLogo {
+    position: absolute;
+    top: 93%;
+    left: 86%;
+    width: 12%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  
+  .cfdmLogo {
+    position: absolute;
+    top: 94%;
+    left: 70%;
+    width: 15%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  
+  /* Styling for the bottom left container that updates dynamically */
+  .taskUIContainer {
+    position: absolute;
+    top: 34%;
+    left: 1%;
+    width: 66.2%;
+    height: 64%;
+    overflow: auto;
+    font-family: "Verdana";
+  
+    border-radius: 0.5vw;
+    border: solid #666666 0.2vw;
+    box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
+    background-color: rgb(211, 211, 211);  
+  }
+
+  /* Used for the pre-task views */
+  .infoContainer {
+    padding-left: 18vw;
+    padding-right: 18vw;
+    padding-bottom: 5vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.8vw;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10vw;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10vw;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    
+}
+  
+  

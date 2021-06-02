@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <!-- Required stylesheets: JQuery-UI -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+</head>
+<body>
+    <script type="module" src="/static/js/index.js"></script>
+
+    <!-- Required libraries: JQuery and JQuery-UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Add the headphonesCheck.js JavaScript file -->
+    <script src="/static/js/headphonesCheck.js"></script>
+
+    <!-- Script for HugginsPitchTest -->
+    <script>
+      function doTheTest() {
+        // Create a new HeadphonesCheck using the default options (Huggins Pitch test with a pass mark of 6/6)
+        // (see JSDoc in headphonesCheck.js for a full list of options).
+        const headphonesCheck = new HeadphonesCheck();
+      
+        // Perform the check (optional: call the showResult function when finished).
+        headphonesCheck.checkHeadphones(showResult);
+
+        // Testing
+        console.log("'doTheTest' runs successfully")
+      
+        // Optional: function to display the result after completing the test.
+        function showResult(result) {
+          let resultMessage = result ? 'Pass' : 'Fail';
+          $('body').append('<div id="testResults" style="width: 100%; text-align: center; font-size: 3em;"></div>');
+          $('#testResults')
+              .append('<p style="margin-top: 1em;">' + resultMessage + '</p>')
+              .append('<p>' + headphonesCheck.attemptRecord[headphonesCheck.attemptCount].numberCorrect + ' out of 6 correct<br>after ' + headphonesCheck.attemptCount + ' attempt(s).<br>(The pass mark is 6.)</p>')
+              .append('<p><a href="https://sijiazhao.github.io/headphonecheck/">Go back to the Headphone Check homepage</a></p>');
+        }
+      }
+    </script>
+
+    <!-- Script to hide the overlay after introduction
+    <script>
+      function hideOverlay() {
+        document.getElementById("overlay").style.display = "none";
+      
+      function showOverlay() {
+      document.getElementById("overlay").style.display = "block";
+      }
+    </script> -->
+
+    <script type="module" src="./static/js/timbreXWeb.js"></script>
+    <canvas id="canvas"></canvas>
+
+    <!-- Sliders Container-->
+    <div class="slidersUIContainer" id="sliderUIContainer">
+      <!-- Raw Spectrum -->
+      <div class="spectrumslidecontainer" id="specContainer">Spectrum
+        <input type="range" min="0" max="255" value="128" class="slider" id="specSlider">
+      </div>
+
+      <!-- Filter Frequency Response -->
+      <div class="brightnessslidecontainer" id="brigContainer">Brightness
+        <input type="range" min="0" max="255" value="128" class="slider" id="brigSlider">
+      </div>
+
+      <!-- Articulation Spectrogram -->
+      <div class="articulationslidecontainer" id="artiContainer">Articulation
+        <input type="range" min="0" max="255" value="128" class="slider" id="artiSlider">
+      </div>
+
+      <!-- Envelope ADSR -->
+      <div class="envelopeslidecontainer" id="enveContainer">Envelope
+        <input type="range" min="0" max="255" value="128" class="slider" id="enveSlider">
+      </div>
+    </div>
+
+    <!-- FFT graph Container -->
+    <div class="FFTUIContainer" id="graphContainer">
+      <!-- This is empty as canvas generates the graph dynamically -->
+    </div>
+
+    <!-- Piano Roll Container -->
+    <div class="pianoUIContainer" id="pianoContainer">
+      <!-- This is empty as canvas generates the image -->
+    </div>
+
+    <!-- Container for preset menu and volume slider -->
+    <div class="preset-volUIContainer" id="preset-volumeContainer">
+      <!-- Preset Menu -->
+      <div class="presetMenu">
+        <label for="presets">Presets</label>
+        <br>
+        <select name="presets" id="presets">
+          <option value="">Reset</option>
+          <option value="piano">Piano</option>
+          <option value="bass">Bass</option>
+          <option value="violin">Violin</option>
+          <option value="flute">Flute</option>
+          <option value="clarinet">Clarinet</option>
+          <option value="timpani">Timpani</option>
+          <option value="marimba">Marimba</option>
+          <option value="xylophone">Xylophone</option>
+          <option value="glockenspiel">Glockenspiel</option>
+        </select>
+        <br>
+        <button id="presetSubmit" value="Submit">Submit</button>
+      </div> 
+      <!-- Volume Slider -->
+      <div class="volumeSliderContainer">Volume
+        <input type="range" min="0" max = "255" value="128" class="slider" id="voluSlider">
+      </div>
+    </div>
+
+    <div class="pianoRoll">
+      <img src="static/images/piano_roll_keyboard.png" alt="PianoRoll" id="controls" width="300">
+    </div>
+
+    <div class="qmulLogo">
+      <img src="static/images/queen-mary-logo.png" alt="QMUL logo" id="QMUL_logo" width="100%">
+    </div>      
+
+    <div class="cfdmLogo">
+      <img src="static/images/CFDM.png" alt="CFDM logo" id="CDFM_logo" width="100%">
+    </div>
+    
+    <!-- Container div that updates with html for each view -->
+    <div class="taskUIContainer" id="taskContainer">
+      <p>This text should be overwritten by view content</p>
+    </div>
+
+    <!-- Overlay div -->
+    <div id="overlay">
+    </div>
+    
+</body>
+</html>

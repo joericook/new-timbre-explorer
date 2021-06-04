@@ -30,6 +30,14 @@
         // Perform the check (optional: call the showResult function when finished).
         headphonesCheck.checkHeadphones(showResult);
 
+        // Hide the button once test has been started
+        let x = document.getElementById("headphoneTestButton");
+        x.style.display = "none";
+
+        // Show 'Next' so the user can continue after completing the test
+        let y = document.getElementById("afterHeadphonesNext");
+        y.style.display = "block";
+
         // Testing
         console.log("'doTheTest' runs successfully")
       
@@ -118,6 +126,7 @@
       </div>
     </div>
 
+    <!-- Image divs -->
     <div class="pianoRoll">
       <img src="static/images/piano_roll_keyboard.png" alt="PianoRoll" id="controls" width="300">
     </div>
@@ -130,13 +139,24 @@
       <img src="static/images/CFDM.png" alt="CFDM logo" id="CDFM_logo" width="100%">
     </div>
     
-    <!-- Container div that updates with html for each view -->
+    <!-- Container div that updates with html for task views -->
     <div class="taskUIContainer" id="taskContainer">
       <p>This text should be overwritten by view content</p>
     </div>
 
     <!-- Overlay div -->
     <div id="overlay">
+      <div id="overlayContent">
+        <!-- Container div that updates with html for overlay views -->
+      </div>
+
+      <div class="qmulLogo">
+        <img src="static/images/queen-mary-logo.png" alt="QMUL logo" id="QMUL_logo_overlay" width="100%">
+      </div>      
+  
+      <div class="cfdmLogo">
+        <img src="static/images/CFDM.png" alt="CFDM logo" id="CDFM_logo_overlay" width="100%">
+      </div>
     </div>
     
 </body>

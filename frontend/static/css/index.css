@@ -19,10 +19,19 @@
     bottom: 0;
     overflow: auto;
     font-family: "Verdana";
-    background-color: rgb(211, 211, 211); /* Black background with opacity */
+    background-color: rgb(211, 211, 211);
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     display: block;
   }
+
+    #overlayContent {
+      position: absolute;
+      width: 70vw;
+      left: 15vw;
+      height: auto;
+      min-height: 100%;
+      background-color: #ffffff;
+    }
 
   /* All app sliders */
   .slider {
@@ -287,7 +296,7 @@
       }
   
   
-  .qmulLogo {
+  #QMUL_logo {
     position: absolute;
     top: 93%;
     left: 86%;
@@ -296,7 +305,7 @@
     object-position: bottom;
   }
   
-  .cfdmLogo {
+  #CDFM_logo {
     position: absolute;
     top: 94%;
     left: 70%;
@@ -304,6 +313,22 @@
     object-fit: cover;
     object-position: bottom;
   }
+
+  #QMUL_logo_overlay {
+    position: absolute;
+    top: 2%;
+    left: 70%;
+    width: 12%;
+  }
+  
+  #CDFM_logo_overlay {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 12%;
+  }
+
+
   
   /* Styling for the bottom left container that updates dynamically */
   .taskUIContainer {
@@ -323,9 +348,10 @@
 
   /* Used for the pre-task views */
   .infoContainer {
-    padding-left: 18vw;
-    padding-right: 18vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
     padding-bottom: 5vh;
+    padding-top: 2vh;
   }
 
   ::-webkit-scrollbar {

@@ -10,6 +10,7 @@ export default class extends AbstractView {
         return `
             <div class="infoContainer">
                 <h1>Participant Information</h1> 
+                <br>
                 <p>
                     Please read the following information carefully before proceeding to the study. 
                 </p>
@@ -23,7 +24,7 @@ export default class extends AbstractView {
                 </p>
                 <h3>Queen Mary Ethics of Research Committee reference number: </h3>
                 <p>
-                    *****
+                    QMERC20.316
                 </p>
                 <h3>Invitation</h3>
                 <p>

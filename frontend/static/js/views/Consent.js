@@ -9,7 +9,8 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <div class="infoContainer">
-                <h1>Consent</h1> 
+                <h1>Consent</h1>
+                <br>
                 <p>
                     Please confirm the following and click <strong>Next</strong> when you are ready for some checks. 
                 </p>
@@ -23,7 +24,7 @@ export default class extends AbstractView {
                 </p>
                 <h3>Queen Mary Ethics of Research Committee reference number: </h3>
                 <p>
-                    *****
+                    QMERC20.316
                 </p>
                 <br>
                 <p>

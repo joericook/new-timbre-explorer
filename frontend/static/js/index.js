@@ -8,6 +8,8 @@ import ConsentDl from "./views/ConsentDl.js";
 import SoundCheck from "./views/SoundCheck.js";
 import Hearing from "./views/Hearing.js";
 import Headphones from "./views/Headphones.js";
+import Background from "./views/Background.js";
+import Walkthrough from "./views/Walkthrough.js";
 import Training1 from "./views/Training1.js";
 
 // Enables forward and back navigation with historyAPI
@@ -26,6 +28,8 @@ const router = async () => {
         { path: "/soundcheck", view: SoundCheck },
         { path: "/hearing", view: Hearing },
         { path: "/headphones", view: Headphones },
+        { path: "/background", view: Background },
+        { path: "/walkthrough", view: Walkthrough },
         { path: "/training1", view: Training1 },
     ];
     
@@ -54,23 +58,15 @@ const router = async () => {
 
     // Introduction paths send html to overlay
     // Task paths send html to taskContainer
-    if (['/', '/info', '/consent', '/consentdl', '/soundcheck', '/hearing', '/headphones'].includes(match.route.path)) {
+    if (['/', '/info', '/consent', '/consentdl', '/soundcheck', '/hearing', '/headphones', '/background'].includes(match.route.path)) {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";
-        //if (ctx.state === 'running') {
-        //    ctx.suspend();
-        //    console.log("audio context suspended");
-        //};
     }   
     else {
         console.log("taskContainer");
         document.querySelector("#taskContainer").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "none";
-        //if (ctx.state === 'suspended') {
-        //    ctx.resume();
-        //    console.log("audio context resumed");
-        //};
     }
     
     // Scroll to top of the div when updating contents

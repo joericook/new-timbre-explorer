@@ -14,6 +14,7 @@ export default class extends AbstractView {
                 <p>
                     To determine whether participants are wearing headphones (desirable) or listening via loudspeakers (undesirable), two quick headphone screening 3-AFC tests will be administered.
                 </p>
+                <a href="/training1" data-link>Next</a>
                 <br><br>
                 <div style="margin: 0;
                             position: absolute;

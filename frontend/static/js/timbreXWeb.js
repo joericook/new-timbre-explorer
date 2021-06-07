@@ -138,18 +138,25 @@ import * as blockDiagram from './canvas/blockDiagram.js'
   //special normalization for the single not object to normalize its spectrum
   noteObj.spSynth.normGain.gain.value = 0.125;
   
+  // Setup runs when a key is pressed
   var setup = function(e){
+    // Ignore if already initialised
     if (init) return;
-    ctx.resume();
-    console.log("context sample rate:", ctx.sampleRate);
-    console.log('Playback resumed successfully')
-    noteObj.startAudio();
-    kbObj.startAudio();
-    lfoOsc.start();
-    init = true;
-    // console.log(blkD.artiGraph.data);
-    // testOsc.start();
-    
+    // Ignore if overlay is currently showing
+    if (document.getElementById("overlay").style.display == "block") {
+      return;
+    }
+    else {
+      ctx.resume();
+      console.log("context sample rate:", ctx.sampleRate);
+      console.log('Playback resumed successfully')
+      noteObj.startAudio();
+      kbObj.startAudio();
+      lfoOsc.start();
+      init = true;
+      // console.log(blkD.artiGraph.data);
+      // testOsc.start();
+    }
   }
   
   var onKeyDown = function(e){
@@ -281,5 +288,31 @@ import * as blockDiagram from './canvas/blockDiagram.js'
   window.addEventListener('resize', resize);
   // var drawVisual = requestAnimationFrame(draw);
   window.requestAnimationFrame(draw);
+
+  // Mutation observer is used to suspend the audio context when the overlay is shown, and resume when it is hidden
+  var mutationObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      //console.log(mutation.oldValue);
+      if (mutation.oldValue == "display: block;") {
+        ctx.resume();
+        console.log("Audio engine resumed");
+      }
+      else if (mutation.oldValue == "display: none;") {
+        ctx.suspend();
+        console.log("Audio engine suspended");
+      }
+    });
+  });
+
+  // Mutation observer listens for changes in "overlay" style, 'attributeOldValue' is used to detect changes in overlay visibilty
+  mutationObserver.observe(document.getElementById("overlay"), {
+    attributes: true,
+    attributeFilter: ['style'],
+    characterData: true,
+    childList: true,
+    subtree: true,
+    attributeOldValue: true,
+    characterDataOldValue: true
+  });
   
 })()

@@ -70,7 +70,9 @@ export default class extends AbstractView {
                     By clicking <strong>Next</strong> I confirm that I understand the points mentioned above and that I agree with them. 
                 </p>
                 <br>
-                <a href="/consentdl" data-link>Next<a/>
+                <div class="nextButton">
+                    <a class="nextText" href="/consentdl" data-link>Next<a/>
+                </div>
             </div>
         `;
     }

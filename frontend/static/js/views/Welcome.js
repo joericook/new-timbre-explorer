@@ -20,7 +20,9 @@ export default class extends AbstractView {
                     This study involves sound. Please make sure that you can listen to audio either through headphones or speakers. Also, for your own safety, start with a low volume level.
                 </p>
                 <br>
-                <a href="/info" data-link>Next<a/>
+                <div class="nextButton">
+                    <a class="nextText" href="/info" data-link>Next<a/>
+                </div>
             </div>
         `;
     }

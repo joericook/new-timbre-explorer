@@ -11,6 +11,7 @@ import Headphones from "./views/Headphones.js";
 import Background from "./views/Background.js";
 import Walkthrough from "./views/Walkthrough.js";
 import Training1 from "./views/Training1.js";
+import Testing1 from "./views/Testing1.js";
 
 // Enables forward and back navigation with historyAPI
 const navigateTo = url => {
@@ -31,6 +32,7 @@ const router = async () => {
         { path: "/background", view: Background },
         { path: "/walkthrough", view: Walkthrough },
         { path: "/training1", view: Training1 },
+        { path: "/testing1", view: Testing1 },
     ];
     
     // Test each route for potential match
@@ -56,9 +58,9 @@ const router = async () => {
     // Create new instance of view that matched the route
     const view = new match.route.view();
 
-    // Introduction paths send html to overlay
-    // Task paths send html to taskContainer
-    if (['/', '/info', '/consent', '/consentdl', '/soundcheck', '/hearing', '/headphones', '/background'].includes(match.route.path)) {
+    // Some paths send html to overlay
+    // others send html to taskContainer
+    if (['/', '/info', '/consent', '/consentdl', '/soundcheck', '/hearing', '/headphones', '/background', '/testing1'].includes(match.route.path)) {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";
@@ -69,7 +71,8 @@ const router = async () => {
         document.getElementById("overlay").style.display = "none";
     }
     
-    // Scroll to top of the div when updating contents
+    // Scroll to top of the divs when updating contents
+    document.getElementById("overlay").scrollTo(0, 0);
     document.getElementById("overlay").scrollTo(0, 0);
 
     // Console log current view

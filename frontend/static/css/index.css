@@ -8,6 +8,27 @@
     pointer-events: none;
   }
 
+  mark.red {
+    color:#ff0000;
+    background: none;
+    font-weight: bold;
+  }
+  mark.yellow {
+    color:#ffff00;
+    background: none;
+    font-weight: bold;
+  }
+  mark.green {
+    color:#00ce00;
+    background: none;
+    font-weight: bold;
+  }
+  mark.blue {
+    color:#0000ff;
+    background: none;
+    font-weight: bold;
+  }
+
   #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
@@ -18,8 +39,9 @@
     right: 0;
     bottom: 0;
     overflow: auto;
-    font-family: "Verdana";
-    background-color: rgb(211, 211, 211);
+    font-family: "Helvetica";
+    font-size: 1.1em;
+    background-color: #6F809F;
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     display: block;
   }
@@ -34,55 +56,63 @@
     }
 
       /* form styling */
-      form .likert {
-        list-style:none;
-        width:100%;
-        margin:0;
-        padding:0 0 35px;
-        display:block;
-        /*border-bottom:2px solid #efefef;*/
+      .roundedBox {
+        padding: 2vh 2vw 2vh 2vw;
+        background-color: rgb(211, 211, 211);  
+        border-radius: 2vw;
+        border: solid #666666 0.2vw;
+        box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
       }
 
-      form .likert:last-of-type {border-bottom:0;}
-      form .likert:before {
-        content: '';
-        position:relative;
-        top:11px;
-        left:9.5%;
-        display:block;
-        background-color:#efefef;
-        height:4px;
-        width:78%;
-      }
-      
-      form .likert li {
-        display:inline-block;
-        width:19%;
-        text-align:center;
-        vertical-align: top;
-      }
+        form .likert {
+          list-style:none;
+          width:100%;
+          margin:0;
+          padding:0 0 35px;
+          display:block;
+          border-bottom:2px solid #efefef;
+        }
 
-      form .likert li input[type=radio] {
-        display:block;
-        position:relative;
-        top:0;
-        left:50%;
-        margin-left:-6px;  
-      }
+        form .likert:last-of-type {border-bottom:0;}
+        form .likert:before {
+          content: '';
+          position:relative;
+          top:11px;
+          left:9.5%;
+          display:block;
+          background-color:#efefef;
+          height:4px;
+          width:78%;
+        }
+        
+        form .likert li {
+          display:inline-block;
+          width:19%;
+          text-align:center;
+          vertical-align: top;
+        }
 
-      form .likert li label {width:100%;}
-      form .buttons {
-        margin:30px 0;
-        padding:0 4.25%;
-        text-align:right
-      } 
+        form .likert li input[type=radio] {
+          display:block;
+          position:relative;
+          top:0;
+          left:50%;
+          margin-left:-6px;  
+        }
 
-      form .buttons button {
-        padding: 5px 10px;
-        background-color: #67ab49;
-        border: 0;
-        border-radius: 3px;
-      }
+        form .likert li label {width:100%;}
+        form .buttons {
+          margin:30px 0;
+          padding:0 4.25%;
+          text-align:right
+        } 
+
+        form .buttons button {
+          padding: 5px 10px;
+          background-color: #67ab49;
+          border: 0;
+          border-radius: 3px;
+        }
 
   /* All app sliders */
   .slider {
@@ -389,8 +419,9 @@
     width: 66.2%;
     height: 64%;
     overflow: auto;
-    font-family: "Verdana";
-  
+    font-family: "Helvetica";
+    font-size: 1.1em;
+
     border-radius: 0.5vw;
     border: solid #666666 0.2vw;
     box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
@@ -416,8 +447,34 @@
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10vw;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
     
 }
   
-  
+.nextButton {
+  /* Animation from https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 0.4vh, 0.4vh var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  width: 3vw;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.2 0.2 0.2 0.2;
+  color: #6F809F;
+}
+.nextButton:hover {
+  --d: 1vh;
+}
+
+.nextText {
+  color: #6F809F;
+}

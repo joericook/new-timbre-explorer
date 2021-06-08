@@ -152,7 +152,9 @@ export default class extends AbstractView {
                     Joshua Ryan Lam: j.r.g.lam@se19.qmul.ac.uk       
                 </p>
                 <br>
-                <a href="/consent" data-link>Next<a/>
+                <div class="nextButton">
+                    <a class="nextText" href="/consent" data-link>Next<a/>
+                </div>
             </div>    
         `;
     }

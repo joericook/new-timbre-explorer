@@ -24,7 +24,9 @@ export default class extends AbstractView {
                     When you are satified with the volume level, click <strong>Next</strong> to progress to a headphone screening test.
                 </p>
                 <br>
-                <a href="/hearing" data-link>Next<a/>
+                <div class="nextButton">
+                    <a class="nextText" href="/hearing" data-link>Next<a/>
+                </div>
             </div>
         `;
     }

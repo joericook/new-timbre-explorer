@@ -15,7 +15,9 @@ export default class extends AbstractView {
                Consent download page
             </p>
             <br>
-            <a href="/soundcheck" data-link>Next<a/>
+            <div class="nextButton">
+                <a class="nextText" href="/soundcheck" data-link>Next<a/>
+            </div>
         </div>
         `;
     }

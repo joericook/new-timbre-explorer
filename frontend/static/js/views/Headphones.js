@@ -22,7 +22,9 @@ export default class extends AbstractView {
                             left: 50%;
                             transform: translate(-50%, -50%);">
                     <button id="headphoneTestButton" onclick="doTheTest()" style="height:5vh; width:10vw; margin: 0 auto;">Begin Test</button>
-                    <a id="afterHeadphonesNext" style="display:none" href="/background" data-link>Next</a>
+                    <div class="nextButton">
+                        <a id="afterHeadphonesNext" style="display:none" class="nextText" href="/background" data-link>Next</a>
+                    </div>
                 </div>
             </div>
         `;

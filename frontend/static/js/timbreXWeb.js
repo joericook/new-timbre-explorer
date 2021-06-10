@@ -295,6 +295,7 @@ import * as blockDiagram from './canvas/blockDiagram.js'
       //console.log(mutation.oldValue);
       if (mutation.oldValue == "display: block;") {
         ctx.resume();
+        // TODO: clear note queue before resuming audio context
         console.log("Audio engine resumed");
       }
       else if (mutation.oldValue == "display: none;") {

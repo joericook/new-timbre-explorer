@@ -96,3 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     router();
 });
+
+document.getElementById("specSlider").addEventListener("input", () => {
+    spectrumValueText.innerHTML = specSlider.value;
+});
+document.getElementById("brigSlider").addEventListener("input", () => {
+    brightnessValueText.innerHTML = brigSlider.value;
+});
+document.getElementById("artiSlider").addEventListener("input", () => {
+    articulationValueText.innerHTML = artiSlider.value;
+});
+document.getElementById("enveSlider").addEventListener("input", () => {
+    envelopeValueText.innerHTML = enveSlider.value;
+});

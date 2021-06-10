@@ -254,7 +254,6 @@
       left: 2.5%;
       top: 2%;
       text-align: center;
-      font-family: "Verdana";
       font-size: 150%;
     }
     .brightnessslidecontainer {
@@ -264,7 +263,6 @@
       left: 26.5%;
       top: 2%;
       text-align: center;
-      font-family: "Verdana";
       font-size: 150%;
     }
     .articulationslidecontainer {
@@ -274,7 +272,6 @@
       left: 50.5%;
       top: 2%;
       text-align: center;
-      font-family: "Verdana";
       font-size: 150%;
     }
     .envelopeslidecontainer {
@@ -284,10 +281,10 @@
       left: 74.5%;
       top: 2%;
       text-align: center;
-      font-family: "Verdana";
       font-size: 150%;
     }
   
+    /* Coloured accents behind timbre sliders */ 
     #specSlider {
       background: #FF0000;
       border-radius: 2vw;
@@ -307,6 +304,34 @@
       background: #0000FF;
       border-radius: 2vw;
       height: 2.4vh;
+    }
+
+    .sliderTitle {
+      width: auto;
+      float: left;
+      margin-left: 7.8vw;
+      margin-right: 0.5em;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      color: #444444;
+    }
+
+    .valueBox {
+      background-color: rgb(211, 211, 211);
+      border: solid #66666666 0.2vw;
+      border-radius: 0.3vw;
+      width: 10%;
+      height: 10%;
+      float: left;
+      text-align: center;
+    }
+
+    .valueText {
+      margin: 0;
+      font-size: 1.2vw;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
     }
   
   /* Container for FFT canvas graph */
@@ -347,7 +372,7 @@
       position: absolute;
       left: 5%;
       top: 1%;
-      font-family: "Verdana";
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
   
     select {
@@ -367,7 +392,7 @@
       left: 35%;
       width: 60%;
       text-align: center;
-      font-family: "Verdana";
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
   
       #voluSlider {
@@ -465,11 +490,12 @@
   background-size: var(--d, 0) 0.4vh, 0.4vh var(--d, 0);
   background-repeat: no-repeat;
   transition: 0.3s;
-  width: 3vw;
+  width: 2.7em;
   font-size: 1.1em;
   font-weight: bold;
   padding: 0.2 0.2 0.2 0.2;
   color: #6F809F;
+  text-align: center;
 }
 .nextButton:hover {
   --d: 1vh;

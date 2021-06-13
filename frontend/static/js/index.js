@@ -64,6 +64,13 @@ const router = async () => {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";
+
+        // If path matches testing1 append the quiz script to the document body
+        if (['/testing1'].includes(match.route.path)) {
+            let newScript = document.createElement("script");
+            newScript.src = "static/js/quiz.js";
+            document.getElementById("overlayContent").append(newScript);
+        }
     }   
     else {
         console.log("taskContainer");
@@ -97,15 +104,3 @@ document.addEventListener("DOMContentLoaded", () => {
     router();
 });
 
-document.getElementById("specSlider").addEventListener("input", () => {
-    spectrumValueText.innerHTML = specSlider.value;
-});
-document.getElementById("brigSlider").addEventListener("input", () => {
-    brightnessValueText.innerHTML = brigSlider.value;
-});
-document.getElementById("artiSlider").addEventListener("input", () => {
-    articulationValueText.innerHTML = artiSlider.value;
-});
-document.getElementById("enveSlider").addEventListener("input", () => {
-    envelopeValueText.innerHTML = enveSlider.value;
-});

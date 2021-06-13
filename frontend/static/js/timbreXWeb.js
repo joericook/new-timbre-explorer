@@ -181,21 +181,25 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     specObj.updateSpectrum(specSlider.value);
     noteObj.updateSpectrum();
     kbObj.updateSpectrum();
+    spectrumValueText.innerHTML = specSlider.value; // Updates value boxes to match slider values
   }
   function updateBrightness() {
     brigObj.updateBrightness(brigSlider.value);
     noteObj.updateBrightness();
     kbObj.updateBrightness();
+    brightnessValueText.innerHTML = brigSlider.value;
   }
   function updateArticulation() {
     artiObj.updateArticulation(artiSlider.value);
     noteObj.updateArticulation();
     kbObj.updateArticulation();
+    articulationValueText.innerHTML = artiSlider.value;
   }
   function updateEnvelope() {
     enveObj.updateEnvelope(enveSlider.value);
     noteObj.updateEnvelope();
     kbObj.updateEnvelope();
+    envelopeValueText.innerHTML = enveSlider.value;
   }
   function updateVolume() {
     volObj.updateVolume(voluSlider.value);

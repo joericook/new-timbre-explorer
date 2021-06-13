@@ -53,16 +53,6 @@
       }
     </script>
 
-    <!-- Script to hide the overlay after introduction
-    <script>
-      function hideOverlay() {
-        document.getElementById("overlay").style.display = "none";
-      
-      function showOverlay() {
-      document.getElementById("overlay").style.display = "block";
-      }
-    </script> -->
-
     <script type="module" src="./static/js/timbreXWeb.js"></script>
     <canvas id="canvas"></canvas>
 
@@ -155,7 +145,7 @@
       <img src="static/images/CFDM.png" alt="CFDM logo" id="CDFM_logo" width="100%">
     </div>
     
-    <!-- Container div that updates with html for task views -->
+    <!-- Container div that updates with html for TE views -->
     <div class="taskUIContainer" id="taskContainer">
       <p>This text should be overwritten by view content</p>
     </div>
@@ -174,6 +164,24 @@
         <img src="static/images/CFDM.png" alt="CFDM logo" id="CDFM_logo_overlay" width="100%">
       </div>
     </div>
+
+    <!-- Task Complete Modal div -->
+    <div id="taskCompleteModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Task Complete!</h2>
+        </div>
+        <div class="modal-body">
+          <p>Click 
+            <div class="nextButton">
+              <a class="nextText" href="/training2" data-link>Next</a>
+            </div>
+            to continue...</p>
+        </div>
+      </div>
+    </div>
     
+    <script type="module" src="./static/js/timbreXWeb.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
   }
-
+  
   #canvas {
     position: absolute;
     pointer-events: none;
@@ -13,16 +13,19 @@
     background: none;
     font-weight: bold;
   }
+
   mark.yellow {
     color:#ffff00;
     background: none;
     font-weight: bold;
   }
+
   mark.green {
     color:#00ce00;
     background: none;
     font-weight: bold;
   }
+
   mark.blue {
     color:#0000ff;
     background: none;
@@ -507,9 +510,19 @@
 
 
 /* Quiz Styling */
+.question-holder {
+  height: 7em;
+  width: 45em;
+  text-align: center;
+  margin-right: 0px;
+}
+
 #intro {
   display: flex;
   justify-content: space-between;
+  width: 12em;
+  height: 8em;
+  margin: 0;
 }
 
 .prefix {
@@ -517,15 +530,22 @@
   font-size: 1em;
 }
 
+.sound-holder {
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
 #counter,
 #score {
   text-align: center;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
-.question-holder {
-  height: 10em;
-  margin-left: 2em;
-  text-align: center;
+.row {
+  display: flex;
+  flex-direction: space-between;
+  width: 100%;
 }
 
 .answer-container {
@@ -533,14 +553,30 @@
   flex-direction: initial;
   margin-bottom: 0.5em;
   margin-left: 1em;
-  
+  width: 31vw;
 }
 
 .answer-prefix {
   background-color: #6F809F;
   color: white;
-  padding: 1.5em 2.5em;
+  padding: 1.5em 2.1em;
   margin: 0; 
+}
+
+.red {
+  background-color: #f00000;
+}
+
+.yellow {
+  background-color: #cccc2c;
+}
+
+.green {
+  background-color: #00ce00;
+}
+
+.blue {
+  background-color: #0000ff;
 }
 
 .answer-text {

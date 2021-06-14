@@ -138,6 +138,9 @@ import * as blockDiagram from './canvas/blockDiagram.js'
   //special normalization for the single not object to normalize its spectrum
   noteObj.spSynth.normGain.gain.value = 0.125;
   
+  // Flag to accept notes. Used to stop notes from queueing when ctx is suspended
+  let acceptingNotes = true;
+
   // Setup runs when a key is pressed
   var setup = function(e){
     // Ignore if already initialised
@@ -160,12 +163,18 @@ import * as blockDiagram from './canvas/blockDiagram.js'
   }
   
   var onKeyDown = function(e){
+    if (acceptingNotes === false) {
+      return;
+    }
     kbObj.keyPress(e.keyCode, true);
     // noteObj.playNote(true);
     console.log("keydown");
   };
   
   var onKeyUp = function(e){
+    if (acceptingNotes === false) {
+      return;
+    }
     kbObj.keyPress(e.keyCode, false);
     // noteObj.playNote(false);
     console.log("keyup");
@@ -299,11 +308,13 @@ import * as blockDiagram from './canvas/blockDiagram.js'
       //console.log(mutation.oldValue);
       if (mutation.oldValue == "display: block;") {
         ctx.resume();
+        acceptingNotes = true;
         // TODO: clear note queue before resuming audio context
         console.log("Audio engine resumed");
       }
       else if (mutation.oldValue == "display: none;") {
         ctx.suspend();
+        acceptingNotes = false;
         console.log("Audio engine suspended");
       }
     });

@@ -2,7 +2,9 @@
 let questions = [
     {
         "id":1,
-        "question":"1) Identify the dimension and direction along which these two sounds differ.",
+        "question":"1) Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
+        "soundBSource": "",
         "a":"Spectrum / Increase",
         "b":"Spectrum / Decrease",
         "c":"Brightness / Increase",
@@ -16,7 +18,9 @@ let questions = [
     },  
     {
         "id":2,
-        "question":"2) Identify the dimension and direction along which these two sounds differ.",
+        "question":"2) Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "",
+        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "a":"Spectrum / Increase",
         "b":"Spectrum / Decrease",
         "c":"Brightness / Increase",
@@ -30,7 +34,9 @@ let questions = [
     },  
     {
         "id":3,
-        "question":"3) Identify the dimension and direction along which these two sounds differ.",
+        "question":"3) Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "",
+        "soundBSource": "",
         "a":"Spectrum / Increase",
         "b":"Spectrum / Decrease",
         "c":"Brightness / Increase",
@@ -100,6 +106,10 @@ const getNewQuestion = () => {
     //console.log(currentQuestion);
     question.innerText = currentQuestion.question;
 
+    // Update with correct audio files for each question
+    document.getElementById("soundA").setAttribute("src", currentQuestion.soundASource);
+    document.getElementById("soundB").setAttribute("src", currentQuestion.soundBSource);
+
     // Display answers for each question
     answers.forEach((answer) => {
         answer.innerText = currentQuestion[answer.dataset["answer"]];
@@ -144,9 +154,22 @@ const getNewQuestion = () => {
     availableQuestions.shift();
 };
 
+hideModal = () => {
+    const modal = document.getElementById("taskCompleteModal");
+    modal.style.display = "none"
+}
+
 //Shows task complete modal 
 displayResults = () => {
-    let modal = document.getElementById("taskCompleteModal");
+    const modal = document.getElementById("taskCompleteModal");
+    const modalBody = document.getElementById("modal-body");
+    modalBody.innerHTML = `
+                            <p>Click</p>
+                            <div class="nextButton">
+                                <a class="nextText" onclick="hideModal()" href="/training2" data-link>Next</a>
+                            </div>
+                            <p>to continue...</p>
+                        `
     modal.style.display = "block"
 }
 

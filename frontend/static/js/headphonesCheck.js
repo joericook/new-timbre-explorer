@@ -662,4 +662,36 @@ class HeadphonesCheck {
   }
 }
 
+// Optional: function to display the result after completing the test.
+function showResult(result) {
+  let resultMessage = result ? 'Pass' : 'Fail';
+  $('body').append('<div id="testResults" style="width: 100%; text-align: center; font-size: 3em;"></div>');
+  $('#testResults')
+  .append('<p style="margin-top: 1em;">' + resultMessage + '</p>')
+  .append('<p>' + headphonesCheck.attemptRecord[headphonesCheck.attemptCount].numberCorrect + ' out of 6 correct<br>after ' + headphonesCheck.attemptCount + ' attempt(s).<br>(The pass mark is 6.)</p>')
+  .append('<p><a href="https://sijiazhao.github.io/headphonecheck/">Go back to the Headphone Check homepage</a></p>');
+}
+
 window.HeadphonesCheck = HeadphonesCheck;
+
+function doTheTest() {
+  // Create a new HeadphonesCheck using the default options (Huggins Pitch test with a pass mark of 6/6)
+  // (see JSDoc in headphonesCheck.js for a full list of options).
+  const headphonesCheck = new HeadphonesCheck();
+    
+  // Perform the check (optional: call the showResult function when finished).
+  headphonesCheck.checkHeadphones(showResult);
+
+  // Hide the button once test has been started
+  let x = document.getElementById("headphoneTestButton");
+  x.style.display = "none";
+
+  // Show 'Next' so the user can continue after completing the test
+  let y = document.getElementById("afterHeadphonesNext");
+  y.style.display = "block";
+
+  // Testing
+  //console.log("'doTheTest' runs successfully")
+    
+  
+}

@@ -59,7 +59,8 @@ const scoreText = document.getElementById("score");
 let questionCounter;
 let score;
 const MAX_QUESTIONS = 3;
-let acceptingAnswers;
+// THIS doesn't need to be declared as long as train.js is run first
+// let acceptingAnswers;
 
 startGame = () => {
     questionCounter = 0;

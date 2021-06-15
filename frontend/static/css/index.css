@@ -508,6 +508,32 @@
   color: #6F809F;
 }
 
+/* Training Styling */
+.instruction-holder {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 2vh;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.description-holder {
+  height: 4em;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.next-trial-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  width: 20vw;
+  background-color: #6F809F;
+  color: white;
+}
 
 /* Quiz Styling */
 .question-holder {
@@ -544,7 +570,7 @@
 
 .row {
   display: flex;
-  flex-direction: space-between;
+  justify-content: center;
   width: 100%;
 }
 

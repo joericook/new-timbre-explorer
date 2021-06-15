@@ -22,7 +22,7 @@ export default class extends AbstractView {
                         <audio id="soundA" controls src='' type="audio/flac"></audio>
                     </div>
                     <div class="sound-holder">
-                    <p class="prefix">B</p>
+                        <p class="prefix">B</p>
                         <audio id="soundB" controls src='' type="audio/flac"></audio>
                     </div>
                     <div class="counter">

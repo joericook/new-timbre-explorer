@@ -76,6 +76,13 @@ const router = async () => {
         console.log("taskContainer");
         document.querySelector("#taskContainer").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "none";
+
+        // If path matches training1 append the quiz script to the document body
+        if (['/training1'].includes(match.route.path)) {
+            let newScript = document.createElement("script");
+            newScript.src = "static/js/train.js";
+            document.getElementById("taskContainer").append(newScript);
+        }
     }
     
     // Scroll to top of the divs when updating contents

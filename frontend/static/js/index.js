@@ -5,7 +5,6 @@ import Welcome from "./views/Welcome.js";
 import Info from "./views/Info.js";
 import Consent from "./views/Consent.js";
 import ConsentDl from "./views/ConsentDl.js";
-import SoundCheck from "./views/SoundCheck.js";
 import Hearing from "./views/Hearing.js";
 import Headphones from "./views/Headphones.js";
 import Background from "./views/Background.js";
@@ -26,7 +25,6 @@ const router = async () => {
         { path: "/info", view: Info },
         { path: "/consent", view: Consent },
         { path: "/consentdl", view: ConsentDl },
-        { path: "/soundcheck", view: SoundCheck },
         { path: "/hearing", view: Hearing },
         { path: "/headphones", view: Headphones },
         { path: "/background", view: Background },
@@ -60,7 +58,7 @@ const router = async () => {
 
     // Some paths send html to overlay
     // others send html to taskContainer
-    if (['/', '/info', '/consent', '/consentdl', '/soundcheck', '/hearing', '/headphones', '/background', '/testing1'].includes(match.route.path)) {
+    if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1'].includes(match.route.path)) {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";

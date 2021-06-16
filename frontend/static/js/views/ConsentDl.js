@@ -12,11 +12,14 @@ export default class extends AbstractView {
             <h1>Consent Form Download</h1>
             <br>
             <p>
-               Consent download page
+                You can download a copy of this consent form by clicking the following link: 
+                <a href="static/images/timbre_explorer_consent_form.pdf" download>
+                    Download Consent Form
+                </a>
             </p>
             <br>
             <div class="nextButton">
-                <a class="nextText" href="/soundcheck" data-link>Next<a/>
+                <a class="nextText" href="/headphones" data-link>Next<a/>
             </div>
         </div>
         `;

@@ -674,24 +674,61 @@ function showResult(result) {
 
 window.HeadphonesCheck = HeadphonesCheck;
 
-function doTheTest() {
+function doHugginsTest() {
   // Create a new HeadphonesCheck using the default options (Huggins Pitch test with a pass mark of 6/6)
   // (see JSDoc in headphonesCheck.js for a full list of options).
-  const headphonesCheck = new HeadphonesCheck();
+  const hugginsHeadphonesCheck = new HeadphonesCheck();
     
-  // Perform the check (optional: call the showResult function when finished).
-  headphonesCheck.checkHeadphones(showResult);
+  // Perform the Huggins Pitch Test check (optional: call the showResult function when finished).
+  hugginsHeadphonesCheck.checkHeadphones();
 
   // Hide the button once test has been started
-  let x = document.getElementById("headphoneTestButton");
+  let x = document.getElementById("hugginsTestButton");
   x.style.display = "none";
 
-  // Show 'Next' so the user can continue after completing the test
-  let y = document.getElementById("afterHeadphonesNext");
+  // Show button for beginning beat test
+  let y = document.getElementById("beatTestButton");
   y.style.display = "block";
 
-  // Testing
-  //console.log("'doTheTest' runs successfully")
-    
-  
+}
+
+function doBeatTest() {
+  // Set options for beat test
+  //    - set the check type to 'beat' for a Beat test
+  //    - provide a volume calibration sound
+  //    - provide an example check sound
+  //    - provide a set of check sounds
+  const options = {
+    checkType: 'beat',
+    volumeSound: 'static/stimuli_Beat/Beat_calibration.flac',
+    checkExample: 'static/stimuli_Beat/Beat_example_2.flac',
+    checkSounds: [
+      {answer: 2, file: 'static/stimuli_Beat/Beat_1_2.flac'},
+      {answer: 3, file: 'static/stimuli_Beat/Beat_2_3.flac'},
+      {answer: 1, file: 'static/stimuli_Beat/Beat_3_1.flac'},
+      {answer: 3, file: 'static/stimuli_Beat/Beat_4_3.flac'},
+      {answer: 3, file: 'static/stimuli_Beat/Beat_5_3.flac'},
+      {answer: 2, file: 'static/stimuli_Beat/Beat_6_2.flac'},
+      {answer: 1, file: 'static/stimuli_Beat/Beat_7_1.flac'},
+      {answer: 2, file: 'static/stimuli_Beat/Beat_8_2.flac'},
+      {answer: 3, file: 'static/stimuli_Beat/Beat_9_3.flac'},
+      {answer: 1, file: 'static/stimuli_Beat/Beat_10_1.flac'},
+      {answer: 1, file: 'static/stimuli_Beat/Beat_11_1.flac'},
+      {answer: 2, file: 'static/stimuli_Beat/Beat_12_2.flac'},
+    ],
+  };
+
+  // Create a new HeadphonesCheck using the options set above.
+  const beatHeadphonesCheck = new HeadphonesCheck(options);
+
+  // Perform the check (optional: call the showResult function when finished).
+  beatHeadphonesCheck.checkHeadphones();
+
+  // Hide the button once test has been started
+  let x = document.getElementById("beatTestButton");
+  x.style.display = "none";
+
+   // Show 'Next' so the user can continue after completing the test
+   let y = document.getElementById("afterHeadphonesNext");
+   y.style.display = "block";
 }

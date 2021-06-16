@@ -26,39 +26,39 @@ export default class extends AbstractView {
                 <p>
                     QMERC20.316
                 </p>
-                <br>
+                <p style="text-align:center">*  *  *</p>
                 <p>
                     Thank you for your interest in this research.  
                     <br>
                     Should you wish to participate in the study, <strong>please consider the following statements.</strong> 
                     <br>
-                    Before submitting the consent form, you should tick all or any of the statements that you agree with.  
+                    Before submitting the consent form, you should <strong>ensure that you agree with all of the following statements</strong>.  
                     <br>
                     By doing so <strong>you confirm that you are willing to participate in this research</strong>, however you are reminded that 
                     <strong>you are free to withdraw your participation</strong> at any time.       
                 </p>
                 <ul>
-                    <li>I confirm that I have read the Participant Information Sheet for the above study; or it has been read to me. I have had 
+                    <li>I confirm that I have read the <strong>Participant Information Sheet</strong> for the above study; or it has been read to me. I have had 
                     the opportunity to consider the information, ask questions and have had these answered satisfactorily. </li>
                     <br>
-                    <li>I understand that my participation is voluntary and that I am free to stop taking part in the study at any time without 
+                    <li>I understand that <strong>my participation is voluntary</strong> and that <strong>I am free to stop taking part in the study at any time</strong> without 
                     giving any reason and without my rights being affected. </li>
                     <br>
-                    <li>I understand that my data will be accessed by the researchers. </li>
+                    <li>I understand that <strong>my data will be accessed by the researchers</strong>. </li>
                     <br>
-                    <li>I understand that my data will be securely stored in GDPR compliant cloud and physical servers in London, UK and in 
+                    <li>I understand that <strong>my data will be securely stored</strong> in GDPR compliant cloud and physical servers in London, UK and in 
                     accordance with the data protection guidelines of the Queen Mary University of London in fully anonymised form.</li>
                     <br>
-                    <li>I understand that I can access the information I have provided and request destruction of that information at any time 
+                    <li>I understand that <strong>I can access the information I have provided and request destruction of that information</strong> at any time 
                     after I complete the study. </li>
                     <br>
-                    <li>I understand that the researchers will not identify me in any publications and other study outputs using personal information
+                    <li>I understand that the <strong>researchers will not identify me in any publications</strong> and other study outputs using personal information
                     obtained from this study. </li>
                     <br>
-                    <li>I understand that the information collected about me will be used to support other research in the future, and it may be 
-                    shared in anonymised form with other researchers. </li>
+                    <li>I understand that the <strong>information collected about me will be used to support other research</strong> in the future, and it <strong>may be 
+                    shared in anonymised form</strong> with other researchers. </li>
                     <br>
-                    <li>I agree to take part in the above study. </li>
+                    <li><strong>I agree to take part</strong> in the above study. </li>
                 </ul>
                 <p>
                     Participants should read <a href="http://www.arcs.qmul.ac.uk/media/arcs/policyzone/Privacy-Notice-for-Research-Participants.pdf" target="_blank" rel="noopener noreferrer">Queen Mary’s privacy notice</a> 

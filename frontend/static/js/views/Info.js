@@ -26,6 +26,7 @@ export default class extends AbstractView {
                 <p>
                     QMERC20.316
                 </p>
+                <p style="text-align:center">*  *  *</p>
                 <h3>Invitation</h3>
                 <p>
                     You are being invited to participate in a research study. Before you decide whether or not you wish 

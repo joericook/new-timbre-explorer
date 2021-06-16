@@ -25,11 +25,19 @@ export default class extends AbstractView {
                     </iframe>
                 </p>
                 <p>
-                    When you have successfully completed the test, enter your percentage score in the box and then click <strong>Next</strong> to continue.
+                    When you have successfully completed the test, select your percentage score from the dropdown menu below and then click <strong>Next</strong> to continue.
                 </p>
-                <br>
+                <label for="hearingTestScoreInput">Enter your hearing test score (%):</label>
+                <select name="hearingTestScore" id="hearingTestScoreInput" required>
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="<70">Under 70%</option>
+                    <option value="70-79">70-79%</option>
+                    <option value="80-89">80-89%</option>
+                    <option value=">90">90% or Higher</option>
+                </select>
+                <br><br>
                 <div class="nextButton">
-                    <a class="nextText" href="/headphones" data-link>Next<a/>
+                    <a class="nextText" href="/background" data-link>Next<a/>
                 </div>
             </div>  
         `;

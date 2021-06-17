@@ -82,14 +82,20 @@ const getNewTrial = () => {
 
     // Update display with current description
     currentTrial = availableTrials[0];
-    console.log(currentTrial);
     description.innerText = currentTrial.description;
 
     // Update with correct audio files for each trial
     document.getElementById("trainingSoundA").setAttribute("src", currentTrial.soundASource);
     document.getElementById("trainingSoundB").setAttribute("src", currentTrial.soundBSource);
 
+    console.log("current trial: " + currentTrial.spectrumValue, currentTrial.brightnessValue, currentTrial.articulationValue, currentTrial.envelopeValue);
     // Set sliders to starting positions for each trial: values of Sound A
+    document.getElementById("specSlider").value = currentTrial.spectrumValue;
+    document.getElementById("brigSlider").value = currentTrial.brightnessValue;
+    document.getElementById("artiSlider").value = currentTrial.articulationValue;
+    document.getElementById("enveSlider").value = currentTrial.envelopeValue;
+
+    // These setAttributes are necessary to trigger the mutation observers in TimbreXWeb.js
     document.getElementById("specSlider").setAttribute("value", currentTrial.spectrumValue);
     document.getElementById("brigSlider").setAttribute("value", currentTrial.brightnessValue);
     document.getElementById("artiSlider").setAttribute("value", currentTrial.articulationValue);
@@ -113,8 +119,6 @@ const getNewTrial = () => {
             
         // Apply the appropriate class
         nextCard.classList.add(classToApply);
-
-        console.log(nextCard.classList);
 
         // After time period, remove the correct/incorrect class and get the next question
         setTimeout(() => {

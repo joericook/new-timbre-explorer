@@ -309,7 +309,6 @@ import * as blockDiagram from './canvas/blockDiagram.js'
       if (mutation.oldValue == "display: block;") {
         ctx.resume();
         acceptingNotes = true;
-        // TODO: clear note queue before resuming audio context
         console.log("Audio engine resumed");
       }
       else if (mutation.oldValue == "display: none;") {
@@ -330,5 +329,42 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     attributeOldValue: true,
     characterDataOldValue: true
   });
+
+  // Mutation observers are used to update dimension values when setAtrribute is used on the sliders
+  // Spectrum
+  var spectrumChangeObserver = new MutationObserver(function(mutations) {
+        updateSpectrum();
+  });
+  // Mutation observer listens for changes in slider values
+  spectrumChangeObserver.observe(document.getElementById("specSlider"), {
+    attributeFilter: ['value'],
+  });
+
+
+  // Brightness
+  var brightnessChangeObserver = new MutationObserver(function(mutations) {
+        updateBrightness();
+  });
+  brightnessChangeObserver.observe(document.getElementById("brigSlider"), {
+    attributeFilter: ['value'],
+  });
+  
+
+  // Articulation
+  var articulationChangeObserver = new MutationObserver(function(mutations) {
+        updateArticulation();
+  });
+  articulationChangeObserver.observe(document.getElementById("artiSlider"), {
+    attributeFilter: ['value'],
+  });
+  
+  // Envelope
+  var envelopeChangeObserver = new MutationObserver(function(mutations) {
+        updateEnvelope();
+  });
+  envelopeChangeObserver.observe(document.getElementById("enveSlider"), {
+    attributeFilter: ['value'],
+  });
+
   
 })()

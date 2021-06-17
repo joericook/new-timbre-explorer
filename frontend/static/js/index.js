@@ -66,7 +66,7 @@ const router = async () => {
         // If path matches testing1 append the quiz script to the document body
         if (['/testing1'].includes(match.route.path)) {
             let newScript = document.createElement("script");
-            newScript.src = "static/js/quiz.js";
+            newScript.src = "static/js/test1.js";
             document.getElementById("overlayContent").append(newScript);
         }
     }   
@@ -78,7 +78,7 @@ const router = async () => {
         // If path matches training1 append the quiz script to the document body
         if (['/training1'].includes(match.route.path)) {
             let newScript = document.createElement("script");
-            newScript.src = "static/js/train.js";
+            newScript.src = "static/js/train1.js";
             document.getElementById("taskContainer").append(newScript);
         }
     }

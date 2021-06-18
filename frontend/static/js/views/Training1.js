@@ -38,6 +38,11 @@ export default class extends AbstractView {
                         <p id="next-trial-text">Next Trial</p>  
                     </div>
                 </div>
+                <div class="row">
+                    <div class="warning" id="train1Warning">
+                        <p style="margin: 0.3em 0.5em 0 0.5em">Try moving the sliders to match Sound B before moving on...</p>
+                    </div>
+                </div>
             </div>
         `;
     }

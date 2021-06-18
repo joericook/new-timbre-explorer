@@ -8,7 +8,8 @@ let descriptions = [
         "spectrumValue": "28",
         "brightnessValue": "128",
         "articulationValue": "128",
-        "envelopeValue": "128"
+        "envelopeValue": "128",
+        "sliderToMove": "specSlider"
     },  
     {
         "id":2,
@@ -19,6 +20,7 @@ let descriptions = [
         "brightnessValue": "78",
         "articulationValue": "128",
         "envelopeValue": "128",
+        "sliderToMove": "brigSlider"
     },  
     {
         "id":3,
@@ -29,6 +31,7 @@ let descriptions = [
         "brightnessValue": "128",
         "articulationValue": "228",
         "envelopeValue": "128",
+        "sliderToMove": "artiSlider"
     } 
 ]
 
@@ -40,6 +43,9 @@ const trialCounterText = document.getElementById("trialCounter");
 let trialCounter;
 const MAX_TRIALS = 3;
 let acceptingAnswers;
+
+let trialSliderToMove;
+let initialValue;
 
 startTraining = () => {
     trialCounter = 0;
@@ -101,16 +107,46 @@ const getNewTrial = () => {
     document.getElementById("artiSlider").setAttribute("value", currentTrial.articulationValue);
     document.getElementById("enveSlider").setAttribute("value", currentTrial.envelopeValue);
 
+    trialSliderToMove = currentTrial.sliderToMove;
+
+    if (trialSliderToMove == "specSlider") {
+        initialValue = currentTrial.spectrumValue;
+    }
+    else if (trialSliderToMove == "brigSlider") {
+        initialValue = currentTrial.brightnessValue;
+    }
+    else if (trialSliderToMove == "artiSlider") {
+        initialValue = currentTrial.articulationValue;
+    }
+    else if (trialSliderToMove == "enveSlider") {
+        initialValue = currentTrial.envelopeValue;
+    }
+
+    console.log("initial value: ", initialValue);
+
     // Add event listeners for answer selection
     let nextCard = document.getElementById("next-card");  
 
     nextCard.addEventListener("click", () => {
+        //console.log("current value: ", document.getElementById(trialSliderToMove).value);
          // If not accepting answers, return
         if(!acceptingAnswers) {
             //console.log("not accepting answers");
             return;
         }
-            
+        // Checks if the trial's slider has been moved; if it hasn't, alert user and return
+        else if (initialValue == document.getElementById(trialSliderToMove).value) {
+            //console.log("slider must be moved");
+            $( "div.warning" ).fadeIn( 300 );
+            return;
+        }
+          
+        // Fade out the warning div when slider has been moved
+        let warningDiv = document.getElementById("train1Warning");
+        if (warningDiv.style.display == "block") {
+            $( "div.warning" ).fadeOut( 300 );
+        } 
+
         // Set acceptingAnswers to false to prevent double skip
         acceptingAnswers = false;
 

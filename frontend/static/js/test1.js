@@ -58,6 +58,7 @@ const scoreText = document.getElementById("score");
 
 let questionCounter;
 let score;
+let scoreToAdd;
 const MAX_QUESTIONS = 3;
 // THIS doesn't need to be declared as long as train.js is run first
 // let acceptingAnswers;
@@ -116,6 +117,9 @@ const getNewQuestion = () => {
         answer.innerText = currentQuestion[answer.dataset["answer"]];
     });
 
+    // 3 points for first attempt, 2 for second, 1 for third
+    scoreToAdd = 3;
+
     // Add event listeners for answer selection
     answers.forEach((answer) => {
         answer.addEventListener("click", (e) => {
@@ -137,10 +141,24 @@ const getNewQuestion = () => {
             // If correct answer is clicked, increment score and set class to correct
             if (answerLetter === currentQuestion.answer) {
                 console.log("correct answer");
-                score++;
+                score += scoreToAdd;
                 scoreText.innerText = score;
                 classToApply = "correct";
             }
+            // If incorrect answer is clicked for first and second attempts, decrement scoreToAdd, give negative feedback, then return
+            else if (scoreToAdd > 1) {
+                scoreToAdd -= 1;
+                clickedAnswer.parentElement.classList.add(classToApply);
+                setTimeout(() => {
+                    clickedAnswer.parentElement.classList.remove(classToApply);
+                    acceptingAnswers = true;
+                }, 1500);
+                return;
+            }
+            else {
+                // If incorrect answer is clicked on third attempt, no change to score, get next question  
+            }
+
             // Apply the appropriate class
             clickedAnswer.parentElement.classList.add(classToApply);
 

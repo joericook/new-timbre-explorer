@@ -185,7 +185,7 @@ displayResults = () => {
     modalBody.innerHTML = `
                             <p>Click</p>
                             <div class="nextButton">
-                                <a class="nextText" onclick="hideModal()" href="/training2" data-link>Next</a>
+                                <a class="nextText" onclick="hideModal()" href="/feedback1" data-link>Next</a>
                             </div>
                             <p>to continue...</p>
                         `

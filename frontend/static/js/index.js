@@ -12,6 +12,7 @@ import Walkthrough from "./views/Walkthrough.js";
 import Training1 from "./views/Training1.js";
 import Testing1 from "./views/Testing1.js";
 import Feedback1 from "./views/Feedback1.js";
+import Training2 from "./views/Training2.js";
 
 // Enables forward and back navigation with historyAPI
 const navigateTo = url => {
@@ -33,6 +34,7 @@ const router = async () => {
         { path: "/training1", view: Training1 },
         { path: "/testing1", view: Testing1 },
         { path: "/feedback1", view: Feedback1 },
+        { path: "/training2", view: Training2 },
     ];
     
     // Test each route for potential match
@@ -67,9 +69,9 @@ const router = async () => {
 
         // If path matches testing1 append the quiz script to the document body
         if (['/testing1'].includes(match.route.path)) {
-            let newScript = document.createElement("script");
-            newScript.src = "static/js/test1.js";
-            document.getElementById("overlayContent").append(newScript);
+            let test1Script = document.createElement("script");
+            test1Script.src = "static/js/test1.js";
+            document.getElementById("overlayContent").append(test1Script);
         }
     }   
     else {
@@ -79,9 +81,14 @@ const router = async () => {
 
         // If path matches training1 append the quiz script to the document body
         if (['/training1'].includes(match.route.path)) {
-            let newScript = document.createElement("script");
-            newScript.src = "static/js/train1.js";
-            document.getElementById("taskContainer").append(newScript);
+            let train1Script = document.createElement("script");
+            train1Script.src = "static/js/train1.js";
+            document.getElementById("taskContainer").append(train1Script);
+        }
+        else if (['/training2'].includes(match.route.path)) {
+            let train2Script = document.createElement("script");
+            train2Script.src = "static/js/train2.js";
+            document.getElementById("taskContainer").append(train2Script);
         }
     }
     
@@ -110,4 +117,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     router();
 });
-

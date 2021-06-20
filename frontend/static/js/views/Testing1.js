@@ -16,7 +16,7 @@ export default class extends AbstractView {
 
                 
 
-                <div id="intro">
+                <div class="intro">
                     <div class="sound-holder">
                         <p class="prefix">A</p>
                         <audio id="soundA" controls src='' type="audio/flac"></audio>

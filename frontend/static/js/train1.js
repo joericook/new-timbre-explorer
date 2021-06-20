@@ -1,5 +1,5 @@
 // Questions in JSON format
-let descriptions = [
+let descriptionsTrain1 = [
     {
         "id":1,
         "description":"1) Sounds A and B differ along the Spectrum dimension. Sound B has a much higher Spectrum value.",
@@ -36,34 +36,34 @@ let descriptions = [
 ]
 
 // Declare variables
-const description = document.getElementById("description");
+const descriptionTrain1 = document.getElementById("descriptionTrain1");
 //const answers = Array.from(document.getElementsByClassName("answer-text"));
-const trialCounterText = document.getElementById("trialCounter");
+const trialCounterTextTrain1 = document.getElementById("trialCounterTextTrain1");
 
-let trialCounter;
-const MAX_TRIALS = 3;
-let acceptingAnswers;
+let trialCounterTrain1;
+const MAX_TRIALS_TRAIN1 = 3;
+let acceptingAnswersTrain1;
 
-let trialSliderToMove;
-let initialValue;
+let trialSliderToMoveTrain1;
+let initialValueTrain1;
 
-startTraining = () => {
-    trialCounter = 0;
-    console.log(descriptions);
-    acceptingAnswers = true;
+startTraining1 = () => {
+    trialCounterTrain1 = 0;
+    console.log(descriptionsTrain1);
+    acceptingAnswersTrain1 = true;
 
-    availableTrials = getRandomTrials(descriptions, MAX_TRIALS);
-    console.log(availableTrials);
+    availableTrialsTrain1 = getRandomTrialsTrain1(descriptionsTrain1, MAX_TRIALS_TRAIN1);
+    console.log(availableTrialsTrain1);
 
-    getNewTrial();
+    getNewTrialTrain1();
 }
 
 // Shuffles available trials into a random order
-const getRandomTrials = (arr, n) => {
+const getRandomTrialsTrain1 = (arr, n) => {
     let len = arr.length;
     if (n > len) {
         throw new RangeError(
-            "getRandomQuestions: more elements taken than available"
+            "getRandomTrials: more elements taken than available"
         );
     }
 
@@ -74,96 +74,97 @@ const getRandomTrials = (arr, n) => {
     return (selected = shuffled.slice(0, n));
 }
 
-const getNewTrial = () => {
+const getNewTrialTrain1 = () => {
     // End when all trials have been shown
-    if (availableTrials.length === 0) {
+    if (availableTrialsTrain1.length === 0) {
         //console.log("No more trials")
-        displayModal();
+        displayModalTrain1();
         return;
     }
 
     // Increment trial counter and update display
-    trialCounter++;
-    trialCounterText.innerText = trialCounter + "/" + MAX_TRIALS;
+    trialCounterTrain1++;
+    trialCounterTextTrain1.innerText = trialCounterTrain1 + "/" + MAX_TRIALS_TRAIN1;
 
     // Update display with current description
-    currentTrial = availableTrials[0];
-    description.innerText = currentTrial.description;
+    currentTrialTrain1 = availableTrialsTrain1[0];
+    descriptionTrain1.innerText = currentTrialTrain1.description;
 
     // Update with correct audio files for each trial
-    document.getElementById("trainingSoundA").setAttribute("src", currentTrial.soundASource);
-    document.getElementById("trainingSoundB").setAttribute("src", currentTrial.soundBSource);
+    document.getElementById("soundATrain1").setAttribute("src", currentTrialTrain1.soundASource);
+    document.getElementById("soundBTrain1").setAttribute("src", currentTrialTrain1.soundBSource);
 
-    console.log("current trial: " + currentTrial.spectrumValue, currentTrial.brightnessValue, currentTrial.articulationValue, currentTrial.envelopeValue);
+    console.log("current trial: " + currentTrialTrain1.spectrumValue, currentTrialTrain1.brightnessValue, currentTrialTrain1.articulationValue, currentTrialTrain1.envelopeValue);
     // Set sliders to starting positions for each trial: values of Sound A
-    document.getElementById("specSlider").value = currentTrial.spectrumValue;
-    document.getElementById("brigSlider").value = currentTrial.brightnessValue;
-    document.getElementById("artiSlider").value = currentTrial.articulationValue;
-    document.getElementById("enveSlider").value = currentTrial.envelopeValue;
+    document.getElementById("specSlider").value = currentTrialTrain1.spectrumValue;
+    document.getElementById("brigSlider").value = currentTrialTrain1.brightnessValue;
+    document.getElementById("artiSlider").value = currentTrialTrain1.articulationValue;
+    document.getElementById("enveSlider").value = currentTrialTrain1.envelopeValue;
 
     // These setAttributes are necessary to trigger the mutation observers in TimbreXWeb.js
-    document.getElementById("specSlider").setAttribute("value", currentTrial.spectrumValue);
-    document.getElementById("brigSlider").setAttribute("value", currentTrial.brightnessValue);
-    document.getElementById("artiSlider").setAttribute("value", currentTrial.articulationValue);
-    document.getElementById("enveSlider").setAttribute("value", currentTrial.envelopeValue);
+    document.getElementById("specSlider").setAttribute("value", currentTrialTrain1.spectrumValue);
+    document.getElementById("brigSlider").setAttribute("value", currentTrialTrain1.brightnessValue);
+    document.getElementById("artiSlider").setAttribute("value", currentTrialTrain1.articulationValue);
+    document.getElementById("enveSlider").setAttribute("value", currentTrialTrain1.envelopeValue);
 
-    trialSliderToMove = currentTrial.sliderToMove;
+    // Get the initial value of the slider that must be moved
+    trialSliderToMoveTrain1 = currentTrialTrain1.sliderToMove;
 
-    if (trialSliderToMove == "specSlider") {
-        initialValue = currentTrial.spectrumValue;
+    if (trialSliderToMoveTrain1 == "specSlider") {
+        initialValueTrain1 = currentTrialTrain1.spectrumValue;
     }
-    else if (trialSliderToMove == "brigSlider") {
-        initialValue = currentTrial.brightnessValue;
+    else if (trialSliderToMoveTrain1 == "brigSlider") {
+        initialValueTrain1 = currentTrialTrain1.brightnessValue;
     }
-    else if (trialSliderToMove == "artiSlider") {
-        initialValue = currentTrial.articulationValue;
+    else if (trialSliderToMoveTrain1 == "artiSlider") {
+        initialValueTrain1 = currentTrialTrain1.articulationValue;
     }
-    else if (trialSliderToMove == "enveSlider") {
-        initialValue = currentTrial.envelopeValue;
+    else if (trialSliderToMoveTrain1 == "enveSlider") {
+        initialValueTrain1 = currentTrialTrain1.envelopeValue;
     }
 
-    console.log("initial value: ", initialValue);
+    console.log("initial value: ", initialValueTrain1);
 
     // Add event listeners for answer selection
-    let nextCard = document.getElementById("next-card");  
+    let nextCardTrain1 = document.getElementById("nextCardTrain1");  
 
-    nextCard.addEventListener("click", () => {
+    nextCardTrain1.addEventListener("click", () => {
         //console.log("current value: ", document.getElementById(trialSliderToMove).value);
          // If not accepting answers, return
-        if(!acceptingAnswers) {
+        if(!acceptingAnswersTrain1) {
             //console.log("not accepting answers");
             return;
         }
         // Checks if the trial's slider has been moved; if it hasn't, alert user and return
-        else if (initialValue == document.getElementById(trialSliderToMove).value) {
+        else if (initialValueTrain1 == document.getElementById(trialSliderToMoveTrain1).value) {
             //console.log("slider must be moved");
             $( "div.warning" ).fadeIn( 300 );
             return;
         }
           
         // Fade out the warning div when slider has been moved
-        let warningDiv = document.getElementById("train1Warning");
-        if (warningDiv.style.display == "block") {
+        let warningDivTrain1 = document.getElementById("warningTrain1");
+        if (warningDivTrain1.style.display == "block") {
             $( "div.warning" ).fadeOut( 300 );
         } 
 
         // Set acceptingAnswers to false to prevent double skip
-        acceptingAnswers = false;
+        acceptingAnswersTrain1 = false;
 
         // Update clicked div with colour for feedback 
-        let classToApply = "correct";
+        let classToApplyTrain1 = "correct";
             
         // Apply the appropriate class
-        nextCard.classList.add(classToApply);
+        nextCardTrain1.classList.add(classToApplyTrain1);
 
         // After time period, remove the correct/incorrect class and get the next question
         setTimeout(() => {
-            nextCard.classList.remove(classToApply);
-            getNewTrial();
-            acceptingAnswers = true;
+            nextCardTrain1.classList.remove(classToApplyTrain1);
+            getNewTrialTrain1();
+            acceptingAnswersTrain1 = true;
         }, 1000);
     });
-    availableTrials.shift();
+    availableTrialsTrain1.shift();
 };
 
 hideModal = () => {
@@ -172,7 +173,7 @@ hideModal = () => {
 }
 
 //Shows task complete modal 
-displayModal = () => {
+displayModalTrain1 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = `
@@ -185,4 +186,4 @@ displayModal = () => {
     modal.style.display = "block"
 }
 
-startTraining();
+startTraining1();

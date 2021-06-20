@@ -69,14 +69,14 @@ startGame = () => {
     console.log(questions);
     acceptingAnswers = true;
 
-    availableQuestions = getRandomQuestions(questions, MAX_QUESTIONS);
+    availableQuestions = getRandomQuestionsTest1(questions, MAX_QUESTIONS);
     console.log(availableQuestions);
 
     getNewQuestion();
 }
 
 // Shuffles available questions into a random order
-const getRandomQuestions = (arr, n) => {
+const getRandomQuestionsTest1 = (arr, n) => {
     let len = arr.length;
     if (n > len) {
         throw new RangeError(

@@ -13,6 +13,7 @@ import Training1 from "./views/Training1.js";
 import Testing1 from "./views/Testing1.js";
 import Feedback1 from "./views/Feedback1.js";
 import Training2 from "./views/Training2.js";
+import Testing2 from "./views/Testing2.js";
 
 // Enables forward and back navigation with historyAPI
 const navigateTo = url => {
@@ -35,6 +36,7 @@ const router = async () => {
         { path: "/testing1", view: Testing1 },
         { path: "/feedback1", view: Feedback1 },
         { path: "/training2", view: Training2 },
+        { path: "/testing2", view: Testing2 },
     ];
     
     // Test each route for potential match
@@ -62,7 +64,7 @@ const router = async () => {
 
     // Some paths send html to overlay
     // others send html to taskContainer
-    if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1', '/feedback1'].includes(match.route.path)) {
+    if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1', '/feedback1', '/testing2'].includes(match.route.path)) {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";
@@ -72,6 +74,11 @@ const router = async () => {
             let test1Script = document.createElement("script");
             test1Script.src = "static/js/test1.js";
             document.getElementById("overlayContent").append(test1Script);
+        }
+        else if (['/testing2'].includes(match.route.path)) {
+            let test2Script = document.createElement("script");
+            test2Script.src = "static/js/test2.js";
+            document.getElementById("overlayContent").append(test2Script);
         }
     }   
     else {

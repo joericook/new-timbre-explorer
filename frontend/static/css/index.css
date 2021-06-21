@@ -549,7 +549,7 @@
 
 /* Quiz Styling */
 .question-holder {
-  height: 7em;
+  height: 5em;
   width: 45em;
   text-align: center;
   margin-right: 0px;
@@ -642,6 +642,37 @@
 
 .incorrect {
   background-color: lightpink;
+}
+
+/* 'Bingo' Styling */
+.bingo-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bingo-answer-container {
+  display: flex;
+  flex-direction: initial;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  width: 12vw;
+  height: 15vh;
+  /*background-color: rgb(211, 211, 211);*/
+}
+
+.bingo-answer-prefix {
+  background-color: #6F809F;
+  color: white;
+  padding: 1.5em 0.6em;
+  width: 8%;
+  margin: 0; 
+}
+
+.bingo-answer-text {
+  padding: 1em;
+  width: 100%;
+  margin: 0;
 }
 
 /* Modal Styling */

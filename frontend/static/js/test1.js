@@ -1,5 +1,5 @@
 // Questions in JSON format
-let questions = [
+let questionsTest1 = [
     {
         "id":1,
         "question":"1) Identify the dimension and direction to change sound A into sound B.",
@@ -51,28 +51,28 @@ let questions = [
 ]
 
 // Declare variables
-const question = document.getElementById("question");
-const answers = Array.from(document.getElementsByClassName("answer-text"));
-const questionCounterText = document.getElementById("counter");
-const scoreText = document.getElementById("score");
+const questionTest1 = document.getElementById("questionTest1");
+const answersTest1 = Array.from(document.getElementsByClassName("answer-text"));
+const questionCounterTextTest1 = document.getElementById("counterTextTest1");
+const scoreTextTest1 = document.getElementById("scoreTest1");
 
-let questionCounter;
-let score;
-let scoreToAdd;
-const MAX_QUESTIONS = 3;
+let questionCounterTest1;
+let scoreTest1;
+let scoreToAddTest1;
+const MAX_QUESTIONS_TEST1 = 3;
 // THIS doesn't need to be declared as long as train.js is run first
 // let acceptingAnswers;
 
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    console.log(questions);
+startTest1 = () => {
+    questionCounterTest1 = 0;
+    scoreTest1 = 0;
+    console.log(questionsTest1);
     acceptingAnswers = true;
 
-    availableQuestions = getRandomQuestionsTest1(questions, MAX_QUESTIONS);
+    availableQuestions = getRandomQuestionsTest1(questionsTest1, MAX_QUESTIONS_TEST1);
     console.log(availableQuestions);
 
-    getNewQuestion();
+    getNewQuestionTest1();
 }
 
 // Shuffles available questions into a random order
@@ -91,37 +91,37 @@ const getRandomQuestionsTest1 = (arr, n) => {
     return (selected = shuffled.slice(0, n));
 }
 
-const getNewQuestion = () => {
+const getNewQuestionTest1 = () => {
     // End when all questions have been shown
     if (availableQuestions.length === 0) {
         //console.log("No more questions")
-        displayResults();
+        displayModalTest1();
         return;
     }
 
     // Increment question counter and update display
-    questionCounter++;
-    questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+    questionCounterTest1++;
+    questionCounterTextTest1.innerText = questionCounterTest1 + "/" + MAX_QUESTIONS_TEST1;
 
     // Update display with current question
     currentQuestion = availableQuestions[0];
     //console.log(currentQuestion);
-    question.innerText = currentQuestion.question;
+    questionTest1.innerText = currentQuestion.question;
 
     // Update with correct audio files for each question
-    document.getElementById("soundA").setAttribute("src", currentQuestion.soundASource);
-    document.getElementById("soundB").setAttribute("src", currentQuestion.soundBSource);
+    document.getElementById("soundATest1").setAttribute("src", currentQuestion.soundASource);
+    document.getElementById("soundBTest1").setAttribute("src", currentQuestion.soundBSource);
 
     // Display answers for each question
-    answers.forEach((answer) => {
+    answersTest1.forEach((answer) => {
         answer.innerText = currentQuestion[answer.dataset["answer"]];
     });
 
     // 3 points for first attempt, 2 for second, 1 for third
-    scoreToAdd = 3;
+    scoreToAddTest1 = 3;
 
     // Add event listeners for answer selection
-    answers.forEach((answer) => {
+    answersTest1.forEach((answer) => {
         answer.addEventListener("click", (e) => {
             // If not accepting answers, return
             if(!acceptingAnswers) {
@@ -141,13 +141,13 @@ const getNewQuestion = () => {
             // If correct answer is clicked, increment score and set class to correct
             if (answerLetter === currentQuestion.answer) {
                 console.log("correct answer");
-                score += scoreToAdd;
-                scoreText.innerText = score;
+                scoreTest1 += scoreToAddTest1;
+                scoreTextTest1.innerText = scoreTest1;
                 classToApply = "correct";
             }
             // If incorrect answer is clicked for first and second attempts, decrement scoreToAdd, give negative feedback, then return
-            else if (scoreToAdd > 1) {
-                scoreToAdd -= 1;
+            else if (scoreToAddTest1 > 1) {
+                scoreToAddTest1 -= 1;
                 clickedAnswer.parentElement.classList.add(classToApply);
                 setTimeout(() => {
                     clickedAnswer.parentElement.classList.remove(classToApply);
@@ -165,7 +165,7 @@ const getNewQuestion = () => {
             // After time period, remove the correct/incorrect class and get the next question
             setTimeout(() => {
                 clickedAnswer.parentElement.classList.remove(classToApply);
-                getNewQuestion();
+                getNewQuestionTest1();
                 acceptingAnswers = true;
             }, 1500);
         });
@@ -179,7 +179,7 @@ hideModal = () => {
 }
 
 //Shows task complete modal 
-displayResults = () => {
+displayModalTest1 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = `
@@ -192,4 +192,4 @@ displayResults = () => {
     modal.style.display = "block"
 }
 
-startGame();
+startTest1();

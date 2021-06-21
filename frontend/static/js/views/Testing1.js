@@ -11,7 +11,7 @@ export default class extends AbstractView {
             <div class="infoContainer">
 
                 <div class="question-holder">
-                    <h1 id="question">Answer the following question:</h1>  
+                    <h1 id="questionTest1">Answer the following question:</h1>  
                 </div>
 
                 
@@ -19,19 +19,19 @@ export default class extends AbstractView {
                 <div class="intro">
                     <div class="sound-holder">
                         <p class="prefix">A</p>
-                        <audio id="soundA" controls src='' type="audio/flac"></audio>
+                        <audio id="soundATest1" controls src='' type="audio/flac"></audio>
                     </div>
                     <div class="sound-holder">
                         <p class="prefix">B</p>
-                        <audio id="soundB" controls src='' type="audio/flac"></audio>
+                        <audio id="soundBTest1" controls src='' type="audio/flac"></audio>
                     </div>
                     <div class="counter">
                         <p class="prefix">Question</p>
-                        <h1 id="counter">1/3</h1>  
+                        <h1 id="counterTextTest1">1/3</h1>  
                     </div>
                     <div class="score">
                         <p class="prefix">Score</p>
-                        <h1 id="score">0</h1>  
+                        <h1 id="scoreTest1">0</h1>  
                     </div>  
                 </div>
     

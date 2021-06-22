@@ -16,6 +16,7 @@ import Training2 from "./views/Training2.js";
 import Testing2 from "./views/Testing2.js";
 import Feedback2 from "./views/Feedback2.js";
 import Testing3 from "./views/Testing3.js";
+import Feedback3 from "./views/Feedback3.js";
 
 // Enables forward and back navigation with historyAPI
 const navigateTo = url => {
@@ -41,6 +42,7 @@ const router = async () => {
         { path: "/testing2", view: Testing2 },
         { path: "/feedback2", view: Feedback2 },
         { path: "/testing3", view: Testing3 },
+        { path: "/feedback3", view: Feedback3 },
     ];
     
     // Test each route for potential match
@@ -69,7 +71,7 @@ const router = async () => {
     // Some paths send html to overlay
     // others send html to taskContainer
     if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1', '/feedback1',
-         '/testing2', '/feedback2', '/testing3'].includes(match.route.path)) {
+         '/testing2', '/feedback2', '/testing3', '/feedback3'].includes(match.route.path)) {
         console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";

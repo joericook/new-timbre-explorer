@@ -675,6 +675,16 @@
   margin: 0;
 }
 
+/* Alternate answer prefix for third test */
+.test3-answer-prefix {
+  background-color: #6F809F;
+  color: white;
+  padding: 2.5em 0.4em;
+  width: 2%;
+  margin: 0; 
+  /*padding-left: 1.5vw;*/
+}
+
 /* Modal Styling */
 /* The Modal (background) */
 .modal {

@@ -40,7 +40,7 @@ export default class extends AbstractView {
                 </div>
                 <div class="row">
                     <div class="warning" id="warningTrain2">
-                        <p style="margin: 0.3em 0.5em 0 0.5em">Try moving the sliders to match Sound B before moving on...</p>
+                        <p style="margin: 0.3em 0.5em 0 0.5em">Try moving <strong>both</strong> sliders to match Sound B before moving on...</p>
                     </div>
                 </div>
             </div>

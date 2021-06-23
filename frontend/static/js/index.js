@@ -17,6 +17,7 @@ import Testing2 from "./views/Testing2.js";
 import Feedback2 from "./views/Feedback2.js";
 import Testing3 from "./views/Testing3.js";
 import Feedback3 from "./views/Feedback3.js";
+import Conclusion from "./views/Conclusion.js";
 
 // Enables forward and back navigation with historyAPI
 const navigateTo = url => {
@@ -43,6 +44,7 @@ const router = async () => {
         { path: "/feedback2", view: Feedback2 },
         { path: "/testing3", view: Testing3 },
         { path: "/feedback3", view: Feedback3 },
+        { path: "/conclusion", view: Conclusion },
     ];
     
     // Test each route for potential match

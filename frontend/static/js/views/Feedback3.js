@@ -101,8 +101,11 @@ export default class extends AbstractView {
                                 <input type="radio" name="timbreLearn" value="5" required>
                                 <label>5</label>
                             </li>
+                            <br><br>
+                            <label for="timbreLearnText" class="form-extra-label">Your explanation here: </label>
+                            <input id="timbreLearnText" type="text" name="timbreLearnText" class="form-extra-text">
                         </ul>
-
+                                                
                         <label>
                             <strong>The process of sound synthesis</strong> - There are many different techniques used to synthesize instruments. Frequency filters 
                             and amplitude-time envelopes are common effects used in this process to create a desired sound, often applied to a base 
@@ -129,6 +132,9 @@ export default class extends AbstractView {
                                 <input type="radio" name="synthLearn" value="5" required>
                                 <label>5</label>
                             </li>
+                            <br><br>
+                            <label for="synthLearnText" class="form-extra-label">Your explanation here: </label>
+                            <input id="synthLearnText" type="text" name="synthLearnText" class="form-extra-text">
                         </ul>
 
                         <label>
@@ -156,6 +162,9 @@ export default class extends AbstractView {
                                 <input type="radio" name="filterLearn" value="5" required>
                                 <label>5</label>
                             </li>
+                            <br><br>
+                            <label for="filterLearnText" class="form-extra-label">Your explanation here: </label>
+                            <input id="filterLearnText" type="text" name="filterLearnText" class="form-extra-text">
                         </ul>
 
                         <label>
@@ -184,6 +193,9 @@ export default class extends AbstractView {
                                 <input type="radio" name="freqLearn" value="5" required>
                                 <label>5</label>
                             </li>
+                            <br><br>
+                            <label for="freqLearnText" class="form-extra-label">Your explanation here: </label>
+                            <input id="freqLearnText" type="text" name="freqLearnText" class="form-extra-text">
                         </ul>
                             
                     </div>
@@ -192,7 +204,7 @@ export default class extends AbstractView {
                          
                     <br><br>
                     <div class="nextButton">
-                        <a class="nextText" href="/testing3" data-link>Next<a/>
+                        <a class="nextText" href="/conclusion" data-link>Next<a/>
                     </div>
 
                 </form>

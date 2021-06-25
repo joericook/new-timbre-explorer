@@ -40,10 +40,10 @@ export default class extends AbstractView {
                         </div>
                         <br>
                         <p>3) In what country did you spend the formative years of your childhood and youth?:</p>
-                        <input type="text" id="countryInput1" name="country1" required>
+                        <input type="text" id="countryInput1" name="countryBorn" required>
                         <br><br>
                         <p>4) What is your current country of residency?:</p>
-                        <input type="text" id="countryInput2" name="country2" required>
+                        <input type="text" id="countryInput2" name="countryCurrent" required>
                         <br><br>
                         <p>5) Which title best describes you?:</p>
                         <div>

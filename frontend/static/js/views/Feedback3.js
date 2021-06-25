@@ -72,8 +72,10 @@ export default class extends AbstractView {
                     <br>
                     <div class="roundedBox">
                         <p>
-                            For each of the following, read the description and rate how well the description is demonstrated by the Timbre Explorer. 
-                            How much did using this tool increase your understanding of each concept and how?:
+                            For each of the following, read the description and rate how well the description is demonstrated by the Timbre Explorer. Rate
+                            each concept from 1-5, with 1 being not at all and 5 being that the concept is very well demonstrated.
+                            <br>
+                            Optionally, explain how the Timbre Explorer helped to improve your understanding:
                         </p>
                         <br>
                         <label>

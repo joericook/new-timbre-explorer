@@ -7,7 +7,7 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        return `
+        return /*html*/`
             <div class="infoContainer">
                 <div class="instruction-holder">
                     <p>Use the corresponding sliders to move timbrally from Sound A to Sound B. As you adjust each slider, play the Timbre Explorer and listen 

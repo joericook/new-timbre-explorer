@@ -7,7 +7,7 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        return `
+        return /*html*/`
             <div class="infoContainer">
                 <h2>Thank you for your Participation!</h2>
                 <p>

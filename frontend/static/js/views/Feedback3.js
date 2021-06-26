@@ -7,7 +7,7 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        return `
+        return /*html*/`
             <div class="infoContainer">
                 <h1>Task 3 Feedback</h1>
                 <br>
@@ -206,7 +206,7 @@ export default class extends AbstractView {
                          
                     <br><br>
                     <div class="nextButton">
-                        <a class="nextText" href="/conclusion" data-link>Next<a/>
+                        <a class="nextText" href="/conclusion" data-link>Next</a>
                     </div>
 
                 </form>

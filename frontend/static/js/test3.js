@@ -223,7 +223,7 @@ hideModal = () => {
 displayModalTest3 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = `
+    modalBody.innerHTML = /*html*/`
                             <p>Click</p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/feedback3" data-link>Next</a>

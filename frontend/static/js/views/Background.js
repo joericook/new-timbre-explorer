@@ -7,7 +7,7 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        return `
+        return /*html*/`
             <div class="infoContainer">
                 <h1>User Background</h1>
                 <br>
@@ -36,7 +36,7 @@ export default class extends AbstractView {
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" id="genderChoice5" name="gender" value="prefer to self-describe" required>
                             <label for="genderChoice5">Prefer to self-describe:</label>
-                            <input type="text" id="self-describedGender name="otherGender"
+                            <input type="text" id="self-describedGender" name="otherGender">
                         </div>
                         <br>
                         <p>3) In what country did you spend the formative years of your childhood and youth?:</p>
@@ -65,7 +65,6 @@ export default class extends AbstractView {
                             <input type="radio" id="musicianTitleChoice6" name="musicianTitle" value="Professional musician" required>
                             <label for="musicianTitleChoice6">Professional musician</label>
                         </div>
-                    </div>
                     </div>
 
                     <br><br>
@@ -196,11 +195,12 @@ export default class extends AbstractView {
                             </li>
                         </ul>
                     </div>
-                    <button type="submit">Submit</button>
+                    <br><br>
+                    <button onclick="event.preventDefault(); saveBackgroundForm()">Submit</button>
                 </form>  
                 <br><br>
                 <div class="nextButton">
-                    <a class="nextText" href="/walkthrough" data-link>Next<a/>
+                    <a id="backgroundNext" class="nextText" style="display: none" href="/walkthrough" data-link>Next</a>
                 </div>
             </div>
         `;

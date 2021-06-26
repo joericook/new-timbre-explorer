@@ -126,6 +126,12 @@
           width: 20vw;
         }
 
+        form input[type=radio] {
+          border: 0px;
+          width: 1.1em;
+          height: 1.1em;
+        }
+
   /* All app sliders */
   .slider {
     -webkit-appearance: none;   /* Override default CSS styles */
@@ -517,6 +523,29 @@
   color: #6F809F;
 }
 
+.submit-row {
+  display: flex;
+  justify-content: initial;
+  width: 100%;
+}
+
+.submit-button {
+  height: 2em;
+  width: 5em;
+  font-size: 1.05em;
+  margin-right: 1em;
+}
+
+.submit-warning {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  color: #d60000;
+  border-radius: 0.5vw;
+  border: solid #d60000 0.2vw;
+  height: 2em;
+}
+
 /* Training Styling */
 .instruction-holder {
   width: 100%;
@@ -553,7 +582,6 @@
   border-radius: 0.5vw;
   border: solid #d60000 0.2vw;
   height: 2em;
-  
 }
 
 /* Quiz Styling */

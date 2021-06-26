@@ -20,48 +20,48 @@ export default class extends AbstractView {
                         <label>How challenging was it for you to do this task?:</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="task2Difficulity" value="1" required>
-                                <label>Very Easy</label>
+                                <input type="radio" id="task3DifficultyChoice1" name="task3Difficulity" value="1" required>
+                                <label for="task3DifficultyChoice1">Very Easy</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Difficulity" value="2" required>
-                                <label>Easy</label>
+                                <input type="radio" id="task3DifficultyChoice2" name="task3Difficulity" value="2" required>
+                                <label for="task3DifficultyChoice2">Easy</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Difficulity" value="3" required>
-                                <label>Neutral</label>
+                                <input type="radio" id="task3DifficultyChoice3" name="task3Difficulity" value="3" required>
+                                <label for="task3DifficultyChoice3">Neutral</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Difficulity" value="4" required>
-                                <label>Challenging</label>
+                                <input type="radio" id="task3DifficultyChoice4" name="task3Difficulity" value="4" required>
+                                <label for="task3DifficultyChoice4">Challenging</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Difficulity" value="5" required>
-                                <label>Very Challenging</label>
+                                <input type="radio" id="task3DifficultyChoice5" name="task3Difficulity" value="5" required>
+                                <label for="task3DifficultyChoice5">Very Challenging</label>
                             </li>
                         </ul>
 
                         <label>How much did you enjoy the task you just completed?:</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="task2Enjoyment" value="1" required>
-                                <label>Not at all</label>
+                                <input type="radio" id="task3EnjoymentChoice1" name="task3Enjoyment" value="1" required>
+                                <label for="task3EnjoymentChoice1">Not at all</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Enjoyment" value="2" required>
-                                <label>Slightly</label>
+                                <input type="radio" id="task3EnjoymentChoice2" name="task3Enjoyment" value="2" required>
+                                <label for="task3EnjoymentChoice2">Slightly</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Enjoyment" value="3" required>
-                                <label>Somewhat</label>
+                                <input type="radio" id="task3EnjoymentChoice3" name="task3Enjoyment" value="3" required>
+                                <label for="task3EnjoymentChoice3">Somewhat</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Enjoyment" value="4" required>
-                                <label>Moderately</label>
+                                <input type="radio" id="task3EnjoymentChoice4" name="task3Enjoyment" value="4" required>
+                                <label for="task3EnjoymentChoice4">Moderately</label>
                             </li>
                             <li>
-                                <input type="radio" name="task2Enjoyment" value="5" required>
-                                <label>Very Much</label>
+                                <input type="radio" id="task3EnjoymentChoice5" name="task3Enjoyment" value="5" required>
+                                <label for="task3EnjoymentChoice5">Very Much</label>
                             </li>
                         </ul>
                     </div>
@@ -201,15 +201,18 @@ export default class extends AbstractView {
                         </ul>
                             
                     </div>
-
-                    <button type="submit">Submit</button>
-                         
-                    <br><br>
-                    <div class="nextButton">
-                        <a class="nextText" href="/conclusion" data-link>Next</a>
+                    <br>
+                    <div class="submit-row">
+                        <!-- Prevent default behaviour and save to feedback1Data object -->
+                        <button onclick="event.preventDefault(); saveForm('feedback3');" id="feedback3Submit" class="submit-button">Submit</button>
+                        <div class="submit-warning" id="feedback3Warning">
+                            <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>
+                        </div>
                     </div>
-
-                </form>
+                </form>  
+                <div class="nextButton">
+                    <a id="feedback3Next" class="nextText" style="display: none" href="/conclusion" data-link>Next</a>
+                </div>
             </div>
         `;
     }

@@ -74,7 +74,7 @@ const router = async () => {
     // others send html to taskContainer
     if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1', '/feedback1',
          '/testing2', '/feedback2', '/testing3', '/feedback3'].includes(match.route.path)) {
-        console.log("overlayContent");
+        //console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "block";
 
@@ -96,7 +96,7 @@ const router = async () => {
         }
     }   
     else {
-        console.log("taskContainer");
+        //console.log("taskContainer");
         document.querySelector("#taskContainer").innerHTML = await view.getHtml();
         document.getElementById("overlay").style.display = "none";
 
@@ -117,9 +117,8 @@ const router = async () => {
     document.getElementById("overlay").scrollTo(0, 0);
     document.getElementById("overlay").scrollTo(0, 0);
 
-    // Console log current view
     //console.log(match.route.view);
-    console.log(match.route.path);
+    //console.log(match.route.path);
 };
 
 // Enable navigating forward and back

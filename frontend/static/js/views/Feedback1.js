@@ -65,11 +65,17 @@ export default class extends AbstractView {
                             </li>
                         </ul>
                     </div>
-                    <button type="submit">Submit</button>
+                    <br>
+                    <div class="submit-row">
+                        <!-- Prevent default behaviour and save to feedback1Data object -->
+                        <button onclick="event.preventDefault(); saveForm('feedback1');" id="feedback1Submit" class="submit-button">Submit</button>
+                        <div class="submit-warning" id="feedback1Warning">
+                            <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>
+                        </div>
+                    </div>
                 </form>  
-                <br><br>
                 <div class="nextButton">
-                    <a class="nextText" href="/training2" data-link>Next</a>
+                    <a id="feedback1Next" class="nextText" style="display: none" href="/training2" data-link>Next</a>
                 </div>
             </div>
         `;

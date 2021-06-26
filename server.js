@@ -28,8 +28,8 @@ async function storeResponse(response) {
 // Serves static directory when 'static' is included in pathname
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));
 
-app.use(express.json());                // Replaces the depreciated 'bodyParser'
-app.use(express.urlencoded());          // Parse URL-encoded bodies
+app.use(express.json());                                  // Replaces the depreciated 'bodyParser'
+app.use(express.urlencoded({ extended: true }));          // Parse URL-encoded bodies
 
 // Serve .flac files when requested
 //app.get("/stimuli_HugginsPitch/*.flac", (req, res) => {

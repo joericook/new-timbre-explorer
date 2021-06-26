@@ -12,7 +12,7 @@ export default class extends AbstractView {
                 <h1>User Background</h1>
                 <br>
                 <p>
-                    Before we begin, please answer the following questions about yourself:
+                    Before we begin, please answer the following questions about yourself:<br>
                 </p>
                 <br>
                 <form id="backgroundForm">
@@ -36,7 +36,7 @@ export default class extends AbstractView {
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" id="genderChoice5" name="gender" value="prefer to self-describe" required>
                             <label for="genderChoice5">Prefer to self-describe:</label>
-                            <input type="text" id="self-describedGender" name="otherGender">
+                            <input type="text" id="self-describedGender" name="otherGender" style="width:7vw">
                         </div>
                         <br>
                         <p>3) In what country did you spend the formative years of your childhood and youth?:</p>
@@ -78,127 +78,132 @@ export default class extends AbstractView {
                         <label>6) Playing the piano/keyboards</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="pianoKnowledge" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="pianoKnowledgeChoice1" name="pianoKnowledge" value="1" required>
+                                <label for="pianoKnowledgeChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="pianoKnowledge" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="pianoKnowledgeChoice2" name="pianoKnowledge" value="2" required>
+                                <label for="pianoKnowledgeChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="pianoKnowledge" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="pianoKnowledgeChoice3" name="pianoKnowledge" value="3" required>
+                                <label for="pianoKnowledgeChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="pianoKnowledge" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="pianoKnowledgeChoice4" name="pianoKnowledge" value="4" required>
+                                <label for="pianoKnowledgeChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="pianoKnowledge" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="pianoKnowledgeChoice5" name="pianoKnowledge" value="5" required>
+                                <label for="pianoKnowledgeChoice5">5</label>
                             </li>
                         </ul>
 
                         <label>7) Timbre (tone/sound quality)</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="timbreKnowledge" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="timbreKnowledgeChoice1" name="timbreKnowledge" value="1" required>
+                                <label for="timbreKnowledgeChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreKnowledge" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="timbreKnowledgeChoice2" name="timbreKnowledge" value="2" required>
+                                <label for="timbreKnowledgeChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreKnowledge" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="timbreKnowledgeChoice3" name="timbreKnowledge" value="3" required>
+                                <label for="timbreKnowledgeChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreKnowledge" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="timbreKnowledgeChoice4" name="timbreKnowledge" value="4" required>
+                                <label for="timbreKnowledgeChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreKnowledge" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="timbreKnowledgeChoice5" name="timbreKnowledge" value="5" required>
+                                <label for="timbreKnowledgeChoice5">5</label>
                             </li>
                         </ul>
 
                         <label>8) The process of sound synthesis</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="synthKnowledge" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="synthKnowledgeChoice1" name="synthKnowledge" value="1" required>
+                                <label for="synthKnowledgeChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthKnowledge" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="synthKnowledgeChoice2" name="synthKnowledge" value="2" required>
+                                <label for="synthKnowledgeChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthKnowledge" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="synthKnowledgeChoice3" name="synthKnowledge" value="3" required>
+                                <label for="synthKnowledgeChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthKnowledge" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="synthKnowledgeChoice4" name="synthKnowledge" value="4" required>
+                                <label for="synthKnowledgeChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthKnowledge" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="synthKnowledgeChoice5" name="synthKnowledge" value="5" required>
+                                <label for="synthKnowledgeChoice5">5</label>
                             </li>
                         </ul>
 
                         <label>9) Frequency filters</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="filterKnowledge" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="filterKnowledgeChoice1" name="filterKnowledge" value="1" required>
+                                <label for="filterKnowledgeChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterKnowledge" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="filterKnowledgeChoice2" name="filterKnowledge" value="2" required>
+                                <label for="filterKnowledgeChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterKnowledge" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="filterKnowledgeChoice3" name="filterKnowledge" value="3" required>
+                                <label for="filterKnowledgeChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterKnowledge" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="filterKnowledgeChoice4" name="filterKnowledge" value="4" required>
+                                <label for="filterKnowledgeChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterKnowledge" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="filterKnowledgeChoice5" name="filterKnowledge" value="5" required>
+                                <label for="filterKnowledgeChoice5">5</label>
                             </li>
                         </ul>
 
                         <label>10) The frequency domain / Fourier transform</label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="freqKnowledge" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="freqKnowledgeChoice1" name="freqKnowledge" value="1" required>
+                                <label for="freqKnowledgeChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqKnowledge" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="freqKnowledgeChoice2" name="freqKnowledge" value="2" required>
+                                <label for="freqKnowledgeChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqKnowledge" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="freqKnowledgeChoice3" name="freqKnowledge" value="3" required>
+                                <label for="freqKnowledgeChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqKnowledge" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="freqKnowledgeChoice4" name="freqKnowledge" value="4" required>
+                                <label for="freqKnowledgeChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqKnowledge" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="freqKnowledgeChoice5" name="freqKnowledge" value="5" required>
+                                <label for="freqKnowledgeChoice5">5</label>
                             </li>
                         </ul>
                     </div>
-                    <br><br>
-                    <button onclick="event.preventDefault(); saveBackgroundForm()">Submit</button>
+                    <br>
+                    <div class="submit-row">
+                        <!-- Prevent default behaviour and save to backgroundData object -->
+                        <button onclick="event.preventDefault(); saveForm('background')" id="backgroundSubmit" class="submit-button">Submit</button>
+                        <div class="submit-warning" id="backgroundWarning">
+                            <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>
+                        </div>
+                    </div>
                 </form>  
-                <br><br>
                 <div class="nextButton">
                     <a id="backgroundNext" class="nextText" style="display: none" href="/walkthrough" data-link>Next</a>
                 </div>

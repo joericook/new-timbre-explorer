@@ -1,7 +1,9 @@
+let hearingData;
 let backgroundData;
 let feedback1Data;
 let feedback2Data;
 let feedback3Data;
+let conclusionData;
 
 // If form is valid, save to background data object, show next button, hide and disable submit button
 // If invalid, display warning 
@@ -40,7 +42,11 @@ function saveForm(page) {
         //$( `#${page}Submit` ).fadeTo(300, 0);
         document.getElementById(`${page}Submit`).disabled = true;
         document.getElementById(`${page}Next`).style.display = "block";
-        if (page === "background") {
+        if (page === "hearing") {
+            hearingData = Object.fromEntries(new FormData(form).entries());
+            console.log("hearingData: ", hearingData);
+        }
+        else if (page === "background") {
             backgroundData = Object.fromEntries(new FormData(form).entries());
             console.log("backgroundData: ", backgroundData);
         }
@@ -56,5 +62,34 @@ function saveForm(page) {
             feedback3Data = Object.fromEntries(new FormData(form).entries());
             console.log("feedback3Data: ", feedback3Data);
         }   
+    } 
+}
+
+// Saves preset suggestions to DB, separately from user data
+function savePresets() {
+    let form = document.getElementById("conclusionForm");
+    let isValidForm = form.checkValidity();
+    console.log("Form Validity: ", isValidForm);
+    if (isValidForm === false) {
+        $( "#conclusionWarning" ).fadeTo(300, 1);
+    }
+    else {
+        if (document.getElementById("conclusionWarning").style.opacity == 1) {
+            $( "#conclusionWarning" ).fadeTo(300, 0);
+        }
+        document.getElementById("conclusionSubmit").disabled = true;
+        conclusionData = Object.fromEntries(new FormData(form).entries());
+        console.log("conclusionData: ", conclusionData);
+
+        const response = conclusionData;
+
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(response),
+        };
+        fetch("/api/store-response", requestOptions).then( () => {
+            console.log("presets saved to DB");
+        });
     } 
 }

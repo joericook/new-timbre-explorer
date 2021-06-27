@@ -17,8 +17,15 @@ export default class extends AbstractView {
                 <br>
                 <form id="conclusionForm">
                     <label for="presetSuggestions">Your suggestions here: </label>
-                    <input id="presetSuggestions" type="text" name="presetSuggestions" class="form-extra-text">
-                    <button type="submit">Submit</button>
+                    <input id="presetSuggestions" type="text" name="presetSuggestions" class="form-extra-text" required>
+                    <br><br>
+                    <div class="submit-row">
+                        <!-- Prevent default behaviour and save to Data object -->
+                        <button onclick="event.preventDefault(); savePresets();" id="conclusionSubmit" class="submit-button">Submit</button>
+                        <div class="submit-warning" id="conclusionWarning">
+                            <p style="margin: 0.3em 0.5em 0 0.5em;">Enter some preset suggestions before submitting...</p>
+                        </div>
+                    </div>
                 </form>
             </div>
         `;

@@ -84,24 +84,24 @@ export default class extends AbstractView {
                         </label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="timbreLearn" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="timbreLearnChoice1" name="timbreLearn" value="1" required>
+                                <label for="timbreLearnChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreLearn" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="timbreLearnChoice2" name="timbreLearn" value="2" required>
+                                <label for="timbreLearnChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreLearn" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="timbreLearnChoice3" name="timbreLearn" value="3" required>
+                                <label for="timbreLearnChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreLearn" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="timbreLearnChoice4" name="timbreLearn" value="4" required>
+                                <label for="timbreLearnChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="timbreLearn" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="timbreLearnChoice5" name="timbreLearn" value="5" required>
+                                <label for="timbreLearnChoice5">5</label>
                             </li>
                             <br><br>
                             <label for="timbreLearnText" class="form-extra-label">Your explanation here: </label>
@@ -115,24 +115,24 @@ export default class extends AbstractView {
                         </label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="synthLearn" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="synthLearnChoice1" name="synthLearn" value="1" required>
+                                <label for="synthLearnChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthLearn" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="synthLearnChoice2" name="synthLearn" value="2" required>
+                                <label for="synthLearnChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthLearn" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="synthLearnChoice3" name="synthLearn" value="3" required>
+                                <label for="synthLearnChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthLearn" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="synthLearnChoice4" name="synthLearn" value="4" required>
+                                <label for="synthLearnChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="synthLearn" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="synthLearnChoice5" name="synthLearn" value="5" required>
+                                <label for="synthLearnChoice5">5</label>
                             </li>
                             <br><br>
                             <label for="synthLearnText" class="form-extra-label">Your explanation here: </label>
@@ -145,24 +145,24 @@ export default class extends AbstractView {
                         </label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="filterLearn" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="filterLearnChoice1" name="filterLearn" value="1" required>
+                                <label for="filterLearnChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterLearn" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="filterLearnChoice2" name="filterLearn" value="2" required>
+                                <label for="filterLearnChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterLearn" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="filterLearnChoice3" name="filterLearn" value="3" required>
+                                <label for="filterLearnChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterLearn" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="filterLearnChoice4" name="filterLearn" value="4" required>
+                                <label for="filterLearnChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="filterLearn" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="filterLearnChoice5" name="filterLearn" value="5" required>
+                                <label for="filterLearnChoice5">5</label>
                             </li>
                             <br><br>
                             <label for="filterLearnText" class="form-extra-label">Your explanation here: </label>
@@ -176,24 +176,24 @@ export default class extends AbstractView {
                         </label>
                         <ul class="likert">
                             <li>
-                                <input type="radio" name="freqLearn" value="1" required>
-                                <label>1</label>
+                                <input type="radio" id="freqLearnChoice1" name="freqLearn" value="1" required>
+                                <label for="freqLearnChoice1">1</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqLearn" value="2" required>
-                                <label>2</label>
+                                <input type="radio" id="freqLearnChoice2" name="freqLearn" value="2" required>
+                                <label for="freqLearnChoice2">2</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqLearn" value="3" required>
-                                <label>3</label>
+                                <input type="radio" id="freqLearnChoice3" name="freqLearn" value="3" required>
+                                <label for="freqLearnChoice3">3</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqLearn" value="4" required>
-                                <label>4</label>
+                                <input type="radio" id="freqLearnChoice4" name="freqLearn" value="4" required>
+                                <label for="freqLearnChoice4">4</label>
                             </li>
                             <li>
-                                <input type="radio" name="freqLearn" value="5" required>
-                                <label>5</label>
+                                <input type="radio" id="freqLearnChoice5" name="freqLearn" value="5" required>
+                                <label for="freqLearnChoice5">5</label>
                             </li>
                             <br><br>
                             <label for="freqLearnText" class="form-extra-label">Your explanation here: </label>
@@ -203,7 +203,7 @@ export default class extends AbstractView {
                     </div>
                     <br>
                     <div class="submit-row">
-                        <!-- Prevent default behaviour and save to feedback1Data object -->
+                        <!-- Prevent default behaviour and save to Data object -->
                         <button onclick="event.preventDefault(); saveForm('feedback3');" id="feedback3Submit" class="submit-button">Submit</button>
                         <div class="submit-warning" id="feedback3Warning">
                             <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>

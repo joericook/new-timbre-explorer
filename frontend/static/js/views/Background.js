@@ -197,7 +197,7 @@ export default class extends AbstractView {
                     </div>
                     <br>
                     <div class="submit-row">
-                        <!-- Prevent default behaviour and save to backgroundData object -->
+                        <!-- Prevent default behaviour and save to Data object -->
                         <button onclick="event.preventDefault(); saveForm('background')" id="backgroundSubmit" class="submit-button">Submit</button>
                         <div class="submit-warning" id="backgroundWarning">
                             <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>

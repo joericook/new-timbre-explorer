@@ -5,6 +5,8 @@ let feedback2Data;
 let feedback3Data;
 let conclusionData;
 
+let testing1Data;
+
 // If form is valid, save to background data object, show next button, hide and disable submit button
 // If invalid, display warning 
 //function saveBackgroundForm() {
@@ -64,6 +66,8 @@ function saveForm(page) {
         }   
     } 
 }
+
+
 
 // Saves preset suggestions to DB, separately from user data
 function savePresets() {

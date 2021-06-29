@@ -68,7 +68,7 @@ const getNewQuestionTest2 = () => {
     if (availableQuestions.length === 0) {
         //console.log("No more questions")
         // Append to data object
-        // For test 1: Overall test score; Time elapsed since start of test (s);
+        // For test 2: Overall test score; Time elapsed since start of test (s);
         testing2Data = Object.assign({ "overallTest2": {"scoreTest2": scoreTest2, "timeTest2": ((Date.now() - test2Start) / 1000)} }, testing2Data);
                 console.log(testing2Data);
 
@@ -160,7 +160,7 @@ const getNewQuestionTest2 = () => {
                 // Append question data to object
                 // Question no.: Correct answer; Users Answers; Users score for the question; 
                 testing2Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest2} }, testing2Data);
-                //console.log(testing1Data);
+                //console.log(testing2Data);
                 // Empty 'userAnswers' array before getting next question
                 userAnswers = [];
 

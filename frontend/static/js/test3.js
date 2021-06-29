@@ -89,11 +89,13 @@ let bothQuestionBanks = false;                    // Flags that both synth sound
 startTest3 = () => {
     questionCounterTest3 = 0;
     scoreTest3 = 0;
-    console.log(questionsTest3_1);
+    console.log("questions: ", questionsTest3_1);
     acceptingAnswers = true;
 
+    test3Start = Date.now();
+
     availableQuestions = getRandomQuestionsTest3(questionsTest3_1, MAX_QUESTIONS_TEST3);
-    console.log(availableQuestions);
+    console.log("randomised order: ", availableQuestions);
 
     getNewQuestionTest3();
 }
@@ -119,6 +121,12 @@ const getNewQuestionTest3 = () => {
     if (availableQuestions.length === 0) {
         console.log("No more questions")
         if (bothQuestionBanks === true) {
+
+            // Append to data object
+            // For test 3: Overall test score; Time elapsed since start of test (s);
+            testing3Data = Object.assign({ "overallTest3": {"scoreTest3": scoreTest3, "timeTest3": ((Date.now() - test3Start) / 1000)} }, testing3Data);
+            console.log(testing3Data);
+
             displayModalTest3();
             return;
         }
@@ -153,6 +161,9 @@ const getNewQuestionTest3 = () => {
     // 3 points for first attempt, 2 for second, 1 for third
     scoreToAddTest3 = 3;
 
+    // Array to hold users answers for each question
+    let userAnswers = [];
+
     // Add event listeners for answer selection
     answersTest3.forEach((answer) => {
         answer.addEventListener("click", (e) => {
@@ -175,6 +186,8 @@ const getNewQuestionTest3 = () => {
 
             const answerLetter = clickedAnswer.dataset["answer"]
             //console.log(answerLetter);
+            // Append clicked answer to 'userAnswers'
+            userAnswers.push(answerLetter);
 
             // Update clicked div with colour for correct or incorrect answer
             let classToApply = "incorrect";
@@ -197,7 +210,8 @@ const getNewQuestionTest3 = () => {
                 return;
             }
             else {
-                // If incorrect answer is clicked on third attempt, no change to score, get next question  
+                // If incorrect answer is clicked on third attempt, lower added score to 0, get next question
+                scoreToAddTest3 -= 1;    
             }
 
             // Apply the appropriate class
@@ -206,6 +220,14 @@ const getNewQuestionTest3 = () => {
             // After time period, remove the correct/incorrect class and get the next question
             setTimeout(() => {
                 clickedAnswer.parentElement.classList.remove(classToApply);
+
+                // Append question data to object
+                // Question no.: Correct answer; Users Answers; Users score for the question; 
+                testing3Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest3} }, testing3Data);
+                //console.log(testing3Data);
+                // Empty 'userAnswers' array before getting next question
+                userAnswers = [];
+
                 getNewQuestionTest3();
                 acceptingAnswers = true;
             }, 1500);

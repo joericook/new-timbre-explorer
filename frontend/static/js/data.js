@@ -6,6 +6,8 @@ let feedback3Data;
 let conclusionData;
 
 let testing1Data;
+let testing2Data;
+let testing3Data;
 
 // If form is valid, save to background data object, show next button, hide and disable submit button
 // If invalid, display warning 

@@ -1,7 +1,7 @@
 // Questions with synthesised sounds
 let questionsTest3_1 = [
     {
-        "id":1,
+        "id":"3_1",
         "question":"1_1) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
@@ -12,7 +12,7 @@ let questionsTest3_1 = [
         "answer":"b"
     },  
     {
-        "id":2,
+        "id":"3_2",
         "question":"1_2) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
@@ -23,7 +23,7 @@ let questionsTest3_1 = [
         "answer":"a"
     },  
     {
-        "id":3,
+        "id":"3_3",
         "question":"1_3) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "",
@@ -38,7 +38,7 @@ let questionsTest3_1 = [
 // Questions with real instrument sounds
 let questionsTest3_2 = [
     {
-        "id":1,
+        "id":"4_1",
         "question":"2_1) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
@@ -49,7 +49,7 @@ let questionsTest3_2 = [
         "answer":"c"
     },  
     {
-        "id":2,
+        "id":"4_2",
         "question":"2_2) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
@@ -60,7 +60,7 @@ let questionsTest3_2 = [
         "answer":"a"
     },  
     {
-        "id":3,
+        "id":"4_3",
         "question":"2_3) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "",

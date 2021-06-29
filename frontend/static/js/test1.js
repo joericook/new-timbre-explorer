@@ -1,21 +1,21 @@
 // Questions in JSON format
 let questionsTest1 = [
     {
-        "id":1_1,
+        "id":"1_1",
         "question":"1) Identify the dimension and direction to change sound A into sound B.",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
         "answer":"b"
     },  
     {
-        "id":1_2,
+        "id":"1_2",
         "question":"2) Identify the dimension and direction to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "answer":"i"
     },  
     {
-        "id":1_3,
+        "id":"1_3",
         "question":"3) Identify the dimension and direction to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "",

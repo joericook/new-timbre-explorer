@@ -1,19 +1,19 @@
 // Questions in JSON format
 let questionsTest2 = [
     {
-        "id":1,
+        "id":"2_1",
         "question":"1) Listen to the sound and click the tile with the matching properties.",
         "soundSource": "",
         "answer":"v"
     },  
     {
-        "id":2,
+        "id":"2_2",
         "question":"2) Listen to the sound and click the tile with the matching properties.",
         "soundSource": "",
         "answer":"e"
     },  
     {
-        "id":3,
+        "id":"2_3",
         "question":"3) Listen to the sound and click the tile with the matching properties.",
         "soundSource": "",
         "answer":"s"
@@ -36,11 +36,13 @@ const MAX_QUESTIONS_TEST2 = 3;
 startTest2 = () => {
     questionCounterTest2 = 0;
     scoreTest2 = 0;
-    //console.log(questions);
+    //console.log("questions: ", questionsTest2);
     acceptingAnswers = true;
 
+    test2Start = Date.now();
+
     availableQuestions = getRandomQuestionsTest2(questionsTest2, MAX_QUESTIONS_TEST2);
-    console.log(availableQuestions);
+    console.log("randomised order: ", availableQuestions);
 
     getNewQuestionTest2();
 }
@@ -65,6 +67,11 @@ const getNewQuestionTest2 = () => {
     // End when all questions have been shown
     if (availableQuestions.length === 0) {
         //console.log("No more questions")
+        // Append to data object
+        // For test 1: Overall test score; Time elapsed since start of test (s);
+        testing2Data = Object.assign({ "overallTest2": {"scoreTest2": scoreTest2, "timeTest2": ((Date.now() - test2Start) / 1000)} }, testing2Data);
+                console.log(testing2Data);
+
         displayModalTest2();
         return;
     }
@@ -75,7 +82,7 @@ const getNewQuestionTest2 = () => {
 
     // Update display with current question
     currentQuestion = availableQuestions[0];
-    console.log(currentQuestion);
+    console.log("current question: ", currentQuestion);
     
     //console.log(currentQuestion);
     questionTest2.innerText = currentQuestion.question;
@@ -85,6 +92,9 @@ const getNewQuestionTest2 = () => {
 
     // 3 points for first attempt, 2 for second, 1 for third
     scoreToAddTest2 = 3;
+
+    // Array to hold users answers for each question
+    let userAnswers = [];
 
     // Add event listeners for answer selection
     answers.forEach((answer) => {
@@ -108,6 +118,8 @@ const getNewQuestionTest2 = () => {
             
             const answerLetter = clickedAnswer.dataset["answer"]
             console.log(answerLetter);
+            // Append clicked answer to 'userAnswers'
+            userAnswers.push(answerLetter);
 
             // Update clicked div with colour for correct or incorrect answer
             let classToApply = "incorrect";
@@ -123,7 +135,7 @@ const getNewQuestionTest2 = () => {
             else if (scoreToAddTest2 > 1) {
                 scoreToAddTest2 -= 1;
                 clickedAnswer.parentElement.classList.add(classToApply);
-                console.log("add 'incorrect' class");
+                console.log("incorrect answer");
                 setTimeout(() => {
                     clickedAnswer.parentElement.classList.remove(classToApply);
                     acceptingAnswers = true;
@@ -131,7 +143,8 @@ const getNewQuestionTest2 = () => {
                 return;
             }
             else {
-                // If incorrect answer is clicked on third attempt, no change to score, get next question  
+                // If incorrect answer is clicked on third attempt, lower added score to 0, get next question
+                scoreToAddTest2 -= 1;   
             }
 
             // Apply the appropriate class
@@ -143,6 +156,14 @@ const getNewQuestionTest2 = () => {
                 if (classToApply === "incorrect") {
                     clickedAnswer.parentElement.classList.remove(classToApply);
                 }
+
+                // Append question data to object
+                // Question no.: Correct answer; Users Answers; Users score for the question; 
+                testing2Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest2} }, testing2Data);
+                //console.log(testing1Data);
+                // Empty 'userAnswers' array before getting next question
+                userAnswers = [];
+
                 getNewQuestionTest2();
                 acceptingAnswers = true;
             }, 1500);

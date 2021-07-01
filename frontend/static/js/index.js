@@ -122,6 +122,7 @@ const router = async () => {
 };
 
 // Enable navigating forward and back
+// DEV USE ONLY, this should be disabled in deployment 
 window.addEventListener("popstate", router);
 
 // When page loads
@@ -137,3 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     router();
 });
+
+// Alert when user attempts to reload page
+window.addEventListener('beforeunload', function (e) {
+    // Cancel the event
+    e.preventDefault();
+    // returnValue must be set to show alert on chrome
+    e.returnValue = '';
+  });

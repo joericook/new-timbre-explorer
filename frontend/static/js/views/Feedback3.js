@@ -211,7 +211,7 @@ export default class extends AbstractView {
                     </div>
                 </form>  
                 <div class="nextButton">
-                    <a id="feedback3Next" class="nextText" style="display: none" href="/conclusion" data-link>Next</a>
+                    <a onclick="sendData()" id="feedback3Next" class="nextText" style="display: none" href="/conclusion" data-link>Next</a>
                 </div>
             </div>
         `;

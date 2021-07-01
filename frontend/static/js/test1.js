@@ -73,7 +73,8 @@ const getNewQuestionTest1 = () => {
         // Append to data object
         // For test 1: Overall test score; Time elapsed since start of test (s);
         testing1Data = Object.assign({ "overallTest1": {"scoreTest1": scoreTest1, "timeTest1": ((Date.now() - test1Start) / 1000)} }, testing1Data);
-                console.log(testing1Data);
+        testing1Data = {"testing1": testing1Data};
+        console.log(testing1Data);
 
         displayModalTest1();
         return;

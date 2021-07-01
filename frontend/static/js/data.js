@@ -48,24 +48,29 @@ function saveForm(page) {
         document.getElementById(`${page}Next`).style.display = "block";
         if (page === "hearing") {
             hearingData = Object.fromEntries(new FormData(form).entries());
+            hearingData = {"hearing": hearingData};
             console.log("hearingData: ", hearingData);
         }
         else if (page === "background") {
             backgroundData = Object.fromEntries(new FormData(form).entries());
+            backgroundData = {"background": backgroundData};
             console.log("backgroundData: ", backgroundData);
         }
         else if (page === "feedback1") {
             feedback1Data = Object.fromEntries(new FormData(form).entries());
+            feedback1Data = {"feedback1": feedback1Data};
             console.log("feedback1Data: ", feedback1Data);
         }
         else if (page === "feedback2") {
             feedback2Data = Object.fromEntries(new FormData(form).entries());
+            feedback2Data = {"feedback2": feedback2Data};
             console.log("feedback2Data: ", feedback2Data);
         }   
         else if (page === "feedback3") {
             feedback3Data = Object.fromEntries(new FormData(form).entries());
+            feedback3Data = {"feedback3": feedback3Data};
             console.log("feedback3Data: ", feedback3Data);
-        }   
+        }
     } 
 }
 
@@ -98,4 +103,28 @@ function savePresets() {
             console.log("presets saved to DB");
         });
     } 
+}
+
+function sendData() {
+    let userData = {...hearingData,
+                   ...backgroundData,
+                   ...feedback1Data,
+                   ...feedback2Data,
+                   ...feedback3Data,
+                   ...conclusionData,
+                   ...testing1Data,
+                   ...testing2Data,
+                   ...testing3Data}
+    console.log(userData);
+
+    const response = {userData}
+
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(response),
+    };
+    fetch("/api/store-response", requestOptions).then( () => {
+        console.log("user data saved to DB");
+    });
 }

@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const { MongoClient } = require("mongodb");
 
+// Separate databases for development and production
 let dbName;
 const collectionName = "responses";
 if (process.env.NODE_ENV !== "production") {
@@ -13,6 +14,7 @@ if (process.env.NODE_ENV !== "production") {
   dbName = "experiment-data-prod";
 }
 
+// DB connect and save
 async function storeResponse(response) {
     const client = new MongoClient(process.env.MONGODB_URI, {
       useNewUrlParser: true,
@@ -41,6 +43,7 @@ app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
 
+// Endpoint for posting to the DB
 app.post("/api/store-response", (req, res) => {
     console.log("Storing response:");
     console.log(req.body);

@@ -42,7 +42,7 @@ startTest2 = () => {
     test2Start = Date.now();
 
     availableQuestions = getRandomQuestionsTest2(questionsTest2, MAX_QUESTIONS_TEST2);
-    console.log("randomised order: ", availableQuestions);
+    //console.log("randomised order: ", availableQuestions);
 
     getNewQuestionTest2();
 }
@@ -83,7 +83,7 @@ const getNewQuestionTest2 = () => {
 
     // Update display with current question
     currentQuestion = availableQuestions[0];
-    console.log("current question: ", currentQuestion);
+    //console.log("current question: ", currentQuestion);
     
     //console.log(currentQuestion);
     questionTest2.innerText = currentQuestion.question;
@@ -96,6 +96,9 @@ const getNewQuestionTest2 = () => {
 
     // Array to hold users answers for each question
     let userAnswers = [];
+
+    // Get time of question start 
+    questionStart = Date.now();
 
     // Add event listeners for answer selection
     answers.forEach((answer) => {
@@ -118,7 +121,7 @@ const getNewQuestionTest2 = () => {
             }
             
             const answerLetter = clickedAnswer.dataset["answer"]
-            console.log(answerLetter);
+            //console.log(answerLetter);
             // Append clicked answer to 'userAnswers'
             userAnswers.push(answerLetter);
 
@@ -127,7 +130,7 @@ const getNewQuestionTest2 = () => {
 
             // If correct answer is clicked, increment score and set class to correct
             if (answerLetter === currentQuestion.answer) {
-                console.log("correct answer");
+                //console.log("correct answer");
                 scoreTest2 += scoreToAddTest2;
                 scoreTextTest2.innerText = scoreTest2;
                 classToApply = "correct";
@@ -136,7 +139,7 @@ const getNewQuestionTest2 = () => {
             else if (scoreToAddTest2 > 1) {
                 scoreToAddTest2 -= 1;
                 clickedAnswer.parentElement.classList.add(classToApply);
-                console.log("incorrect answer");
+                //console.log("incorrect answer");
                 setTimeout(() => {
                     clickedAnswer.parentElement.classList.remove(classToApply);
                     acceptingAnswers = true;
@@ -160,7 +163,8 @@ const getNewQuestionTest2 = () => {
 
                 // Append question data to object
                 // Question no.: Correct answer; Users Answers; Users score for the question; 
-                testing2Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest2} }, testing2Data);
+                testing2Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, 
+                                                "questionScore": scoreToAddTest2, "time": ((Date.now() - questionStart) / 1000)} }, testing2Data);
                 //console.log(testing2Data);
                 // Empty 'userAnswers' array before getting next question
                 userAnswers = [];

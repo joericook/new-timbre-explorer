@@ -168,7 +168,7 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     }
     kbObj.keyPress(e.keyCode, true);
     // noteObj.playNote(true);
-    console.log("keydown");
+    //console.log("keydown");
   };
   
   var onKeyUp = function(e){
@@ -177,7 +177,7 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     }
     kbObj.keyPress(e.keyCode, false);
     // noteObj.playNote(false);
-    console.log("keyup");
+    //console.log("keyup");
   }
   
   specSlider.oninput = updateSpectrum; // updates with this.value

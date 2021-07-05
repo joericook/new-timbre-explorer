@@ -47,6 +47,7 @@ let trialCounterTrain1;
 const MAX_TRIALS_TRAIN1 = 3;
 let acceptingAnswersTrain1;
 
+// Get time of training 1 start
 train1Start = Date.now();
 
 let trialSliderToMoveTrain1;
@@ -115,6 +116,9 @@ const getNewTrialTrain1 = () => {
     document.getElementById("brigSlider").setAttribute("value", currentTrialTrain1.brightnessValue);
     document.getElementById("artiSlider").setAttribute("value", currentTrialTrain1.articulationValue);
     document.getElementById("enveSlider").setAttribute("value", currentTrialTrain1.envelopeValue);
+
+    // Get time of trial start
+    trialStart = Date.now();
 
     // Get the initial value of the slider that must be moved
     trialSliderToMoveTrain1 = currentTrialTrain1.sliderToMove;
@@ -189,8 +193,8 @@ const getNewTrialTrain1 = () => {
 
             // Append trial data to object
             // Trial no.: slider; correct value; user's value; accuracy (how close user value is to correct value); 
-            training1Data = Object.assign({ [currentTrialTrain1.id]: {"slider": trialSlider, "correctValue": currentTrialTrain1.correctValue, 
-                                            "userValue": userValue, "accuracy": (userValue - currentTrialTrain1.correctValue)} }, training1Data);
+            training1Data = Object.assign({ [currentTrialTrain1.id]: {"slider": trialSlider, "correctValue": currentTrialTrain1.correctValue, "userValue": userValue, 
+                                            "accuracy": (userValue - currentTrialTrain1.correctValue), "time": ((Date.now() - trialStart) / 1000)} }, training1Data);
             console.log(training1Data);
 
             getNewTrialTrain1();

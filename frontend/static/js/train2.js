@@ -103,7 +103,7 @@ const getNewTrialTrain2 = () => {
     document.getElementById("soundATrain2").setAttribute("src", currentTrialTrain2.soundASource);
     document.getElementById("soundBTrain2").setAttribute("src", currentTrialTrain2.soundBSource);
 
-    console.log("current trial: " + currentTrialTrain2.spectrumValue, currentTrialTrain2.brightnessValue, currentTrialTrain2.articulationValue, currentTrialTrain2.envelopeValue);
+    //console.log("current trial: " + currentTrialTrain2.spectrumValue, currentTrialTrain2.brightnessValue, currentTrialTrain2.articulationValue, currentTrialTrain2.envelopeValue);
     // Set sliders to starting positions for each trial: values of Sound A
     document.getElementById("specSlider").value = currentTrialTrain2.spectrumValue;
     document.getElementById("brigSlider").value = currentTrialTrain2.brightnessValue;
@@ -115,6 +115,8 @@ const getNewTrialTrain2 = () => {
     document.getElementById("brigSlider").setAttribute("value", currentTrialTrain2.brightnessValue);
     document.getElementById("artiSlider").setAttribute("value", currentTrialTrain2.articulationValue);
     document.getElementById("enveSlider").setAttribute("value", currentTrialTrain2.envelopeValue);
+
+    trialStart = Date.now();
 
     for (let i = 0; i < 2; i++) {
         trialSliderToMoveTrain2[i] = currentTrialTrain2.sliderToMove[i];
@@ -205,8 +207,8 @@ const getNewTrialTrain2 = () => {
             // Append trial data to object
             // Trial no.: sliders; correct values; user's values; accuracy (how close user values are to correct values); 
             training2Data = Object.assign({ [currentTrialTrain2.id]: {"slider": trialSlider, "correctValue": currentTrialTrain2.correctValue, 
-                                            "userValue": userValue, "accuracy": (acc)} }, training2Data);
-            console.log(training2Data);
+                                            "userValue": userValue, "accuracy": (acc), "time": ((Date.now() - trialStart) / 1000)} }, training2Data);
+            //console.log(training2Data);
 
             getNewTrialTrain2();
             acceptingAnswersTrain2 = true;

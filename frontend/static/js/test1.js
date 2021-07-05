@@ -99,6 +99,9 @@ const getNewQuestionTest1 = () => {
     // Array to hold users answers for each question
     let userAnswers = [];
 
+    // Get time of question start
+    questionStart = Date.now();
+
     // Add event listeners for answer selection
     answersTest1.forEach((answer) => {
         answer.addEventListener("click", (e) => {
@@ -150,7 +153,8 @@ const getNewQuestionTest1 = () => {
 
                 // Append question data to object
                 // Question no.: Correct answer; Users Answers; Users score for the question; 
-                testing1Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest1} }, testing1Data);
+                testing1Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, 
+                                                "questionScore": scoreToAddTest1, "time": ((Date.now() - questionStart) / 1000)} }, testing1Data);
                 //console.log(testing1Data);
                 // Empty 'userAnswers' array before getting next question
                 userAnswers = [];

@@ -89,13 +89,13 @@ let bothQuestionBanks = false;                    // Flags that both synth sound
 startTest3 = () => {
     questionCounterTest3 = 0;
     scoreTest3 = 0;
-    console.log("questions: ", questionsTest3_1);
+    //console.log("questions: ", questionsTest3_1);
     acceptingAnswers = true;
 
     test3Start = Date.now();
 
     availableQuestions = getRandomQuestionsTest3(questionsTest3_1, MAX_QUESTIONS_TEST3);
-    console.log("randomised order: ", availableQuestions);
+    //console.log("randomised order: ", availableQuestions);
 
     getNewQuestionTest3();
 }
@@ -119,7 +119,7 @@ const getRandomQuestionsTest3 = (arr, n) => {
 const getNewQuestionTest3 = () => {
     // End when all questions have been shown from both banks, load second bank if only the first has been completed
     if (availableQuestions.length === 0) {
-        console.log("No more questions")
+        //console.log("No more questions")
         if (bothQuestionBanks === true) {
 
             // Append to data object
@@ -165,6 +165,9 @@ const getNewQuestionTest3 = () => {
     // Array to hold users answers for each question
     let userAnswers = [];
 
+    // Get time of question start
+    questionStart = Date.now();
+
     // Add event listeners for answer selection
     answersTest3.forEach((answer) => {
         answer.addEventListener("click", (e) => {
@@ -195,7 +198,7 @@ const getNewQuestionTest3 = () => {
 
             // If correct answer is clicked, increment score and set class to correct
             if (answerLetter === currentQuestion.answer) {
-                console.log("correct answer");
+                //console.log("correct answer");
                 scoreTest3 += scoreToAddTest3;
                 scoreTextTest3.innerText = scoreTest3;
                 classToApply = "correct";
@@ -224,7 +227,8 @@ const getNewQuestionTest3 = () => {
 
                 // Append question data to object
                 // Question no.: Correct answer; Users Answers; Users score for the question; 
-                testing3Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, "questionScore": scoreToAddTest3} }, testing3Data);
+                testing3Data = Object.assign({ [currentQuestion.id]: {"correctAnswer": currentQuestion.answer, "userAnswers": userAnswers, 
+                                                "questionScore": scoreToAddTest3, "time": ((Date.now() - questionStart) / 1000)} }, testing3Data);
                 //console.log(testing3Data);
                 // Empty 'userAnswers' array before getting next question
                 userAnswers = [];

@@ -1,7 +1,7 @@
 // Questions in JSON format
 let descriptionsTrain2 = [
     {
-        "id":1,
+        "id":"2_1",
         "description":"1) Sounds A and B differ along the Spectrum and Brightness dimensions. Sound B has a much higher Spectrum value and a much lower Brightness value",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
@@ -9,10 +9,11 @@ let descriptionsTrain2 = [
         "brightnessValue": "228",
         "articulationValue": "128",
         "envelopeValue": "128",
-        "sliderToMove": ["specSlider", "brigSlider"]
+        "sliderToMove": ["specSlider", "brigSlider"],
+        "correctValue": ["128", "128"]
     },  
     {
-        "id":2,
+        "id":"2_2",
         "description":"2) Sounds A and B differ along the Brightness and Envelope dimensions. Sound B has a slightly higher Brightness value and a much higher Envelope value.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
@@ -20,10 +21,11 @@ let descriptionsTrain2 = [
         "brightnessValue": "78",
         "articulationValue": "128",
         "envelopeValue": "28",
-        "sliderToMove": ["brigSlider", "enveSlider"]
+        "sliderToMove": ["brigSlider", "enveSlider"],
+        "correctValue": ["128", "128"]
     },  
     {
-        "id":3,
+        "id":"2_3",
         "description":"3) Sounds A and B differ along the Articulation and Envelope dimensions. Sound B has a much lower Articulation value and slightly lower Envelope value.",
         "soundASource": "",
         "soundBSource": "",
@@ -31,7 +33,8 @@ let descriptionsTrain2 = [
         "brightnessValue": "128",
         "articulationValue": "228",
         "envelopeValue": "178",
-        "sliderToMove": ["artiSlider", "enveSlider"]
+        "sliderToMove": ["artiSlider", "enveSlider"],
+        "correctValue": ["128", "128"]
     } 
 ]
 
@@ -43,6 +46,8 @@ const trialCounterTextTrain2 = document.getElementById("trialCounterTextTrain2")
 let trialCounterTrain2;
 const MAX_TRIALS_TRAIN2 = 3;
 let acceptingAnswersTrain2;
+
+train2Start = Date.now();
 
 let trialSliderToMoveTrain2 = [];
 let initialValuesTrain2 = [0, 0];
@@ -78,6 +83,10 @@ const getNewTrialTrain2 = () => {
     // End when all trials have been shown
     if (availableTrialsTrain2.length === 0) {
         //console.log("No more trials")
+        training2Data = Object.assign({ "overallTrain2": {"timeTrain2": ((Date.now() - train2Start) / 1000)} }, training2Data);
+        training2Data = {"training2": training2Data};
+        console.log(training2Data);
+
         displayModalTrain2();
         return;
     }
@@ -110,7 +119,7 @@ const getNewTrialTrain2 = () => {
     for (let i = 0; i < 2; i++) {
         trialSliderToMoveTrain2[i] = currentTrialTrain2.sliderToMove[i];
 
-        console.log(trialSliderToMoveTrain2[i]);
+        //console.log(trialSliderToMoveTrain2[i]);
 
         if (trialSliderToMoveTrain2[i] == "specSlider") {
             initialValuesTrain2[i] = currentTrialTrain2.spectrumValue;
@@ -161,9 +170,44 @@ const getNewTrialTrain2 = () => {
         // Apply the appropriate class
         nextCardTrain2.classList.add(classToApplyTrain2);
 
+        trialSlider = [];
+        userValue = [];
+
+        for (let i = 0; i < 2; i++) {
+            if (currentTrialTrain2.sliderToMove[i] === "specSlider") {
+                trialSlider[i] = "spectrum";
+                userValue[i] = document.getElementById("specSlider").value;
+            }
+            else if (currentTrialTrain2.sliderToMove[i] === "brigSlider") {
+                trialSlider[i] = "brightness";
+                userValue[i] = document.getElementById("brigSlider").value;
+            }
+            else if (currentTrialTrain2.sliderToMove[i] === "artiSlider") {
+                trialSlider[i] = "articulation";
+                userValue[i] = document.getElementById("artiSlider").value;
+            }
+            else if (currentTrialTrain2.sliderToMove[i] === "enveSlider") {
+                trialSlider[i] = "envelope";
+                userValue[i] = document.getElementById("enveSlider").value;
+            }
+        }
+
         // After time period, remove the correct/incorrect class and get the next question
         setTimeout(() => {
             nextCardTrain2.classList.remove(classToApplyTrain2);
+
+            // Element-wise subtraction for accuracy of each slider moved
+            acc = [];
+            for(var i = 0; i < 2; i++) {
+                acc.push(userValue[i] - currentTrialTrain2.correctValue[i]);
+            }
+
+            // Append trial data to object
+            // Trial no.: sliders; correct values; user's values; accuracy (how close user values are to correct values); 
+            training2Data = Object.assign({ [currentTrialTrain2.id]: {"slider": trialSlider, "correctValue": currentTrialTrain2.correctValue, 
+                                            "userValue": userValue, "accuracy": (acc)} }, training2Data);
+            console.log(training2Data);
+
             getNewTrialTrain2();
             acceptingAnswersTrain2 = true;
         }, 1000);

@@ -5,6 +5,9 @@ let feedback2Data;
 let feedback3Data;
 let conclusionData;
 
+let training1Data;
+let training2Data;
+
 let testing1Data;
 let testing2Data;
 let testing3Data;
@@ -105,6 +108,7 @@ function savePresets() {
     } 
 }
 
+// Wrap up all data objects and save to DB
 function sendData() {
     let userData = {...hearingData,
                    ...backgroundData,
@@ -112,6 +116,8 @@ function sendData() {
                    ...feedback2Data,
                    ...feedback3Data,
                    ...conclusionData,
+                   ...training1Data,
+                   ...training2Data,
                    ...testing1Data,
                    ...testing2Data,
                    ...testing3Data}

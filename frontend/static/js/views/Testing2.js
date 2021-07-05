@@ -19,7 +19,7 @@ export default class extends AbstractView {
                 <div class="intro">
                     <div class="sound-holder" style="margin: 0 16vw">
                         <p class="prefix">Play Sound</p>
-                        <audio id="soundTest2" controls src='' type="audio/flac"></audio>
+                        <audio id="soundTest2" controls src='' type="audio/wav"></audio>
                     </div>
                     <div class="counter">
                         <p class="prefix">Question</p>

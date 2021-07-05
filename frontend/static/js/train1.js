@@ -1,7 +1,7 @@
 // Questions in JSON format
 let descriptionsTrain1 = [
     {
-        "id":1,
+        "id":"1_1",
         "description":"1) Sounds A and B differ along the Spectrum dimension. Sound B has a much higher Spectrum value.",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
@@ -9,10 +9,11 @@ let descriptionsTrain1 = [
         "brightnessValue": "128",
         "articulationValue": "128",
         "envelopeValue": "128",
-        "sliderToMove": "specSlider"
+        "sliderToMove": "specSlider",
+        "correctValue": "228"
     },  
     {
-        "id":2,
+        "id":"1_2",
         "description":"2) Sounds A and B differ along the Brightness dimension. Sound B has a slightly higher Brightness value.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
@@ -20,10 +21,11 @@ let descriptionsTrain1 = [
         "brightnessValue": "78",
         "articulationValue": "128",
         "envelopeValue": "128",
-        "sliderToMove": "brigSlider"
+        "sliderToMove": "brigSlider",
+        "correctValue": "228"
     },  
     {
-        "id":3,
+        "id":"1_3",
         "description":"3) Sounds A and B differ along the Articulation dimension. Sound B has a much lower Articulation value.",
         "soundASource": "",
         "soundBSource": "",
@@ -31,7 +33,8 @@ let descriptionsTrain1 = [
         "brightnessValue": "128",
         "articulationValue": "228",
         "envelopeValue": "128",
-        "sliderToMove": "artiSlider"
+        "sliderToMove": "artiSlider",
+        "correctValue": "228"
     } 
 ]
 
@@ -43,6 +46,8 @@ const trialCounterTextTrain1 = document.getElementById("trialCounterTextTrain1")
 let trialCounterTrain1;
 const MAX_TRIALS_TRAIN1 = 3;
 let acceptingAnswersTrain1;
+
+train1Start = Date.now();
 
 let trialSliderToMoveTrain1;
 let initialValueTrain1;
@@ -78,6 +83,10 @@ const getNewTrialTrain1 = () => {
     // End when all trials have been shown
     if (availableTrialsTrain1.length === 0) {
         //console.log("No more trials")
+        training1Data = Object.assign({ "overallTrain1": {"timeTrain1": ((Date.now() - train1Start) / 1000)} }, training1Data);
+        training1Data = {"training1": training1Data};
+        console.log(training1Data);
+
         displayModalTrain1();
         return;
     }
@@ -157,9 +166,33 @@ const getNewTrialTrain1 = () => {
         // Apply the appropriate class
         nextCardTrain1.classList.add(classToApplyTrain1);
 
+        if (currentTrialTrain1.sliderToMove === "specSlider") {
+            trialSlider = "spectrum";
+            userValue = document.getElementById("specSlider").value;
+        }
+        else if (currentTrialTrain1.sliderToMove === "brigSlider") {
+            trialSlider = "brightness";
+            userValue = document.getElementById("brigSlider").value;
+        }
+        else if (currentTrialTrain1.sliderToMove === "artiSlider") {
+            trialSlider = "articulation";
+            userValue = document.getElementById("artiSlider").value;
+        }
+        else if (currentTrialTrain1.sliderToMove === "enveSlider") {
+            trialSlider = "envelope";
+            userValue = document.getElementById("enveSlider").value;
+        }
+
         // After time period, remove the correct/incorrect class and get the next question
         setTimeout(() => {
             nextCardTrain1.classList.remove(classToApplyTrain1);
+
+            // Append trial data to object
+            // Trial no.: slider; correct value; user's value; accuracy (how close user value is to correct value); 
+            training1Data = Object.assign({ [currentTrialTrain1.id]: {"slider": trialSlider, "correctValue": currentTrialTrain1.correctValue, 
+                                            "userValue": userValue, "accuracy": (userValue - currentTrialTrain1.correctValue)} }, training1Data);
+            console.log(training1Data);
+
             getNewTrialTrain1();
             acceptingAnswersTrain1 = true;
         }, 1000);

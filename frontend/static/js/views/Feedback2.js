@@ -17,7 +17,7 @@ export default class extends AbstractView {
                 <br>
                 <form id="feedback2Form">
                     <div class="roundedBox">
-                        <label>How challenging was it for you to do this task?:</label>
+                        <label><strong>How challenging was it for you to do this task?:</strong></label>
                         <ul class="likert">
                             <li>
                                 <input type="radio" id="task2DifficultyChoice1" name="task2Difficulity" value="1" required>
@@ -41,27 +41,23 @@ export default class extends AbstractView {
                             </li>
                         </ul>
 
-                        <label>How much did you enjoy the task you just completed?:</label>
+                        <label><strong>How much did you enjoy the task you just completed?:</strong></label>
                         <ul class="likert">
-                            <li>
+                            <li class="options-4">
                                 <input type="radio" id="task2EnjoymentChoice1" name="task2Enjoyment" value="1" required>
                                 <label for="task2EnjoymentChoice1">Not at all</label>
                             </li>
-                            <li>
+                            <li class="options-4">
                                 <input type="radio" id="task2EnjoymentChoice2" name="task2Enjoyment" value="2" required>
                                 <label for="task2EnjoymentChoice2">Slightly</label>
                             </li>
-                            <li>
+                            <li class="options-4">
                                 <input type="radio" id="task2EnjoymentChoice3" name="task2Enjoyment" value="3" required>
-                                <label for="task2EnjoymentChoice3">Somewhat</label>
+                                <label for="task2EnjoymentChoice3">Moderately</label>
                             </li>
-                            <li>
+                            <li class="options-4">
                                 <input type="radio" id="task2EnjoymentChoice4" name="task2Enjoyment" value="4" required>
-                                <label for="task2EnjoymentChoice4">Moderately</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="task2EnjoymentChoice5" name="task2Enjoyment" value="5" required>
-                                <label for="task2EnjoymentChoice5">Very Much</label>
+                                <label for="task2EnjoymentChoice4">Very Much</label>
                             </li>
                         </ul>
                     </div>

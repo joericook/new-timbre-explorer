@@ -80,7 +80,7 @@ function saveForm(page) {
 
 
 // Saves preset suggestions to DB, separately from user data
-function savePresets() {
+function saveConclusion() {
     let form = document.getElementById("conclusionForm");
     let isValidForm = form.checkValidity();
     console.log("Form Validity: ", isValidForm);
@@ -103,7 +103,7 @@ function savePresets() {
             body: JSON.stringify(response),
         };
         fetch("/api/store-response", requestOptions).then( () => {
-            console.log("presets saved to DB");
+            console.log("presets/email saved to DB");
         });
     } 
 }

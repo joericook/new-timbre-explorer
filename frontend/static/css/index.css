@@ -67,7 +67,7 @@
         box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
       }
 
-        form .likert {
+        .likert {
           list-style:none;
           width:100%;
           margin:0;
@@ -76,45 +76,47 @@
           border-bottom:2px solid #efefef;
         }
 
-        form .likert:last-of-type {border-bottom:0;}
-        form .likert:before {
+        .likert:last-of-type {border-bottom:0;}
+        .likert:before {
           content: '';
           position:relative;
-          top:11px;
+          top:12px;
           left:9.5%;
           display:block;
           background-color:#efefef;
-          height:4px;
+          height:5px;
           width:78%;
         }
         
-        form .likert li {
+        .likert li {
           display:inline-block;
           width:19%;
           text-align:center;
           vertical-align: top;
         }
 
-        form .likert li input[type=radio] {
+        .options-4 {
+          width: 23.75% !important; /* width to take precedence if likert has 4 points instead of 5 */
+        }
+
+        form input[type=radio] {
+          border: 0px;
+          width: 1.1em;
+          height: 1.1em;
+        }
+
+        .likert input[type=radio] {
           display:block;
           position:relative;
           top:0;
           left:50%;
-          margin-left:-6px;  
+          margin-left:-6px; 
         }
 
-        form .likert li label {width:100%;}
-        form .buttons {
-          margin:30px 0;
-          padding:0 4.25%;
-          text-align:right
-        } 
-
-        form .buttons button {
-          padding: 5px 10px;
-          background-color: #67ab49;
-          border: 0;
-          border-radius: 3px;
+        .likert li label {
+          width:100%;
+          font-size: 0.9em;
+          font-weight: 300;
         }
 
         .form-extra-label {
@@ -124,12 +126,6 @@
         .form-extra-text {
           margin-left: 0.5vw; 
           width: 20vw;
-        }
-
-        form input[type=radio] {
-          border: 0px;
-          width: 1.1em;
-          height: 1.1em;
         }
 
   /* All app sliders */

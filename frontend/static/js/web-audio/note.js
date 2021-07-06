@@ -57,14 +57,14 @@ export class Note {
     // only take action if something has changed
     // if note first turns on
     if (!this.pressed && pressed) {
-      console.log("onset");
+      //console.log("onset");
       // this.spSynth.synthOn();
       this.arFilter.schedule();
       this.enADSR.scheduleOnset();
       this.pressed = true;
     // when the note turns off
     } else if (this.pressed && !pressed) {
-      console.log("release");
+      //console.log("release");
       this.enADSR.scheduleRelease();
       // this.spSynth.synthOff();
       this.pressed = false;

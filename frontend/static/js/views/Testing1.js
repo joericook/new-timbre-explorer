@@ -37,42 +37,42 @@ export default class extends AbstractView {
     
                 <div class="row">
                     <div class="answer-container card">
-                        <p class="answer-prefix red">A</p>
-                        <p class="answer-text" data-answer="a">Spectrum / Increase</p>  
+                        <p class="answer-prefix">A</p>
+                        <p class="answer-text" data-answer="a"><mark class="red">Spectrum:</mark> Increase</p>  
                     </div>
                     <div class="answer-container card">
-                        <p class="answer-prefix red">B</p>
-                        <p class="answer-text" data-answer="b">Spectrum / Decrease</p>  
-                    </div>
-                </div>
-                <div class="row"> 
-                    <div class="answer-container card">
-                        <p class="answer-prefix yellow">C</p>
-                        <p class="answer-text" data-answer="c">Brightness / Increase</p>  
-                    </div>  
-                    <div class="answer-container card">
-                        <p class="answer-prefix yellow">D</p>
-                        <p class="answer-text" data-answer="d">Brightness / Decrease</p>  
+                        <p class="answer-prefix">B</p>
+                        <p class="answer-text" data-answer="b"><mark class="red">Spectrum:</mark> Decrease</p>  
                     </div>
                 </div>
                 <div class="row"> 
                     <div class="answer-container card">
-                        <p class="answer-prefix green">E</p>
-                        <p class="answer-text" data-answer="e">Articulation / Increase</p>  
+                        <p class="answer-prefix">C</p>
+                        <p class="answer-text" data-answer="c"><mark class="yellow">Brightness:</mark> Increase</p>  
                     </div>  
                     <div class="answer-container card">
-                        <p class="answer-prefix green">F</p>
-                        <p class="answer-text" data-answer="f">Articulation / Decrease</p>  
+                        <p class="answer-prefix">D</p>
+                        <p class="answer-text" data-answer="d"><mark class="yellow">Brightness:</mark> Decrease</p>  
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="answer-container card">
+                        <p class="answer-prefix">E</p>
+                        <p class="answer-text" data-answer="e"><mark class="green">Articulation:</mark> Increase</p>  
+                    </div>  
+                    <div class="answer-container card">
+                        <p class="answer-prefix">F</p>
+                        <p class="answer-text" data-answer="f"><mark class="green">Articulation:</mark> Decrease</p>  
                     </div>
                 </div>
                 <div class="row">
                     <div class="answer-container card">
-                        <p class="answer-prefix blue">G</p>
-                        <p class="answer-text" data-answer="g">Envelope / Increase</p>  
+                        <p class="answer-prefix">G</p>
+                        <p class="answer-text" data-answer="g"><mark class="blue">Envelope:</mark> Increase</p>  
                     </div>  
                     <div class="answer-container card">
-                        <p class="answer-prefix blue">H</p>
-                        <p class="answer-text" data-answer="h">Envelope / Decrease</p>  
+                        <p class="answer-prefix">H</p>
+                        <p class="answer-text" data-answer="h"><mark class="blue">Envelope:</mark> Decrease</p>  
                     </div>
                 </div>
                 <div class="row">

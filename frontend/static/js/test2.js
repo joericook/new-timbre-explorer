@@ -187,11 +187,12 @@ displayModalTest2 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
-                            <p>Click</p>
+                            <p>
+                                Click next when you are ready to continue... <br>
+                            </p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/feedback2" data-link>Next</a>
                             </div>
-                            <p>to continue...</p>
                         `
     modal.style.display = "block"
 }

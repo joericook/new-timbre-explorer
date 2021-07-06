@@ -113,7 +113,15 @@ const getNewQuestionTest1 = () => {
             // Set acceptingAnswers to false to only allow single answer
             acceptingAnswers = false
 
-            const clickedAnswer = e.target;
+            // This ensures that answers are still recognised if a <mark> element is clicked
+            let clickedAnswer;
+            if (e.target.nodeName == "MARK") {
+                clickedAnswer = e.target.parentElement;
+            }
+            else {
+                clickedAnswer = e.target;
+            }
+
             const answerLetter = clickedAnswer.dataset["answer"]
             //console.log(answerLetter);
             // Append clicked answer to 'userAnswers'
@@ -177,11 +185,12 @@ displayModalTest1 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
-                            <p>Click</p>
+                            <p>
+                                Click next when you are ready to continue... <br>
+                            </p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/feedback1" data-link>Next</a>
                             </div>
-                            <p>to continue...</p>
                         `
     modal.style.display = "block"
 }

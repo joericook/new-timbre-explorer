@@ -10,8 +10,8 @@ export default class extends AbstractView {
         return /*html*/`
             <div class="infoContainer">
                 <div class="instruction-holder">
-                    <p>Use the corresponding slider to move timbrally from Sound A to Sound B. As you adjust each slider, play the Timbre Explorer and listen 
-                    to the effect it has on the timbre of the sound. When you are done, click below to move on.</p>
+                    <p>Use the sliders to move timbrally from Sound A to Sound B. As you adjust each slider, play the Timbre Explorer and listen 
+                    to the effect it has on the timbre of the sound. When you think you have matched sound B, click the button to move on.</p>
                 </div>
             
                 <div class="description-holder">

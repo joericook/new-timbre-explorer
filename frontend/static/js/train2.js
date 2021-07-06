@@ -227,11 +227,15 @@ displayModalTrain2 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
-                            <p>Click</p>
+                            <p>
+                                In the next task, you will presented with a single sound at a time. Each sound will be <strong>high</strong> or <strong>low</strong> in 2 of the Timbre Explorer
+                                dimensions, and in the middle for the other 2 dimensions.<br><br>
+                                Listen to each sound and <strong>identify which Timbre Explorer dimensions are high and/or low</strong>.<br><br>
+                                For each sound you will have <strong>3</strong> attempts to find the correct answer. Click next when you are ready to begin... 
+                            </p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/testing2" data-link>Next</a>
                             </div>
-                            <p>to continue...</p>
                         `
     modal.style.display = "block"
 }

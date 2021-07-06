@@ -12,26 +12,6 @@ let testing1Data;
 let testing2Data;
 let testing3Data;
 
-// If form is valid, save to background data object, show next button, hide and disable submit button
-// If invalid, display warning 
-//function saveBackgroundForm() {
-//    let form = document.getElementById("backgroundForm");
-//    let isValidForm = form.checkValidity();
-//    console.log("Form Validity: ", isValidForm);
-//    if (isValidForm === false) {
-//        $( "#backgroundWarning" ).fadeTo(300, 1);
-//    }
-//    else {
-//        if (document.getElementById("backgroundWarning").style.opacity == 1) {
-//            $( "#backgroundWarning" ).fadeTo(300, 0);
-//        }
-//        //$( "#backgroundSubmit" ).fadeTo(300, 0);
-//        document.getElementById("backgroundSubmit").disabled = true;
-//        backgroundData = Object.fromEntries(new FormData(form).entries());
-//        console.log(backgroundData);
-//        document.getElementById("backgroundNext").style.display = "block";
-//    } 
-//}
 
 // If form is valid, save to pages data object, show next button, hide and disable submit button
 // If invalid, display warning 
@@ -48,7 +28,6 @@ function saveForm(page) {
         }
         //$( `#${page}Submit` ).fadeTo(300, 0);
         document.getElementById(`${page}Submit`).disabled = true;
-        document.getElementById(`${page}Next`).style.display = "block";
         if (page === "hearing") {
             hearingData = Object.fromEntries(new FormData(form).entries());
             hearingData = {"hearing": hearingData};
@@ -60,11 +39,13 @@ function saveForm(page) {
             console.log("backgroundData: ", backgroundData);
         }
         else if (page === "feedback1") {
+            $( `#${page}NextTaskInfo` ).fadeTo(300, 1);
             feedback1Data = Object.fromEntries(new FormData(form).entries());
             feedback1Data = {"feedback1": feedback1Data};
             console.log("feedback1Data: ", feedback1Data);
         }
         else if (page === "feedback2") {
+            $( `#${page}NextTaskInfo` ).fadeTo(300, 1);
             feedback2Data = Object.fromEntries(new FormData(form).entries());
             feedback2Data = {"feedback2": feedback2Data};
             console.log("feedback2Data: ", feedback2Data);
@@ -74,6 +55,7 @@ function saveForm(page) {
             feedback3Data = {"feedback3": feedback3Data};
             console.log("feedback3Data: ", feedback3Data);
         }
+        document.getElementById(`${page}Next`).style.display = "block";
     } 
 }
 

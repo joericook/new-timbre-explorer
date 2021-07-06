@@ -14,8 +14,14 @@
     font-weight: bold;
   }
 
+  mark.yellow-bright {
+    color:#ffff01;
+    background: none;
+    font-weight: bold;
+  }
+
   mark.yellow {
-    color:#ffff00;
+    color:#bdbd00;
     background: none;
     font-weight: bold;
   }
@@ -128,6 +134,10 @@
           width: 20vw;
         }
 
+      .nextTaskInfo {
+        opacity: 0;
+      }
+
   /* All app sliders */
   .slider {
     -webkit-appearance: none;   /* Override default CSS styles */
@@ -200,51 +210,6 @@
       border-radius: 0.7vw;
       border: 0.05vw solid #010101;
     }
-  
-    /*
-    TODO: ms styling may be necessary for IE and Edge?
-    input[type=range]::-ms-track {
-      width: 100%;
-      height: 0.8vw;
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-  
-    input[type=range]::-ms-fill-lower {
-      background: #434343;
-      border: 0.02vw solid #010101;
-      border-radius: 0.8vw;
-      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
-    }
-  
-    input[type=range]::-ms-fill-upper {
-      background: #505050;
-      border: 0.02vw solid #010101;
-      border-radius: 0.8vw;
-      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
-    }
-  
-    input[type=range]::-ms-thumb {
-      box-shadow: 0.15vw 0.15vw 0.15vw #000000, 0vw 0vw 0.15vw #0d0d0d;
-      border: 0.15vw solid #ff8c00;
-      height: 2.8vw;
-      width: 4vw;
-      border-radius: 0.9vw;
-      background: #ff8c00;
-      cursor: pointer;
-      height: 2.8vw;
-    }
-  
-    input[type=range]:focus::-ms-fill-lower {
-      background: #505050;
-    }
-  
-    input[type=range]:focus::-ms-fill-upper {
-      background: #5d5d5d;
-    }
-    */
   
   /* Container for 4 timbre sliders */
   .slidersUIContainer {
@@ -633,22 +598,6 @@
   margin: 0; 
 }
 
-.red {
-  background-color: #f00000;
-}
-
-.yellow {
-  background-color: #cccc2c;
-}
-
-.green {
-  background-color: #00ce00;
-}
-
-.blue {
-  background-color: #0000ff;
-}
-
 .answer-text {
   padding: 1.5em;
   width: 100%;
@@ -730,7 +679,7 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
   font-family: Helvetica;
 }
 
@@ -738,11 +687,21 @@
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 1.5vw;
+  padding: 0;
   border: 1vw solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
+  width: 40%; /* Could be more or less, depending on screen size */
   border-radius: 0.5vw;
   border: solid #666666 0.2vw;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: #ececec;
+}
+
+.modal-header {
+  padding: 1vh 1.5vw;
+  background-color: #435a86;;
+  color: white;
+}
+
+.modal-body {
+  padding: 0 1.5vw 1.5vw 1.5vw;
 }

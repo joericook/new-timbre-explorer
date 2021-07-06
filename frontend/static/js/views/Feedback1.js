@@ -69,7 +69,15 @@ export default class extends AbstractView {
                             <p style="margin: 0.3em 0.5em 0 0.5em;">All questions must be answered before continuing...</p>
                         </div>
                     </div>
-                </form>  
+                </form>
+                <div class="nextTaskInfo" id="feedback1NextTaskInfo">
+                    <p>
+                        In the next task, you will presented with 2 sounds: A and B. The Timbre Explorer parameters will be set to those of sound A.<br><br>
+                        Listen to both sounds and <strong>move <u>both</u> of the indicated sliders</strong> to move from sound A to sound B.<br><br>
+                        For each pair of sounds, when you think the timbre explorer settings <strong>match sound B</strong>, you should continue to the next pair. 
+                        Click next when you are ready to begin... <br><br>
+                    </p>
+                </div>
                 <div class="nextButton">
                     <a id="feedback1Next" class="nextText" style="display: none" href="/training2" data-link>Next</a>
                 </div>

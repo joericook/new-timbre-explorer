@@ -214,11 +214,14 @@ displayModalTrain1 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
-                            <p>Click</p>
+                            <p>
+                                In the next task, you will presented with 2 sounds: A and B.<br><br>
+                                Listen to both sounds and <strong>identify which Timbre Explorer dimension has changed</strong>, and in <strong>which direction</strong>, to get from sound A to sound B.<br><br>
+                                For each pair of sounds you will have <strong>3</strong> attempts to find the correct answer. Click next when you are ready to begin... 
+                            </p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/testing1" data-link>Next</a>
                             </div>
-                            <p>to continue...</p>
                         `
     modal.style.display = "block"
 }

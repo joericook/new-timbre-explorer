@@ -1,5 +1,5 @@
 // Questions with synthesised sounds
-let questionsTest3_1 = [
+let questionsTest3_synth = [
     {
         "id":"3_1",
         "question":"1_1) Identify the dimensions and directions to change sound A into sound B.",
@@ -32,13 +32,25 @@ let questionsTest3_1 = [
         "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
         "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
         "answer":"d"
-    } 
+    },
+    {
+        "id":"3_4",
+        "question":"1_4) Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "",
+        "soundBSource": "",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"d"
+    }  
 ]
 
 // Questions with real instrument sounds
-let questionsTest3_2 = [
+let questionsTest3_real = [
     {
-        "id":"4_1",
+        "id":"6_1_forward",
+        "pairID": 1,
         "question":"2_1) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
         "soundBSource": "",
@@ -49,7 +61,8 @@ let questionsTest3_2 = [
         "answer":"c"
     },  
     {
-        "id":"4_2",
+        "id":"6_2_forward",
+        "pairID": 2,
         "question":"2_2) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
@@ -60,7 +73,44 @@ let questionsTest3_2 = [
         "answer":"a"
     },  
     {
-        "id":"4_3",
+        "id":"6_3_forward",
+        "pairID": 3,
+        "question":"2_3) Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "",
+        "soundBSource": "",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"b"
+    },
+    {
+        "id":"6_1_reverse",
+        "pairID": 1,
+        "question":"2_1) Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
+        "soundBSource": "",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&emsp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease &ensp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&ensp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp;&ensp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"c"
+    },  
+    {
+        "id":"6_2_reverse",
+        "pairID": 2,
+        "question":"2_2) Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "",
+        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"a"
+    },  
+    {
+        "id":"6_3_reverse",
+        "pairID": 3,
         "question":"2_3) Identify the dimensions and directions to change sound A into sound B.",
         "soundASource": "",
         "soundBSource": "",
@@ -89,12 +139,12 @@ let bothQuestionBanks = false;                    // Flags that both synth sound
 startTest3 = () => {
     questionCounterTest3 = 0;
     scoreTest3 = 0;
-    //console.log("questions: ", questionsTest3_1);
+    //console.log("questions: ", questionsTest3_synth);
     acceptingAnswers = true;
 
     test3Start = Date.now();
 
-    availableQuestions = getRandomQuestionsTest3(questionsTest3_1, MAX_QUESTIONS_TEST3);
+    availableQuestions = getRandomQuestionsTest3(questionsTest3_synth, MAX_QUESTIONS_TEST3);
     //console.log("randomised order: ", availableQuestions);
 
     getNewQuestionTest3();
@@ -110,8 +160,24 @@ const getRandomQuestionsTest3 = (arr, n) => {
     }
 
     // Shuffles the order of the questions
-    const shuffled = [...arr].sort(() => 0.5 - Math.random());
-
+    shuffled = [...arr].sort(() => 0.5 - Math.random());
+    
+    // For the real instrument sounds, ensure that each forward/reverse pair of real instrument sounds is only used once
+    if (bothQuestionBanks === true) {
+        // Add the first question of each forward/reverse pair to 'newArray'
+        newArray = [];
+        for (i = 1; i < 4; i++) {
+            for (j = 0; j < shuffled.length; j++) {
+                if(shuffled[j].pairID === i) {
+                    newArray.push(shuffled[j]);
+                    break;
+                }
+            }
+        }
+        // Shuffle the order of the new array
+        shuffled = [...newArray].sort(() => 0.5 - Math.random());
+    }
+    
     // Return randomised array of questions
     return (selected = shuffled.slice(0, n));
 }
@@ -133,7 +199,7 @@ const getNewQuestionTest3 = () => {
         }
         else {
             bothQuestionBanks = true;
-            availableQuestions = getRandomQuestionsTest3(questionsTest3_2, MAX_QUESTIONS_TEST3);
+            availableQuestions = getRandomQuestionsTest3(questionsTest3_real, MAX_QUESTIONS_TEST3);
 
             getNewQuestionTest3();
             return;
@@ -251,7 +317,9 @@ displayModalTest3 = () => {
     const modal = document.getElementById("taskCompleteModal");
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
-                            <p>Click</p>
+                            <p>
+                                Click next when you are ready to continue... <br>
+                            </p>
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/feedback3" data-link>Next</a>
                             </div>

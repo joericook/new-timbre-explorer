@@ -1,26 +1,75 @@
 // Questions in JSON format
 let questionsTest1 = [
     {
-        "id":"1_1",
-        "question":"1) Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "soundBSource": "",
+        "id":"1-2_1",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_1a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_1b.wav",
+        "answer":"a"
+    },  
+    {
+        "id":"1-2_2",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_2a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_2b.wav",
         "answer":"b"
     },  
     {
-        "id":"1_2",
-        "question":"2) Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
+        "id":"1-2_3",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_3a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_3b.wav",
+        "answer":"c"
+    },
+    {
+        "id":"1-2_4",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_4a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_4b.wav",
+        "answer":"d"
+    },  
+    {
+        "id":"1-2_5",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_5a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_5b.wav",
+        "answer":"e"
+    },
+    {
+        "id":"1-2_6",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_6a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_6b.wav",
+        "answer":"f"
+    },  
+    {
+        "id":"1-2_7",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_7a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_7b.wav",
+        "answer":"g"
+    },  
+    {
+        "id":"1-2_8",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_8a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_8b.wav",
+        "answer":"h"
+    },
+    {
+        "id":"1-2_9",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_9a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_9b.wav",
         "answer":"i"
     },  
     {
-        "id":"1_3",
-        "question":"3) Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "",
-        "answer":"e"
-    } 
+        "id":"1-2_10",
+        "question":"Identify the dimension and direction to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_10a.wav",
+        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_10b.wav",
+        "answer":"i"
+    }  
 ]
 
 // Declare variables
@@ -32,7 +81,7 @@ const scoreTextTest1 = document.getElementById("scoreTest1");
 let questionCounterTest1;
 let scoreTest1;
 let scoreToAddTest1;
-const MAX_QUESTIONS_TEST1 = 3;
+const MAX_QUESTIONS_TEST1 = 10;
 // THIS doesn't need to be declared as long as train.js is run first
 // let acceptingAnswers;
 
@@ -74,7 +123,7 @@ const getNewQuestionTest1 = () => {
         // For test 1: Overall test score; Time elapsed since start of test (s);
         testing1Data = Object.assign({ "overallTest1": {"scoreTest1": scoreTest1, "timeTest1": ((Date.now() - test1Start) / 1000)} }, testing1Data);
         testing1Data = {"testing1": testing1Data};
-        console.log(testing1Data);
+        //console.log(testing1Data);
 
         displayModalTest1();
         return;
@@ -132,7 +181,7 @@ const getNewQuestionTest1 = () => {
 
             // If correct answer is clicked, increment score and set class to correct
             if (answerLetter === currentQuestion.answer) {
-                console.log("correct answer");
+                //console.log("correct answer");
                 scoreTest1 += scoreToAddTest1;
                 scoreTextTest1.innerText = scoreTest1;
                 classToApply = "correct";
@@ -169,7 +218,7 @@ const getNewQuestionTest1 = () => {
 
                 getNewQuestionTest1();
                 acceptingAnswers = true;
-            }, 1500);
+            }, 1000);
         });
     });
     availableQuestions.shift();

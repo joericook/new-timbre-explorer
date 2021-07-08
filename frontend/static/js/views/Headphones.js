@@ -19,7 +19,8 @@ export default class extends AbstractView {
                     <br><br>
                     When both tests have been completed you will be able to click <strong>Next</strong> to continue.
                 </p>
-                <a href="/hearing" data-link>Next</a>
+                <!-- NEXT BUTTON FOR DEV USE ONLY -->
+                <!-- <a href="/hearing" data-link>Next</a> -->                
                 <br><br>
                 <div style="margin: 0;
                             position: absolute;

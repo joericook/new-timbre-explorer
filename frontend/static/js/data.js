@@ -18,7 +18,7 @@ let testing3Data;
 function saveForm(page) {
     let form = document.getElementById(`${page}Form`);
     let isValidForm = form.checkValidity();
-    console.log("Form Validity: ", isValidForm);
+    //console.log("Form Validity: ", isValidForm);
     if (isValidForm === false) {
         $( `#${page}Warning` ).fadeTo(300, 1);
     }
@@ -31,29 +31,29 @@ function saveForm(page) {
         if (page === "hearing") {
             hearingData = Object.fromEntries(new FormData(form).entries());
             hearingData = {"hearing": hearingData};
-            console.log("hearingData: ", hearingData);
+            //console.log("hearingData: ", hearingData);
         }
         else if (page === "background") {
             backgroundData = Object.fromEntries(new FormData(form).entries());
             backgroundData = {"background": backgroundData};
-            console.log("backgroundData: ", backgroundData);
+            //console.log("backgroundData: ", backgroundData);
         }
         else if (page === "feedback1") {
             $( `#${page}NextTaskInfo` ).fadeTo(300, 1);
             feedback1Data = Object.fromEntries(new FormData(form).entries());
             feedback1Data = {"feedback1": feedback1Data};
-            console.log("feedback1Data: ", feedback1Data);
+            //console.log("feedback1Data: ", feedback1Data);
         }
         else if (page === "feedback2") {
             $( `#${page}NextTaskInfo` ).fadeTo(300, 1);
             feedback2Data = Object.fromEntries(new FormData(form).entries());
             feedback2Data = {"feedback2": feedback2Data};
-            console.log("feedback2Data: ", feedback2Data);
+            //console.log("feedback2Data: ", feedback2Data);
         }   
         else if (page === "feedback3") {
             feedback3Data = Object.fromEntries(new FormData(form).entries());
             feedback3Data = {"feedback3": feedback3Data};
-            console.log("feedback3Data: ", feedback3Data);
+            //console.log("feedback3Data: ", feedback3Data);
         }
         document.getElementById(`${page}Next`).style.display = "block";
     } 
@@ -65,7 +65,7 @@ function saveForm(page) {
 function saveConclusion() {
     let form = document.getElementById("conclusionForm");
     let isValidForm = form.checkValidity();
-    console.log("Form Validity: ", isValidForm);
+    //console.log("Form Validity: ", isValidForm);
     if (isValidForm === false) {
         $( "#conclusionWarning" ).fadeTo(300, 1);
     }
@@ -75,7 +75,7 @@ function saveConclusion() {
         }
         document.getElementById("conclusionSubmit").disabled = true;
         conclusionData = Object.fromEntries(new FormData(form).entries());
-        console.log("conclusionData: ", conclusionData);
+        //console.log("conclusionData: ", conclusionData);
 
         const response = conclusionData;
 
@@ -103,7 +103,7 @@ function sendData() {
                    ...testing1Data,
                    ...testing2Data,
                    ...testing3Data}
-    console.log(userData);
+    //console.log(userData);
 
     const response = {userData}
 

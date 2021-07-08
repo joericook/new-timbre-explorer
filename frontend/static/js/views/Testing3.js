@@ -54,7 +54,17 @@ export default class extends AbstractView {
                         <p class="test3-answer-prefix">D</p>
                         <p class="answer-text" data-answer="d">Answer D</p>  
                     </div>
-                </div>   
+                </div>
+                <div class="row"> 
+                    <div class="answer-container card">
+                        <p class="test3-answer-prefix">E</p>
+                        <p class="answer-text" data-answer="e">Answer E</p>  
+                    </div>  
+                    <div class="answer-container card">
+                        <p class="test3-answer-prefix">F</p>
+                        <p class="answer-text" data-answer="f">Answer F</p>  
+                    </div>
+                </div>    
                 
             </div>
         `;

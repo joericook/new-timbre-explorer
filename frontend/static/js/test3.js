@@ -1,124 +1,332 @@
 // Questions with synthesised sounds
 let questionsTest3_synth = [
     {
-        "id":"3_1",
-        "question":"1_1) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&emsp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Decrease &ensp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "c":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&ensp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp;&ensp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "answer":"b"
+        "id":"3-1_1",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_1a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_1b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"d"
     },  
     {
-        "id":"3_2",
-        "question":"1_2) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "c":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "id":"3-1_2",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_2a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_2b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
         "answer":"a"
     },  
     {
-        "id":"3_3",
-        "question":"1_3) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "answer":"d"
+        "id":"3-1_3",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_3a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_3b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "answer":"f"
     },
     {
-        "id":"3_4",
-        "question":"1_4) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "answer":"d"
+        "id":"3-1_4",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_4a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_4b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"c"
+    },
+    {
+        "id":"3-1_5",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_5a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_5b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"c"
+    },
+    {
+        "id":"3-1_6",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_6a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_6b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"a"
+    },
+    {
+        "id":"3-1_7",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_7a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_7b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "answer":"e"
+    },
+    {
+        "id":"3-1_8",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_8a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_8b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "answer":"f"
+    },
+    {
+        "id":"3-1_9",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_9a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_9b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"b"
+    },
+    {
+        "id":"3-1_10",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_10a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_10b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"b"
+    },
+    {
+        "id":"3-1_11",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_11a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_11b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"f"
+    },
+    {
+        "id":"3-1_12",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.1_sounds/3.1_12a.wav",
+        "soundBSource": "static/TE_sounds/task3.1_sounds/3.1_12b.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"green\">Articulation</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"c"
     }  
 ]
 
 // Questions with real instrument sounds
 let questionsTest3_real = [
     {
-        "id":"6_1_forward",
+        "id":"3-2_1",
         "pairID": 1,
-        "question":"2_1) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&emsp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Decrease &ensp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "c":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&ensp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp;&ensp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "answer":"c"
-    },  
-    {
-        "id":"6_2_forward",
-        "pairID": 2,
-        "question":"2_2) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "c":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/PNO.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/OBE.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
         "answer":"a"
     },  
     {
-        "id":"6_3_forward",
+        "id":"3-2_2",
+        "pairID": 2,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/VCP.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/TBS.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "answer":"d"
+    },  
+    {
+        "id":"3-2_3",
         "pairID": 3,
-        "question":"2_3) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "answer":"b"
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/TUB.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/VCE.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "answer":"e"
     },
     {
-        "id":"6_1_reverse",
-        "pairID": 1,
-        "question":"2_1) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&emsp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Decrease &ensp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "c":"<mark class=\"red\">Spectrum</mark>: Increase &emsp;&ensp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp;&ensp;&nbsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: No Change &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "id":"3-2_4",
+        "pairID": 4,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/GIT.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/MBA.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"b"
+    },  
+    {
+        "id":"3-2_5",
+        "pairID": 5,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/HCD.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/VIB.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
         "answer":"c"
     },  
     {
-        "id":"6_2_reverse",
-        "pairID": 2,
-        "question":"2_2) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "static/stimuli_HugginsPitch/HugginsPitch_calibration.flac",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "c":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: No Change",
-        "d":"<mark class=\"red\">Spectrum</mark>: Decrease &emsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "id":"3-2_6",
+        "pairID": 6,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/WTU.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/VLI.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"d"
+    },
+    {
+        "id":"3-2_7",
+        "pairID": 1,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/OBE.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/PNO.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
         "answer":"a"
     },  
     {
-        "id":"6_3_reverse",
+        "id":"3-2_8",
+        "pairID": 2,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/TBS.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/VCP.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "d":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"d"
+    },  
+    {
+        "id":"3-2_9",
         "pairID": 3,
-        "question":"2_3) Identify the dimensions and directions to change sound A into sound B.",
-        "soundASource": "",
-        "soundBSource": "",
-        "a":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "b":"<mark class=\"red\">Spectrum</mark>: Increase &emsp; <mark class=\"yellow\">Brightness</mark>: Increase <br><br> <mark class=\"green\">Articulation</mark>: Increase &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
-        "c":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Increase",
-        "d":"<mark class=\"red\">Spectrum</mark>: No Change &nbsp; <mark class=\"yellow\">Brightness</mark>: Decrease <br><br> <mark class=\"green\">Articulation</mark>: Decrease &nbsp <mark class=\"blue\">Envelope</mark>: Decrease",
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/VCE.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/TUB.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "answer":"e"
+    },
+    {
+        "id":"3-2_10",
+        "pairID": 4,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/MBA.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/GIT.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "c":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: No Change <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
         "answer":"b"
+    },  
+    {
+        "id":"3-2_11",
+        "pairID": 5,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/VIB.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/HCD.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Decrease",
+        "f":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Increase <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"c"
+    },  
+    {
+        "id":"3-2_12",
+        "pairID": 6,
+        "question":"Identify the dimensions and directions to change sound A into sound B.",
+        "soundASource": "static/TE_sounds/task3.2_sounds/VLI.wav",
+        "soundBSource": "static/TE_sounds/task3.2_sounds/WTU.wav",
+        "a":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "b":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: Increase",
+        "c":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "d":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "e":"<mark class=\"red\">Spectrum</mark>: Increase <br> <mark class=\"yellow\">Brightness</mark>: Decrease <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "f":"<mark class=\"red\">Spectrum</mark>: Decrease <br> <mark class=\"yellow\">Brightness</mark>: No Change <br> <mark class=\"blue\">Envelope</mark>: No Change",
+        "answer":"d"
     } 
 ]
 
@@ -131,7 +339,7 @@ const scoreTextTest3 = document.getElementById("scoreTest3");
 let questionCounterTest3;
 let scoreTest3;
 let scoreToAddTest3;
-const MAX_QUESTIONS_TEST3 = 3;
+const MAX_QUESTIONS_TEST3 = 6;
 let bothQuestionBanks = false;                    // Flags that both synth sounds and real sounds have been loaded
 // THIS doesn't need to be declared as long as train.js is run first
 // let acceptingAnswers;
@@ -166,7 +374,7 @@ const getRandomQuestionsTest3 = (arr, n) => {
     if (bothQuestionBanks === true) {
         // Add the first question of each forward/reverse pair to 'newArray'
         newArray = [];
-        for (i = 1; i < 4; i++) {
+        for (i = 1; i < 7; i++) {
             for (j = 0; j < shuffled.length; j++) {
                 if(shuffled[j].pairID === i) {
                     newArray.push(shuffled[j]);
@@ -179,6 +387,7 @@ const getRandomQuestionsTest3 = (arr, n) => {
     }
     
     // Return randomised array of questions
+    //console.log((selected = shuffled.slice(0, n)));
     return (selected = shuffled.slice(0, n));
 }
 
@@ -192,7 +401,7 @@ const getNewQuestionTest3 = () => {
             // For test 3: Overall test score; Time elapsed since start of test (s);
             testing3Data = Object.assign({ "overallTest3": {"scoreTest3": scoreTest3, "timeTest3": ((Date.now() - test3Start) / 1000)} }, testing3Data);
             testing3Data = {"testing3": testing3Data};
-            console.log(testing3Data);
+            //console.log(testing3Data);
 
             displayModalTest3();
             return;
@@ -323,7 +532,6 @@ displayModalTest3 = () => {
                             <div class="nextButton">
                                 <a class="nextText" onclick="hideModal()" href="/feedback3" data-link>Next</a>
                             </div>
-                            <p>to continue...</p>
                         `
     modal.style.display = "block"
 }

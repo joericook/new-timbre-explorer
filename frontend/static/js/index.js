@@ -123,7 +123,7 @@ const router = async () => {
 
 // Enable navigating forward and back
 // DEV USE ONLY, this should be disabled in deployment 
-window.addEventListener("popstate", router);
+//window.addEventListener("popstate", router);
 
 // When page loads
 document.addEventListener("DOMContentLoaded", () => {

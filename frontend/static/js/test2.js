@@ -1,23 +1,149 @@
 // Questions in JSON format
 let questionsTest2 = [
     {
-        "id":"2_1",
-        "question":"1) Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "",
-        "answer":"v"
+        "id":"2-2_1",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_1.wav",
+        "answer":"a"
     },  
     {
-        "id":"2_2",
-        "question":"2) Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "",
+        "id":"2-2_2",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_2.wav",
+        "answer":"b"
+    },  
+    {
+        "id":"2-2_3",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_3.wav",
+        "answer":"c"
+    },
+    {
+        "id":"2-2_4",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_4.wav",
+        "answer":"d"
+    },
+    {
+        "id":"2-2_5",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_5.wav",
         "answer":"e"
     },  
     {
-        "id":"2_3",
-        "question":"3) Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "",
+        "id":"2-2_6",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_6.wav",
+        "answer":"f"
+    },  
+    {
+        "id":"2-2_7",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_7.wav",
+        "answer":"g"
+    },
+    {
+        "id":"2-2_8",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_8.wav",
+        "answer":"h"
+    },
+    {
+        "id":"2-2_9",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_9.wav",
+        "answer":"i"
+    },  
+    {
+        "id":"2-2_10",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_10.wav",
+        "answer":"j"
+    },  
+    {
+        "id":"2-2_11",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_11.wav",
+        "answer":"k"
+    },
+    {
+        "id":"2-2_12",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_12.wav",
+        "answer":"l"
+    },
+    {
+        "id":"2-2_13",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_13.wav",
+        "answer":"m"
+    },  
+    {
+        "id":"2-2_14",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_14.wav",
+        "answer":"n"
+    },  
+    {
+        "id":"2-2_15",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_15.wav",
+        "answer":"o"
+    },
+    {
+        "id":"2-2_16",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_16.wav",
+        "answer":"p"
+    },
+    {
+        "id":"2-2_17",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_17.wav",
+        "answer":"q"
+    },  
+    {
+        "id":"2-2_18",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_18.wav",
+        "answer":"r"
+    },  
+    {
+        "id":"2-2_19",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_19.wav",
         "answer":"s"
-    } 
+    },
+    {
+        "id":"2-2_20",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_20.wav",
+        "answer":"t"
+    },
+    {
+        "id":"2-2_21",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_21.wav",
+        "answer":"u"
+    },  
+    {
+        "id":"2-2_22",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_22.wav",
+        "answer":"v"
+    },  
+    {
+        "id":"2-2_23",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_23.wav",
+        "answer":"w"
+    },
+    {
+        "id":"2-2_24",
+        "question":"Listen to the sound and click the tile with the matching properties.",
+        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_24.wav",
+        "answer":"x"
+    }
 ]
 
 // Declare variables
@@ -29,7 +155,7 @@ const scoreTextTest2 = document.getElementById("scoreTest2");
 let questionCounterTest2;
 let scoreTest2;
 let scoreToAddTest2;
-const MAX_QUESTIONS_TEST2 = 3;
+const MAX_QUESTIONS_TEST2 = 10;
 // THIS doesn't need to be declared as long as train.js is run first
  let acceptingAnswers;
 
@@ -71,7 +197,7 @@ const getNewQuestionTest2 = () => {
         // For test 2: Overall test score; Time elapsed since start of test (s);
         testing2Data = Object.assign({ "overallTest2": {"scoreTest2": scoreTest2, "timeTest2": ((Date.now() - test2Start) / 1000)} }, testing2Data);
         testing2Data = {"testing2": testing2Data};
-        console.log(testing2Data);
+        //console.log(testing2Data);
 
         displayModalTest2();
         return;
@@ -143,7 +269,7 @@ const getNewQuestionTest2 = () => {
                 setTimeout(() => {
                     clickedAnswer.parentElement.classList.remove(classToApply);
                     acceptingAnswers = true;
-                }, 1500);
+                }, 1000);
                 return;
             }
             else {
@@ -156,9 +282,13 @@ const getNewQuestionTest2 = () => {
 
             // After time period, remove the correct/incorrect class and get the next question
             setTimeout(() => {
-                // If answer was correct, leave the answer highlighted
+                // If answer was correct, leave the answer highlighted and lower opacity
                 if (classToApply === "incorrect") {
                     clickedAnswer.parentElement.classList.remove(classToApply);
+                }
+                else if (classToApply === "correct") {
+                    clickedAnswer.parentElement.classList.remove(classToApply);
+                    clickedAnswer.parentElement.classList.add("bingo-locked");
                 }
 
                 // Append question data to object

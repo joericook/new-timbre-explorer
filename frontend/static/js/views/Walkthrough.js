@@ -50,7 +50,9 @@ export default class extends AbstractView {
                     For the <mark class="blue">envelope</mark>, the process is the same as the articulation. Continuously press and release a key while changing the envelope slider, the slider
                     on the far right. Again, you may need to briefly hold the key each time before releasing, in order to hear the full 
                     effect of this dimension. Reset when you are finished. 
-                    <br><br><br>
+                    <br><br>
+                    <p style="text-align:center">*  *  *</p>
+                    <br>
                     With the walk-through completed you should now be able to use the Timbre Explorer and continue to the first task of the study.
                     <br><br>
                     In the first task you will be presented with 2 sounds: A and B. The Timbre Explorer parameters will be set to those of sound A.

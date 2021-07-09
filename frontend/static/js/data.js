@@ -114,5 +114,6 @@ function sendData() {
     };
     fetch("/api/store-response", requestOptions).then( () => {
         console.log("user data saved to DB");
+        console.log(process.env.MONGODB_URI);
     });
 }

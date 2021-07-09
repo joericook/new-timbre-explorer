@@ -86,6 +86,7 @@ function saveConclusion() {
         };
         fetch("/api/store-response", requestOptions).then( () => {
             console.log("presets/email saved to DB");
+            console.log(process.env.MONGODB_URI);
         });
     } 
 }

@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== "production") {
   console.log(process.env.MONGODB_URI);
   dbName = "experiment-data-dev";
 } else {
+  console.log(process.env.MONGODB_URI);
   dbName = "experiment-data-prod";
 }
 

@@ -68,18 +68,6 @@ export class BlockDiagram {
     
   }
   
-  displayGraphInfo(divId, display) {
-    console.log("setting displayStyle of div", divId, "to", display);
-    
-    for (var i = 0; i < this.infoList.length; i++) {
-      if (this.infoList[i] == divId) {
-        this.document.getElementById(divId).style.display = "block";
-      } else {
-        this.document.getElementById(this.infoList[i]).style.display = "none";
-      }
-    }
-  }
-  
   resize(w, h) {
     this.gui.resize(w, h);
     this.specGraph.resize(this.gui.graphSX, this.gui.graphY, this.gui.graphW, this.gui.graphH);

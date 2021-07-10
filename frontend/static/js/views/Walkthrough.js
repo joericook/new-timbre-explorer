@@ -31,26 +31,51 @@ export default class extends AbstractView {
                 <p>
                     To control the timbre dimensions, use the 4 (colored) range sliders at the top of the screen, which can be clicked and dragged to be changed.  
                     <br><br>
-                    We will now go through each dimension to hear its effect on the final sound. First reset the dimensions using the “Submit” button on the bottom 
+                    We will now go through each dimension to hear its effect on the final sound. You can also see the effect that each slider has on the sound by observing the 
+                    black graph on the right (the result of a Fourier Transform on the sound). 
+                    <br>
+                    First reset the dimensions using the “Submit” button on the bottom 
                     left (the drop-down menu above it should say “Reset”). The timbre sliders should all return to their center positions. 
                     <br><br>
-                    For the <mark class="red">spectrum</mark> dimension, hold down any key that triggers a note. You should hear a continuous note. While still holding down the key, use 
+
+                    For the <mark class="red">Spectrum</mark> dimension, hold down any key that triggers a note. You should hear a continuous note. While still holding down the key, use 
                     your mouse to move the spectrum slider. You should now hear the sound changing as the slider is moved. Move the slider to its lowest and then 
-                    its highest position to roughly familiarize yourself with what this dimension is capable of. When finished, release the held key and reset the 
-                    dimensions again (Use “Reset” preset and click the “Submit” button, bottom left). 
+                    its highest position to roughly familiarize yourself with what this dimension is capable of. 
                     <br><br>
-                    For the <mark class="yellow-bright">brightness</mark> dimension, repeat the same process, but this time use the Brightness slider, the second slider from the left. (Hold down a 
-                    note key and move the brightness slider to observe its full range of effects. Reset when done). 
+                    Perceptually, the sound is more <b>hollow</b> for lower spectrum values, but becomes more <b>full</b> as the spectrum value increases from left to right.
+                    From a technical standpoint, the spectrum dimension controls the base wave-shape of the sound. This dimension provides the foundational sound of the timbre explorer 
+                    which is further shaped by the other three dimensions.
+                    <br>
+                    When finished, release the held key and reset the dimensions again (Use “Reset” preset and click the “Submit” button, bottom right). 
                     <br><br>
-                    Now for the <mark class="green">articulation</mark>, we will do something slightly different. To observe its effects you will need to continuously press and release a note 
-                    key. While you do this, use the mouse to change the Articulation range slider, the third from the left. Each time you press the note key, the 
-                    sound should be slightly different depending on the position of the slider. To fully hear the effect you may need to briefly hold the key before 
-                    releasing it. As before, reset when you are finished. 
+
+                    For the <mark class="yellow-bright">Brightness</mark> dimension, repeat the same process, but this time use the Brightness slider. Hold down a note key and move the
+                    brightness slider to observe its full range of effects. Reset when you are done. 
                     <br><br>
-                    For the <mark class="blue">envelope</mark>, the process is the same as the articulation. Continuously press and release a key while changing the envelope slider, the slider
-                    on the far right. Again, you may need to briefly hold the key each time before releasing, in order to hear the full 
-                    effect of this dimension. Reset when you are finished. 
+                    Perceptually, sounds with a low brightness are <b>dull</b> sounding, and as you increase the brightness from left to right, you'll hear the sound become more and more <b>bright</b>, 
+                    up to a point where it begins to sound thin and tinny. From a technical standpoint, the brightness is a frequency filter. In the middle of the brightness range, the filter
+                    is off and no effect is applied. Below this neutral range, the filter is a low-pass filter, which blocks high-frequencies and allows low-frequencies to "pass", and above 
+                    the neutral range, the filter is a high-pass filter, which blocks low-frequencies and allow high-frequencies to pass.    
                     <br><br>
+
+                    Now for the <mark class="green">Articulation</mark>, we will do something slightly different. To observe its effects you will need to continuously press and release a note 
+                    key. While you do this, use the mouse to change the articulation range slider. Each time you press the note key, the sound should be slightly different depending on the 
+                    position of the slider. To fully hear the effect you may need to briefly hold the key before releasing it. As before, reset when you are finished.
+                    <br><br>
+                    This slider begins to introduce time variance to the timbre. Perceptually, the best way to describe the effect is through onomatopoeias. As in the brightness dimension, we 
+                    have a neutral setting in the middle of the articulation range. At low articualtion values, the sound is an increasingly pronounced <b>"BWAA"</b> sound. At high articulation values, 
+                    the sound becomes more of a <b>"NYUU"</b> sound. This sound is also caused by a filter but, unlike the brightness filter, this one has a cut-off value that moves over time.
+                    <br><br>
+
+                    For the <mark class="blue">Envelope</mark>, the process is the same as the articulation. Continuously press and release a key while changing the envelope slider. Again, you 
+                    may need to briefly hold the key each time before releasing, in order to hear the full effect of this dimension.
+                    <br><br>
+                    This dimension which controls how the overall amplitude of the sound changes over time. Perceptually, this dimension is primarily about the onset of the sound, the way the sound 
+                    changes at the start. Sounds with a low envelope value have more <b>sudden</b> onsets, as would be heard in percussive sounds like drums, xylophones etc. Sounds with a high envelope value 
+                    have more <b>gradual</b> onsets, as would be heard in bowed string instruments or wind instruments. At extreme ends of the range, sounds also have a longer "release". This is the time that
+                    it takes for the sounds amplitude to return to zero.
+                    <br><br> 
+
                     <p style="text-align:center">*  *  *</p>
                     <br>
                     With the walk-through completed you should now be able to use the Timbre Explorer and continue to the first task of the study.

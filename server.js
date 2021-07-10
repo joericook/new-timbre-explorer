@@ -3,15 +3,16 @@ const path = require("path");
 const app = express();
 const { MongoClient } = require("mongodb");
 
+console.log("DatabaseURI: ", process.env.MONGODB_URI);
 // Separate databases for development and production
 let dbName;
 const collectionName = "responses";
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
-  console.log(process.env.MONGODB_URI);
+  console.log("Dev: ", process.env.MONGODB_URI);
   dbName = "experiment-data-dev";
 } else {
-  console.log("DatabaseURI: ", process.env.MONGODB_URI);
+  console.log("Production: ", process.env.MONGODB_URI);
   dbName = "experiment-data-prod";
 }
 

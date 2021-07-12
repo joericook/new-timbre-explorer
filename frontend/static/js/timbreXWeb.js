@@ -151,8 +151,8 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     }
     else {
       ctx.resume();
-      console.log("context sample rate:", ctx.sampleRate);
-      console.log('Playback resumed successfully')
+      //console.log("context sample rate:", ctx.sampleRate);
+      //console.log('Playback resumed successfully')
       noteObj.startAudio();
       kbObj.startAudio();
       lfoOsc.start();
@@ -231,7 +231,7 @@ import * as blockDiagram from './canvas/blockDiagram.js'
   //reset notes if tab de-activates
   document.addEventListener("visibilitychange", function() {
     kbObj.allNotesOff();
-    console.log("tab deactivated");
+    //console.log("tab deactivated");
   });
   
   function changePreset() {
@@ -285,7 +285,7 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     canvas.height = window.innerHeight;
     // canvas.width = document.body.clientWidth;
     // canvas.height = document.body.clientHeight;
-    console.log("resizing");
+    //console.log("resizing");
     blkD.resize(canvas.width, canvas.height);
     // gui.resize(window.innerWidth, window.innerHeight);
     // canvas.width = window.innerWidth;
@@ -309,12 +309,12 @@ import * as blockDiagram from './canvas/blockDiagram.js'
       if (mutation.oldValue == "display: block;") {
         ctx.resume();
         acceptingNotes = true;
-        console.log("Audio engine resumed");
+        console.log("Audio Engine Resumed");
       }
       else if (mutation.oldValue == "display: none;") {
         ctx.suspend();
         acceptingNotes = false;
-        console.log("Audio engine suspended");
+        console.log("Audio Engine Suspended");
       }
     });
   });

@@ -11,14 +11,21 @@ export default class extends AbstractView {
             <div class="infoContainer">
                 <h1></h1>
                 <br><br><br><br><br>
-                <p style="text-align: center">
+                
+                <p style="text-align: center" id="preTestText">
                     This study will test your perception of timbre and will therefore require you to wear headphones throughout.
                     <br><br>
                     To check that headphones are being worn, we ask that you take <strong>two</strong> brief headphone tests.
                     To begin each test, please click the button below and follow the instructions in the window that appears.
                     <br><br>
-                    When both tests have been completed you will be able to click <strong>Next</strong> to continue.
+                    When both tests have been completed, you will be able to click <strong>Next</strong> to continue.
                 </p>
+    
+                <p style="display: none; text-align: center;" id="postTestText">
+                    <br><br><br><br><br><br><br><br>
+                    You succesfully passed both tests! Click <strong>Next</strong> to continue...   
+                </p>
+                
                 <!-- NEXT BUTTON FOR DEV USE ONLY -->
                 <!-- <a href="/hearing" data-link>Next</a> -->                
                 <br><br>

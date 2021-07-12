@@ -149,8 +149,6 @@ export default class extends AbstractView {
                 <h3>Who can I contact if I have any questions about this study?</h3>
                 <p>
                     Joseph Rome Innes Cook: j.r.i.cook@se20.qmul.ac.uk 
-                    <br>
-                    Joshua Ryan Lam: j.r.g.lam@se19.qmul.ac.uk       
                 </p>
                 <br>
                 <div class="nextButton">

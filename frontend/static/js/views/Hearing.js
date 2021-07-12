@@ -14,7 +14,7 @@ export default class extends AbstractView {
                 <p>
                     Before completing the study, please complete this brief speech-in-noise hearing test.
                 </p>
-                <p align="center">
+                <p style="text-align:center">
                     <iframe
                         title="hear-it Hearing Test"
                         frameborder="0"

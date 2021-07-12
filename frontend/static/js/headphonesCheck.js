@@ -151,7 +151,7 @@ class HeadphonesCheck {
       volumeSound: 'static/stimuli_HugginsPitch/HugginsPitch_calibration.flac',
       volumeText: '<p class="notice">Please put on your headphones.</p>' +
           '<p>If you do not have headphones, you can use earbuds (headphones are preferred).</p>' +
-          '<p>Click the <span style="color:#03a9f4;"><b>blue</b></span> button below to play a sound to check your volume.</p>',
+          '<p>Turn your volume to zero, before playing a sound with the <span style="color:#03a9f4;"><b>blue</b></span> button below and adjusting your volume to a comfortably loud level.</p>',
       checkType: 'huggins',
       checkVolume: 1,
       checkExample: 'static/stimuli_HugginsPitch/HugginsPitch_example_2.flac',
@@ -722,13 +722,19 @@ function doBeatTest() {
   const beatHeadphonesCheck = new HeadphonesCheck(options);
 
   // Perform the check (optional: call the showResult function when finished).
-  beatHeadphonesCheck.checkHeadphones();
+  beatHeadphonesCheck.checkHeadphones(true, false);
 
-  // Hide the button once test has been started
-  let x = document.getElementById("beatTestButton");
+  // Hide the button and pre-text once test has been started
+  let w = document.getElementById("beatTestButton");
+  w.style.display = "none";
+
+  let x = document.getElementById("preTestText");
   x.style.display = "none";
 
-   // Show 'Next' so the user can continue after completing the test
-   let y = document.getElementById("afterHeadphonesNext");
-   y.style.display = "block";
+  // Show 'Next' and post-test text so the user can continue after completing the test
+  let y = document.getElementById("afterHeadphonesNext");
+  y.style.display = "block";
+
+  let z = document.getElementById("postTestText");
+  z.style.display = "block";
 }

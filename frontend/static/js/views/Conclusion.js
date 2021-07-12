@@ -12,7 +12,7 @@ export default class extends AbstractView {
                 <h2>Thank you for your Participation!</h2>
                 <p>
                     This study is now concluded. <br> Before you close this page, Do you have any suggestions for a combination of settings that resemble the timbre
-                    of a real-world instrument? If so, please provide the Timbre Explorer settings in the following format: s1, b2, a1, e1; s2, b2, a2, e2...etc. 
+                    of a real-world instrument? If so, please provide the Timbre Explorer settings in the following format: s1, b2, a1, e1, name1; s2, b2, a2, e2, name2...etc. 
                 </p>
                 <form id="conclusionForm">
                     <label for="presetSuggestions"><i>Your suggestions here: </i></label>

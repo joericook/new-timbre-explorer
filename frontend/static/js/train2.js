@@ -337,7 +337,7 @@ const getNewTrialTrain2 = () => {
         //console.log("No more trials")
         training2Data = Object.assign({ "overallTrain2": {"timeTrain2": ((Date.now() - train2Start) / 1000)} }, training2Data);
         training2Data = {"training2": training2Data};
-        console.log(training2Data);
+        //console.log(training2Data);
 
         displayModalTrain2();
         return;

@@ -73,7 +73,7 @@ export default class extends AbstractView {
                     This dimension which controls how the overall amplitude of the sound changes over time. Perceptually, this dimension is primarily about the onset of the sound, the way the sound 
                     changes at the start. Sounds with a low envelope value have more <b>sudden</b> onsets, as would be heard in percussive sounds like drums, xylophones etc. Sounds with a high envelope value 
                     have more <b>gradual</b> onsets, as would be heard in bowed string instruments or wind instruments. At extreme ends of the range, sounds also have a longer "release". This is the time that
-                    it takes for the sounds amplitude to return to zero.
+                    it takes for the sound's amplitude to return to zero.
                     <br><br> 
 
                     <p style="text-align:center">*  *  *</p>

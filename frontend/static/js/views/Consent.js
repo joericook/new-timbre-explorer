@@ -9,7 +9,7 @@ export default class extends AbstractView {
     async getHtml() {
         return /*html*/`
             <div class="infoContainer">
-                <h1>Consent</h1>
+                <h1 class="pageTitle">Consent</h1>
                 <br>
                 <p>
                     Please confirm the following and click <strong>Next</strong> when you are ready for some checks. 

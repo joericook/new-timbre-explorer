@@ -9,11 +9,11 @@ export default class extends AbstractView {
     async getHtml() {
         return /*html*/`
             <div class="infoContainer">
-                <h1>Control Walkthrough</h1>
+                <h1 class="pageTitle">Control Walkthrough</h1>
                 <p>
                     This walkthrough will guide you through the basic controls of the Timbre Explorer.
                 </p>
-                <h2>Keyboard Controls</h2>
+                <h2 class="secondTitle">Keyboard Controls</h2>
                 <p>
                     To trigger notes, use the bottom 2 rows of the keyboard, the ones starting with ASDF and ZXC. As seen on the right, these rows form a piano 
                     roll, with each key triggering the corresponding note when pressed/held. For example, the “Z” key triggers a C note, with the “,” key 
@@ -27,7 +27,7 @@ export default class extends AbstractView {
                     <br><br>
                     Before moving on the next section, press any key to start the Web-Audio processing engine. (this should turn on the (red) graph on the top left).     
                 </p>
-                <h2>Timbre Controls</h2>
+                <h2 class="secondTitle">Timbre Controls</h2>
                 <p>
                     To control the timbre dimensions, use the 4 (colored) range sliders at the top of the screen, which can be clicked and dragged to be changed.  
                     <br><br>

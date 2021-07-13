@@ -38,6 +38,22 @@
     font-weight: bold;
   }
 
+  .pageTitle {
+    background-color: #435a86;
+    color: white;
+    width: 75%;
+    padding: 0.2em 0 0.2em 0.3em;
+    border-radius: 0.5em;
+  }
+
+  .secondTitle {
+    background-color: #7e6f9f;
+    color: white;
+    width: 50%;
+    padding: 0.2em 0 0.2em 0.3em;
+    border-radius: 0.5em;
+  }
+
   #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
@@ -483,7 +499,7 @@
 /* Temani Afif, 2021 */
 
 .nextText {
-  color: #6F809F;
+  color: #435a86;
 }
 
 .submit-row {
@@ -706,7 +722,7 @@
 
 .modal-header {
   padding: 1vh 1.5vw;
-  background-color: #435a86;;
+  background-color: #435a86;
   color: white;
 }
 

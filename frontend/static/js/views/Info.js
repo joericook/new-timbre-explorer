@@ -9,7 +9,7 @@ export default class extends AbstractView {
     async getHtml() {
         return /*html*/`
             <div class="infoContainer">
-                <h1>Participant Information</h1> 
+                <h1 class="pageTitle">Participant Information</h1> 
                 <br>
                 <p>
                     Please read the following information carefully before proceeding to the study. 

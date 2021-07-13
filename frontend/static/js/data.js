@@ -1,4 +1,3 @@
-let hearingData;
 let backgroundData;
 let feedback1Data;
 let feedback2Data;
@@ -28,12 +27,7 @@ function saveForm(page) {
         }
         //$( `#${page}Submit` ).fadeTo(300, 0);
         document.getElementById(`${page}Submit`).disabled = true;
-        if (page === "hearing") {
-            hearingData = Object.fromEntries(new FormData(form).entries());
-            hearingData = {"hearing": hearingData};
-            //console.log("hearingData: ", hearingData);
-        }
-        else if (page === "background") {
+        if (page === "background") {
             backgroundData = Object.fromEntries(new FormData(form).entries());
             backgroundData = {"background": backgroundData};
             //console.log("backgroundData: ", backgroundData);
@@ -92,8 +86,7 @@ function saveConclusion() {
 
 // Wrap up all data objects and save to DB
 function sendData() {
-    let userData = {...hearingData,
-                   ...backgroundData,
+    let userData = {...backgroundData,
                    ...feedback1Data,
                    ...feedback2Data,
                    ...feedback3Data,

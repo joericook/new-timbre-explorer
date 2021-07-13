@@ -1,7 +1,7 @@
 /**
- * Sijia Zhao (2020-2021) sijia.zhao@psy.ox.ac.uk
- * Read LICENSE file before using
- */
+* Sijia Zhao (2020-2021) sijia.zhao@psy.ox.ac.uk
+* Read LICENSE file before using
+*/
 
 class HeadphonesCheck {
 
@@ -738,3 +738,12 @@ function doBeatTest() {
   let z = document.getElementById("postTestText");
   z.style.display = "block";
 }
+/* REFERENCES */
+/***************************************************************************************
+*    Title: An online headphone screening test based on dichotic pitch
+*    Authors: Alice E. Milne, Roberta Bianco, Katarina C. Poole, Sijia Zhao, 
+              Andrew J. Oxenham, Alexander J. Billig & Maria Chait 
+*    Date: 2020
+*    Availability: https://github.com/ChaitLabUCL/HeadphoneCheck_Test
+*
+***************************************************************************************/

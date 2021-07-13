@@ -45,7 +45,19 @@ export default class extends AbstractView {
                         <p><strong>4) What is your current country of residency?:</strong></p>
                         <input type="text" id="countryInput2" name="countryCurrent" required>
                         <br><br>
-                        <p><strong>5) Which title best describes you?:</strong></p>
+                        <p><strong>5) Do you knowingly have any hearing loss or impairment?:</strong></p>
+                        <div>
+                            <input type="radio" id="hearingLossChoice1" name="hearingLoss" value="none" required>
+                            <label for="hearingLossChoice1">No</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="hearingLossChoice2" name="hearingLoss" value="minor" required>
+                            <label for="hearingLossChoice2">Yes, minor hearing loss or tinnitus</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="hearingLossChoice3" name="hearingLoss" value="major" required>
+                            <label for="hearingLossChoice3">Yes, major hearing loss or impairment</label>
+                            <br><br>
+                        </div>
+                        <p><strong>6) Which title best describes you?:</strong></p>
                         <div>
                             <input type="radio" id="musicianTitleChoice1" name="musicianTitle" value="Non-musician" required>
                             <label for="musicianTitleChoice1">Non-musician</label>
@@ -65,6 +77,7 @@ export default class extends AbstractView {
                             <input type="radio" id="musicianTitleChoice6" name="musicianTitle" value="Professional musician" required>
                             <label for="musicianTitleChoice6">Professional musician</label>
                         </div>
+                        <br><br>
                     </div>
 
                     <br><br>
@@ -75,7 +88,7 @@ export default class extends AbstractView {
                             basis, or have formally studied it:
                         </p>
 
-                        <label><strong>6) Playing the piano/keyboards</strong></label>
+                        <label><strong>7) Playing the piano/keyboards</strong></label>
                         <ul class="likert">
                             <li class="options-4">
                                 <input type="radio" id="pianoKnowledgeChoice1" name="pianoKnowledge" value="1" required>
@@ -95,7 +108,7 @@ export default class extends AbstractView {
                             </li>
                         </ul>
 
-                        <label><strong>7) Timbre (tone/sound quality)</strong></label>
+                        <label><strong>8) Timbre (tone/sound quality)</strong></label>
                         <ul class="likert">
                             <li class="options-4">
                                 <input type="radio" id="timbreKnowledgeChoice1" name="timbreKnowledge" value="1" required>
@@ -115,7 +128,7 @@ export default class extends AbstractView {
                             </li>
                         </ul>
 
-                        <label><strong>8) The process of sound synthesis</strong></label>
+                        <label><strong>9) The process of sound synthesis</strong></label>
                         <ul class="likert">
                             <li class="options-4">
                                 <input type="radio" id="synthKnowledgeChoice1" name="synthKnowledge" value="1" required>
@@ -135,7 +148,7 @@ export default class extends AbstractView {
                             </li>
                         </ul>
 
-                        <label><strong>9) Frequency filters</strong></label>
+                        <label><strong>10) Frequency filters</strong></label>
                         <ul class="likert">
                             <li class="options-4">
                                 <input type="radio" id="filterKnowledgeChoice1" name="filterKnowledge" value="1" required>
@@ -155,7 +168,7 @@ export default class extends AbstractView {
                             </li>
                         </ul>
 
-                        <label><strong>10) The frequency domain / Fourier transform</strong></label>
+                        <label><strong>11) The frequency domain / Fourier transform</strong></label>
                         <ul class="likert">
                             <li class="options-4">
                                 <input type="radio" id="freqKnowledgeChoice1" name="freqKnowledge" value="1" required>

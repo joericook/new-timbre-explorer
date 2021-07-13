@@ -366,5 +366,14 @@ import * as blockDiagram from './canvas/blockDiagram.js'
     attributeFilter: ['value'],
   });
 
-  
+
 })()
+
+/* REFERENCES */
+/***************************************************************************************
+*    Title: Webapp version of timbre explorer
+*    Authors: Joshua Ryan Go Lam
+*    Date: 2020
+*    Availability: https://github.com/jRoshLam/timbreExplorerWeb
+*
+***************************************************************************************/

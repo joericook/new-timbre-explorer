@@ -1,11 +1,8 @@
-// console.log("JS is loaded");
-
 //Import views
 import Welcome from "./views/Welcome.js";
 import Info from "./views/Info.js";
 import Consent from "./views/Consent.js";
 import ConsentDl from "./views/ConsentDl.js";
-import Hearing from "./views/Hearing.js";
 import Headphones from "./views/Headphones.js";
 import Background from "./views/Background.js";
 import Walkthrough from "./views/Walkthrough.js";
@@ -32,7 +29,6 @@ const router = async () => {
         { path: "/info", view: Info },
         { path: "/consent", view: Consent },
         { path: "/consentdl", view: ConsentDl },
-        { path: "/hearing", view: Hearing },
         { path: "/headphones", view: Headphones },
         { path: "/background", view: Background },
         { path: "/walkthrough", view: Walkthrough },
@@ -72,7 +68,7 @@ const router = async () => {
 
     // Some paths send html to overlay
     // others send html to taskContainer
-    if (['/', '/info', '/consent', '/consentdl', '/hearing', '/headphones', '/background', '/testing1', '/feedback1',
+    if (['/', '/info', '/consent', '/consentdl', '/headphones', '/background', '/testing1', '/feedback1',
          '/testing2', '/feedback2', '/testing3', '/feedback3'].includes(match.route.path)) {
         //console.log("overlayContent");
         document.querySelector("#overlayContent").innerHTML = await view.getHtml();
@@ -115,7 +111,6 @@ const router = async () => {
     
     // Scroll to top of the divs when updating contents
     document.getElementById("overlay").scrollTo(0, 0);
-    document.getElementById("overlay").scrollTo(0, 0);
 
     //console.log(match.route.view);
     //console.log(match.route.path);
@@ -146,3 +141,12 @@ window.addEventListener('beforeunload', function (e) {
     // returnValue must be set to show alert on chrome
     e.returnValue = '';
   });
+
+/* REFERENCES */
+/***************************************************************************************
+*    Title: Building a Single Page App without frameworks
+*    Authors: Dom (dcode)
+*    Date: 2020
+*    Availability: https://dev.to/dcodeyt/building-a-single-page-app-without-frameworks-hl9
+*
+***************************************************************************************/

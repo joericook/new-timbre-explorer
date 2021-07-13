@@ -245,3 +245,12 @@ displayModalTest1 = () => {
 }
 
 startTest1();
+
+/* REFERENCES */
+/***************************************************************************************
+*    Title: QUIZ with JavaScript | The Ultimate Guide
+*    Authors: Keep Coding by MDB
+*    Date: 2021
+*    Availability: https://www.youtube.com/watch?v=MxrGPP4F8Sc&t=3675s
+*
+***************************************************************************************/

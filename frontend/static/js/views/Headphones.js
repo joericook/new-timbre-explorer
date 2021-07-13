@@ -27,7 +27,7 @@ export default class extends AbstractView {
                 </p>
                 
                 <!-- NEXT BUTTON FOR DEV USE ONLY -->
-                <!-- <a href="/hearing" data-link>Next</a> -->                
+                <!-- <a href="/background" data-link>Next</a> -->                
                 <br><br>
                 <div style="margin: 0;
                             position: absolute;
@@ -37,7 +37,7 @@ export default class extends AbstractView {
                     <button id="hugginsTestButton" onclick="doHugginsTest()" style="height:5vh; width:10vw; margin: 0 auto;">Begin Test 1</button>
                     <button id="beatTestButton" onclick="doBeatTest()" style="height:5vh; width:10vw; margin: 0 auto; display:none;">Begin Test 2</button>
                     <div class="nextButton">
-                        <a id="afterHeadphonesNext" style="display:none" class="nextText" href="/hearing" data-link>Next</a>
+                        <a id="afterHeadphonesNext" style="display:none" class="nextText" href="/background" data-link>Next</a>
                     </div>
                 </div>
             </div>

@@ -124,6 +124,7 @@
           font-size: 0.9em;
           font-weight: 300;
         }
+        /* Pete Fecteau, 2019 */
 
         .form-extra-label {
           margin-left: 5.5vw;
@@ -479,6 +480,7 @@
 .nextButton:hover {
   --d: 1vh;
 }
+/* Temani Afif, 2021 */
 
 .nextText {
   color: #6F809F;
@@ -700,6 +702,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: #ececec;
 }
+/* w3schools, 2021 */
 
 .modal-header {
   padding: 1vh 1.5vw;
@@ -710,3 +713,22 @@
 .modal-body {
   padding: 0 1.5vw 1.5vw 1.5vw;
 }
+
+/* REFERENCES */
+/***************************************************************************************
+*    Title: How To - CSS/JS Modal
+*    Authors: w3schools
+*    Date: 2021
+*    Availability: https://www.w3schools.com/howto/howto_css_modals.asp 
+*
+*    Title: Responsive Likert Scale for Surveys.
+*    Authors: Pete Fecteau
+*    Date: 2019
+*    Availability: https://codepen.io/Buttonpresser/pen/qiuIx
+*
+*    Title: 100 underline/overlay animations
+*    Authors: Temani Afif
+*    Date: 2021
+*    Availability: https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40
+*
+***************************************************************************************/

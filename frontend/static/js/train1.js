@@ -1,198 +1,22 @@
-// Questions in JSON format
-let descriptionsTrain1 = [
-    {
-        "id":"1-1_1",
-        "description":"Sounds A and B differ along the Spectrum dimension. Sound B has a higher Spectrum value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_1a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_1b.wav",
-        "spectrumValue": "10",
-        "brightnessValue": "208",
-        "articulationValue": "4",
-        "envelopeValue": "185",
-        "sliderToMove": "specSlider",
-        "correctValue": "160"
-    },  
-    {
-        "id":"1-1_2",
-        "description":"Sounds A and B differ along the Spectrum dimension. Sound B has a higher Spectrum value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_2a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_2b.wav",
-        "spectrumValue": "75",
-        "brightnessValue": "224",
-        "articulationValue": "75",
-        "envelopeValue": "122",
-        "sliderToMove": "specSlider",
-        "correctValue": "150"
-    },  
-    {
-        "id":"1-1_3",
-        "description":"Sounds A and B differ along the Spectrum dimension. Sound B has a lower Spectrum value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_3a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_3b.wav",
-        "spectrumValue": "200",
-        "brightnessValue": "57",
-        "articulationValue": "206",
-        "envelopeValue": "183",
-        "sliderToMove": "specSlider",
-        "correctValue": "50"
-    },
-    {
-        "id":"1-1_4",
-        "description":"Sounds A and B differ along the Spectrum dimension. Sound B has a lower Spectrum value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_4a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_4b.wav",
-        "spectrumValue": "100",
-        "brightnessValue": "108",
-        "articulationValue": "110",
-        "envelopeValue": "128",
-        "sliderToMove": "specSlider",
-        "correctValue": "25"
-    },
-    {
-        "id":"1-1_5",
-        "description":"Sounds A and B differ along the Brightness dimension. Sound B has a higher Brightness value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_5a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_5b.wav",
-        "spectrumValue": "215",
-        "brightnessValue": "10",
-        "articulationValue": "207",
-        "envelopeValue": "188",
-        "sliderToMove": "brigSlider",
-        "correctValue": "160"
-    },  
-    {
-        "id":"1-1_6",
-        "description":"Sounds A and B differ along the Brightness dimension. Sound B has a higher Brightness value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_6a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_6b.wav",
-        "spectrumValue": "121",
-        "brightnessValue": "180",
-        "articulationValue": "18",
-        "envelopeValue": "68",
-        "sliderToMove": "brigSlider",
-        "correctValue": "255"
-    },  
-    {
-        "id":"1-1_7",
-        "description":"Sounds A and B differ along the Brightness dimension. Sound B has a lower Brightness value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_7a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_7b.wav",
-        "spectrumValue": "208",
-        "brightnessValue": "250",
-        "articulationValue": "41",
-        "envelopeValue": "125",
-        "sliderToMove": "brigSlider",
-        "correctValue": "100"
-    },
-    {
-        "id":"1-1_8",
-        "description":"Sounds A and B differ along the Brightness dimension. Sound B has a lower Brightness value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_8a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_8b.wav",
-        "spectrumValue": "191",
-        "brightnessValue": "125",
-        "articulationValue": "73",
-        "envelopeValue": "70",
-        "sliderToMove": "brigSlider",
-        "correctValue": "50"
-    },
-    {
-        "id":"1-1_9",
-        "description":"Sounds A and B differ along the Articulation dimension. Sound B has a higher Articulation value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_9a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_9b.wav",
-        "spectrumValue": "108",
-        "brightnessValue": "241",
-        "articulationValue": "25",
-        "envelopeValue": "42",
-        "sliderToMove": "artiSlider",
-        "correctValue": "175"
-    },  
-    {
-        "id":"1-1_10",
-        "description":"Sounds A and B differ along the Articulation dimension. Sound B has a higher Articulation value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_10a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_10b.wav",
-        "spectrumValue": "29",
-        "brightnessValue": "82",
-        "articulationValue": "125",
-        "envelopeValue": "42",
-        "sliderToMove": "artiSlider",
-        "correctValue": "200"
-    },  
-    {
-        "id":"1-1_11",
-        "description":"Sounds A and B differ along the Articulation dimension. Sound B has a lower Articulation value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_11a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_11b.wav",
-        "spectrumValue": "118",
-        "brightnessValue": "200",
-        "articulationValue": "250",
-        "envelopeValue": "200",
-        "sliderToMove": "artiSlider",
-        "correctValue": "100"
-    },
-    {
-        "id":"1-1_12",
-        "description":"Sounds A and B differ along the Articulation dimension. Sound B has a lower Articulation value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_12a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_12b.wav",
-        "spectrumValue": "58",
-        "brightnessValue": "41",
-        "articulationValue": "150",
-        "envelopeValue": "106",
-        "sliderToMove": "artiSlider",
-        "correctValue": "75"
-    },
-    {
-        "id":"1-1_13",
-        "description":"Sounds A and B differ along the envelope dimension. Sound B has a higher envelope value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_13a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_13b.wav",
-        "spectrumValue": "226",
-        "brightnessValue": "85",
-        "articulationValue": "79",
-        "envelopeValue": "0",
-        "sliderToMove": "enveSlider",
-        "correctValue": "150"
-    },  
-    {
-        "id":"1-1_14",
-        "description":"Sounds A and B differ along the envelope dimension. Sound B has a higher envelope value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_14a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_14b.wav",
-        "spectrumValue": "15",
-        "brightnessValue": "138",
-        "articulationValue": "110",
-        "envelopeValue": "150",
-        "sliderToMove": "enveSlider",
-        "correctValue": "225"
-    },  
-    {
-        "id":"1-1_15",
-        "description":"Sounds A and B differ along the envelope dimension. Sound B has a lower envelope value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_15a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_15b.wav",
-        "spectrumValue": "221",
-        "brightnessValue": "62",
-        "articulationValue": "108",
-        "envelopeValue": "250",
-        "sliderToMove": "enveSlider",
-        "correctValue": "100"
-    },
-    {
-        "id":"1-1_16",
-        "description":"Sounds A and B differ along the envelope dimension. Sound B has a lower envelope value.",
-        "soundASource": "static/TE_sounds/task1.1_sounds/1.1_16a.wav",
-        "soundBSource": "static/TE_sounds/task1.1_sounds/1.1_16b.wav",
-        "spectrumValue": "100",
-        "brightnessValue": "75",
-        "articulationValue": "128",
-        "envelopeValue": "85",
-        "sliderToMove": "enveSlider",
-        "correctValue": "10"
-    }
-]
+// Questions in the following JSON format:
+//
+//let descriptionsTrain1 = [
+//    {
+//        "id":"",
+//        "description":"",
+//        "soundASource": "",
+//        "soundBSource": "",
+//        "spectrumValue": "",
+//        "brightnessValue": "",
+//        "articulationValue": "",
+//        "envelopeValue": "",
+//        "sliderToMove": "",
+//        "correctValue": ""
+//    },...
+//
+// Obfuscated to protect integrity of the study
+
+const _0x1995=['Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20envelope\x20dimension.\x20Sound\x20B\x20has\x20a\x20higher\x20envelope\x20value.','224','static/TE_sounds/task1.1_sounds/1.1_6a.wav','enveSlider','static/TE_sounds/task1.1_sounds/1.1_8b.wav','static/TE_sounds/task1.1_sounds/1.1_7b.wav','1-1_8','static/TE_sounds/task1.1_sounds/1.1_10a.wav','static/TE_sounds/task1.1_sounds/1.1_13a.wav','118','1-1_16','static/TE_sounds/task1.1_sounds/1.1_4a.wav','static/TE_sounds/task1.1_sounds/1.1_16a.wav','188','191','200','225','static/TE_sounds/task1.1_sounds/1.1_3b.wav','1-1_9','static/TE_sounds/task1.1_sounds/1.1_12a.wav','125','23DNfHFl','static/TE_sounds/task1.1_sounds/1.1_11a.wav','1-1_12','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Brightness\x20dimension.\x20Sound\x20B\x20has\x20a\x20higher\x20Brightness\x20value.','specSlider','206','208','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20envelope\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20envelope\x20value.','56IAcYVH','185','106','241','static/TE_sounds/task1.1_sounds/1.1_16b.wav','static/TE_sounds/task1.1_sounds/1.1_9a.wav','1-1_4','1115986AVPzTR','226','static/TE_sounds/task1.1_sounds/1.1_6b.wav','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Articulation\x20dimension.\x20Sound\x20B\x20has\x20a\x20higher\x20Articulation\x20value.','100','static/TE_sounds/task1.1_sounds/1.1_10b.wav','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Brightness\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20Brightness\x20value.','1-1_13','1-1_5','250','static/TE_sounds/task1.1_sounds/1.1_5b.wav','static/TE_sounds/task1.1_sounds/1.1_7a.wav','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Spectrum\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20Spectrum\x20value.','110','1-1_7','artiSlider','138','static/TE_sounds/task1.1_sounds/1.1_5a.wav','215','1451797rmbJGs','255','static/TE_sounds/task1.1_sounds/1.1_14a.wav','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Articulation\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20Articulation\x20value.','150','35941QnnCMl','108','1-1_6','29328adZSWo','static/TE_sounds/task1.1_sounds/1.1_2b.wav','5996ZbJqAd','175','1-1_11','160','72324RphqhE','128','122','static/TE_sounds/task1.1_sounds/1.1_1a.wav','803214ecjdOr','static/TE_sounds/task1.1_sounds/1.1_9b.wav','180','brigSlider','Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Spectrum\x20dimension.\x20Sound\x20B\x20has\x20a\x20higher\x20Spectrum\x20value.','1-1_15','1-1_10','static/TE_sounds/task1.1_sounds/1.1_11b.wav','static/TE_sounds/task1.1_sounds/1.1_1b.wav','static/TE_sounds/task1.1_sounds/1.1_4b.wav','static/TE_sounds/task1.1_sounds/1.1_12b.wav','static/TE_sounds/task1.1_sounds/1.1_13b.wav','static/TE_sounds/task1.1_sounds/1.1_3a.wav','static/TE_sounds/task1.1_sounds/1.1_15a.wav'];const _0x2a15b8=_0x4d65;(function(_0xcac56,_0x302235){const _0x25b9cf=_0x4d65;while(!![]){try{const _0x5603cf=parseInt(_0x25b9cf(0x1bf))+-parseInt(_0x25b9cf(0x1b5))+-parseInt(_0x25b9cf(0x1bb))+-parseInt(_0x25b9cf(0x1ad))+parseInt(_0x25b9cf(0x1f1))+-parseInt(_0x25b9cf(0x1e2))*-parseInt(_0x25b9cf(0x1b2))+parseInt(_0x25b9cf(0x1b7))*-parseInt(_0x25b9cf(0x1ea));if(_0x5603cf===_0x302235)break;else _0xcac56['push'](_0xcac56['shift']());}catch(_0x1cf00e){_0xcac56['push'](_0xcac56['shift']());}}}(_0x1995,0xd122a));function _0x4d65(_0x3fa06a,_0x3bc2a9){return _0x4d65=function(_0x1995b8,_0x4d65e2){_0x1995b8=_0x1995b8-0x1a6;let _0x1c392d=_0x1995[_0x1995b8];return _0x1c392d;},_0x4d65(_0x3fa06a,_0x3bc2a9);}let descriptionsTrain1=[{'id':'1-1_1','description':_0x2a15b8(0x1c3),'soundASource':_0x2a15b8(0x1be),'soundBSource':_0x2a15b8(0x1c7),'spectrumValue':'10','brightnessValue':_0x2a15b8(0x1e8),'articulationValue':'4','envelopeValue':_0x2a15b8(0x1eb),'sliderToMove':_0x2a15b8(0x1e6),'correctValue':_0x2a15b8(0x1ba)},{'id':'1-1_2','description':_0x2a15b8(0x1c3),'soundASource':'static/TE_sounds/task1.1_sounds/1.1_2a.wav','soundBSource':_0x2a15b8(0x1b6),'spectrumValue':'75','brightnessValue':_0x2a15b8(0x1ce),'articulationValue':'75','envelopeValue':_0x2a15b8(0x1bd),'sliderToMove':'specSlider','correctValue':'150'},{'id':'1-1_3','description':'Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Spectrum\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20Spectrum\x20value.','soundASource':_0x2a15b8(0x1cb),'soundBSource':_0x2a15b8(0x1de),'spectrumValue':_0x2a15b8(0x1dc),'brightnessValue':'57','articulationValue':_0x2a15b8(0x1e7),'envelopeValue':'183','sliderToMove':_0x2a15b8(0x1e6),'correctValue':'50'},{'id':_0x2a15b8(0x1f0),'description':_0x2a15b8(0x1a6),'soundASource':_0x2a15b8(0x1d8),'soundBSource':_0x2a15b8(0x1c8),'spectrumValue':'100','brightnessValue':_0x2a15b8(0x1b3),'articulationValue':_0x2a15b8(0x1a7),'envelopeValue':_0x2a15b8(0x1bc),'sliderToMove':'specSlider','correctValue':'25'},{'id':_0x2a15b8(0x1f9),'description':_0x2a15b8(0x1e5),'soundASource':_0x2a15b8(0x1ab),'soundBSource':_0x2a15b8(0x1fb),'spectrumValue':_0x2a15b8(0x1ac),'brightnessValue':'10','articulationValue':'207','envelopeValue':_0x2a15b8(0x1da),'sliderToMove':_0x2a15b8(0x1c2),'correctValue':'160'},{'id':_0x2a15b8(0x1b4),'description':_0x2a15b8(0x1e5),'soundASource':_0x2a15b8(0x1cf),'soundBSource':_0x2a15b8(0x1f3),'spectrumValue':'121','brightnessValue':_0x2a15b8(0x1c1),'articulationValue':'18','envelopeValue':'68','sliderToMove':_0x2a15b8(0x1c2),'correctValue':_0x2a15b8(0x1ae)},{'id':_0x2a15b8(0x1a8),'description':_0x2a15b8(0x1f7),'soundASource':_0x2a15b8(0x1fc),'soundBSource':_0x2a15b8(0x1d2),'spectrumValue':_0x2a15b8(0x1e8),'brightnessValue':'250','articulationValue':'41','envelopeValue':_0x2a15b8(0x1e1),'sliderToMove':_0x2a15b8(0x1c2),'correctValue':_0x2a15b8(0x1f5)},{'id':_0x2a15b8(0x1d3),'description':_0x2a15b8(0x1f7),'soundASource':'static/TE_sounds/task1.1_sounds/1.1_8a.wav','soundBSource':_0x2a15b8(0x1d1),'spectrumValue':_0x2a15b8(0x1db),'brightnessValue':'125','articulationValue':'73','envelopeValue':'70','sliderToMove':_0x2a15b8(0x1c2),'correctValue':'50'},{'id':_0x2a15b8(0x1df),'description':_0x2a15b8(0x1f4),'soundASource':_0x2a15b8(0x1ef),'soundBSource':_0x2a15b8(0x1c0),'spectrumValue':_0x2a15b8(0x1b3),'brightnessValue':_0x2a15b8(0x1ed),'articulationValue':'25','envelopeValue':'42','sliderToMove':_0x2a15b8(0x1a9),'correctValue':_0x2a15b8(0x1b8)},{'id':_0x2a15b8(0x1c5),'description':_0x2a15b8(0x1f4),'soundASource':_0x2a15b8(0x1d4),'soundBSource':_0x2a15b8(0x1f6),'spectrumValue':'29','brightnessValue':'82','articulationValue':_0x2a15b8(0x1e1),'envelopeValue':'42','sliderToMove':_0x2a15b8(0x1a9),'correctValue':_0x2a15b8(0x1dc)},{'id':_0x2a15b8(0x1b9),'description':'Sounds\x20A\x20and\x20B\x20differ\x20along\x20the\x20Articulation\x20dimension.\x20Sound\x20B\x20has\x20a\x20lower\x20Articulation\x20value.','soundASource':_0x2a15b8(0x1e3),'soundBSource':_0x2a15b8(0x1c6),'spectrumValue':_0x2a15b8(0x1d6),'brightnessValue':'200','articulationValue':_0x2a15b8(0x1fa),'envelopeValue':_0x2a15b8(0x1dc),'sliderToMove':_0x2a15b8(0x1a9),'correctValue':_0x2a15b8(0x1f5)},{'id':_0x2a15b8(0x1e4),'description':_0x2a15b8(0x1b0),'soundASource':_0x2a15b8(0x1e0),'soundBSource':_0x2a15b8(0x1c9),'spectrumValue':'58','brightnessValue':'41','articulationValue':_0x2a15b8(0x1b1),'envelopeValue':_0x2a15b8(0x1ec),'sliderToMove':_0x2a15b8(0x1a9),'correctValue':'75'},{'id':_0x2a15b8(0x1f8),'description':_0x2a15b8(0x1cd),'soundASource':_0x2a15b8(0x1d5),'soundBSource':_0x2a15b8(0x1ca),'spectrumValue':_0x2a15b8(0x1f2),'brightnessValue':'85','articulationValue':'79','envelopeValue':'0','sliderToMove':'enveSlider','correctValue':'150'},{'id':'1-1_14','description':_0x2a15b8(0x1cd),'soundASource':_0x2a15b8(0x1af),'soundBSource':'static/TE_sounds/task1.1_sounds/1.1_14b.wav','spectrumValue':'15','brightnessValue':_0x2a15b8(0x1aa),'articulationValue':'110','envelopeValue':'150','sliderToMove':'enveSlider','correctValue':_0x2a15b8(0x1dd)},{'id':_0x2a15b8(0x1c4),'description':_0x2a15b8(0x1e9),'soundASource':_0x2a15b8(0x1cc),'soundBSource':'static/TE_sounds/task1.1_sounds/1.1_15b.wav','spectrumValue':'221','brightnessValue':'62','articulationValue':'108','envelopeValue':'250','sliderToMove':_0x2a15b8(0x1d0),'correctValue':_0x2a15b8(0x1f5)},{'id':_0x2a15b8(0x1d7),'description':_0x2a15b8(0x1e9),'soundASource':_0x2a15b8(0x1d9),'soundBSource':_0x2a15b8(0x1ee),'spectrumValue':_0x2a15b8(0x1f5),'brightnessValue':'75','articulationValue':'128','envelopeValue':'85','sliderToMove':_0x2a15b8(0x1d0),'correctValue':'10'}];
 
 // Declare variables
 const descriptionTrain1 = document.getElementById("descriptionTrain1");

@@ -1,150 +1,16 @@
-// Questions in JSON format
-let questionsTest2 = [
-    {
-        "id":"2-2_1",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_1.wav",
-        "answer":"a"
-    },  
-    {
-        "id":"2-2_2",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_2.wav",
-        "answer":"b"
-    },  
-    {
-        "id":"2-2_3",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_3.wav",
-        "answer":"c"
-    },
-    {
-        "id":"2-2_4",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_4.wav",
-        "answer":"d"
-    },
-    {
-        "id":"2-2_5",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_5.wav",
-        "answer":"e"
-    },  
-    {
-        "id":"2-2_6",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_6.wav",
-        "answer":"f"
-    },  
-    {
-        "id":"2-2_7",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_7.wav",
-        "answer":"g"
-    },
-    {
-        "id":"2-2_8",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_8.wav",
-        "answer":"h"
-    },
-    {
-        "id":"2-2_9",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_9.wav",
-        "answer":"i"
-    },  
-    {
-        "id":"2-2_10",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_10.wav",
-        "answer":"j"
-    },  
-    {
-        "id":"2-2_11",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_11.wav",
-        "answer":"k"
-    },
-    {
-        "id":"2-2_12",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_12.wav",
-        "answer":"l"
-    },
-    {
-        "id":"2-2_13",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_13.wav",
-        "answer":"m"
-    },  
-    {
-        "id":"2-2_14",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_14.wav",
-        "answer":"n"
-    },  
-    {
-        "id":"2-2_15",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_15.wav",
-        "answer":"o"
-    },
-    {
-        "id":"2-2_16",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_16.wav",
-        "answer":"p"
-    },
-    {
-        "id":"2-2_17",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_17.wav",
-        "answer":"q"
-    },  
-    {
-        "id":"2-2_18",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_18.wav",
-        "answer":"r"
-    },  
-    {
-        "id":"2-2_19",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_19.wav",
-        "answer":"s"
-    },
-    {
-        "id":"2-2_20",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_20.wav",
-        "answer":"t"
-    },
-    {
-        "id":"2-2_21",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_21.wav",
-        "answer":"u"
-    },  
-    {
-        "id":"2-2_22",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_22.wav",
-        "answer":"v"
-    },  
-    {
-        "id":"2-2_23",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_23.wav",
-        "answer":"w"
-    },
-    {
-        "id":"2-2_24",
-        "question":"Listen to the sound and click the tile with the matching properties.",
-        "soundSource": "static/TE_sounds/task2.2_sounds/2.2_24.wav",
-        "answer":"x"
-    }
-]
+// Questions in the following JSON format:
+//
+//let questionsTest2 = [
+//    {
+//        "id":"",
+//        "question":"",
+//        "soundSource": "",
+//        "answer":""
+//    },...  
+//
+// Obfuscated to protect integrity of the study
+
+const _0xd6dd=['static/TE_sounds/task2.2_sounds/2.2_12.wav','2-2_9','2-2_10','2-2_4','static/TE_sounds/task2.2_sounds/2.2_6.wav','static/TE_sounds/task2.2_sounds/2.2_22.wav','882982DQVqnS','2-2_8','449573rGTAge','4QduvrA','static/TE_sounds/task2.2_sounds/2.2_9.wav','34SXpPRT','static/TE_sounds/task2.2_sounds/2.2_11.wav','static/TE_sounds/task2.2_sounds/2.2_19.wav','static/TE_sounds/task2.2_sounds/2.2_18.wav','static/TE_sounds/task2.2_sounds/2.2_10.wav','2-2_16','2-2_14','2-2_1','2-2_11','33201icYFdP','2eNSqFm','2-2_7','1Buadnh','2-2_17','2-2_18','30238kSgUvG','static/TE_sounds/task2.2_sounds/2.2_4.wav','2-2_15','2-2_21','2-2_3','static/TE_sounds/task2.2_sounds/2.2_3.wav','static/TE_sounds/task2.2_sounds/2.2_1.wav','13124AcUNnD','189670agglef','static/TE_sounds/task2.2_sounds/2.2_23.wav','2-2_13','21WZWYmU','static/TE_sounds/task2.2_sounds/2.2_14.wav','static/TE_sounds/task2.2_sounds/2.2_7.wav','static/TE_sounds/task2.2_sounds/2.2_20.wav','2-2_23','static/TE_sounds/task2.2_sounds/2.2_8.wav','Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','2-2_19','761859DcyTVn'];function _0x2eee(_0x5c2096,_0x53f8ef){return _0x2eee=function(_0xd6dd69,_0x2eee00){_0xd6dd69=_0xd6dd69-0x194;let _0x8955ed=_0xd6dd[_0xd6dd69];return _0x8955ed;},_0x2eee(_0x5c2096,_0x53f8ef);}const _0x1da269=_0x2eee;(function(_0x300b28,_0x5dbcac){const _0xddcae4=_0x2eee;while(!![]){try{const _0x124de9=parseInt(_0xddcae4(0x1bf))*parseInt(_0xddcae4(0x1a9))+parseInt(_0xddcae4(0x1ac))*parseInt(_0xddcae4(0x19b))+-parseInt(_0xddcae4(0x1b7))*parseInt(_0xddcae4(0x1a6))+-parseInt(_0xddcae4(0x1b4))+-parseInt(_0xddcae4(0x19a))*-parseInt(_0xddcae4(0x1a7))+parseInt(_0xddcae4(0x1b3))*parseInt(_0xddcae4(0x19d))+-parseInt(_0xddcae4(0x198));if(_0x124de9===_0x5dbcac)break;else _0x300b28['push'](_0x300b28['shift']());}catch(_0x5205d8){_0x300b28['push'](_0x300b28['shift']());}}}(_0xd6dd,0x6fe3c));let questionsTest2=[{'id':_0x1da269(0x1a4),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1b2),'answer':'a'},{'id':'2-2_2','question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':'static/TE_sounds/task2.2_sounds/2.2_2.wav','answer':'b'},{'id':_0x1da269(0x1b0),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1b1),'answer':'c'},{'id':_0x1da269(0x195),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x1ad),'answer':'d'},{'id':'2-2_5','question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_5.wav','answer':'e'},{'id':'2-2_6','question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x196),'answer':'f'},{'id':_0x1da269(0x1a8),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1b9),'answer':'g'},{'id':_0x1da269(0x199),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1bc),'answer':'h'},{'id':_0x1da269(0x1c1),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x19c),'answer':'i'},{'id':_0x1da269(0x194),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x1a1),'answer':'j'},{'id':_0x1da269(0x1a5),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x19e),'answer':'k'},{'id':'2-2_12','question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x1c0),'answer':'l'},{'id':_0x1da269(0x1b6),'question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_13.wav','answer':'m'},{'id':_0x1da269(0x1a3),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x1b8),'answer':'n'},{'id':_0x1da269(0x1ae),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':'static/TE_sounds/task2.2_sounds/2.2_15.wav','answer':'o'},{'id':_0x1da269(0x1a2),'question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_16.wav','answer':'p'},{'id':_0x1da269(0x1aa),'question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_17.wav','answer':'q'},{'id':_0x1da269(0x1ab),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1a0),'answer':'r'},{'id':_0x1da269(0x1be),'question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x19f),'answer':'s'},{'id':'2-2_20','question':_0x1da269(0x1bd),'soundSource':_0x1da269(0x1ba),'answer':'t'},{'id':_0x1da269(0x1af),'question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_21.wav','answer':'u'},{'id':'2-2_22','question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x197),'answer':'v'},{'id':_0x1da269(0x1bb),'question':'Listen\x20to\x20the\x20sound\x20and\x20click\x20the\x20tile\x20with\x20the\x20matching\x20properties.','soundSource':_0x1da269(0x1b5),'answer':'w'},{'id':'2-2_24','question':_0x1da269(0x1bd),'soundSource':'static/TE_sounds/task2.2_sounds/2.2_24.wav','answer':'x'}];
 
 // Declare variables
 const questionTest2 = document.getElementById("questionTest2");
@@ -301,7 +167,7 @@ const getNewQuestionTest2 = () => {
 
                 getNewQuestionTest2();
                 acceptingAnswers = true;
-            }, 1500);
+            }, 1000);
         });
     });
     availableQuestions.shift();

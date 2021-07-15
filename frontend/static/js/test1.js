@@ -1,76 +1,17 @@
-// Questions in JSON format
-let questionsTest1 = [
-    {
-        "id":"1-2_1",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_1a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_1b.wav",
-        "answer":"a"
-    },  
-    {
-        "id":"1-2_2",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_2a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_2b.wav",
-        "answer":"b"
-    },  
-    {
-        "id":"1-2_3",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_3a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_3b.wav",
-        "answer":"c"
-    },
-    {
-        "id":"1-2_4",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_4a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_4b.wav",
-        "answer":"d"
-    },  
-    {
-        "id":"1-2_5",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_5a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_5b.wav",
-        "answer":"e"
-    },
-    {
-        "id":"1-2_6",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_6a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_6b.wav",
-        "answer":"f"
-    },  
-    {
-        "id":"1-2_7",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_7a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_7b.wav",
-        "answer":"g"
-    },  
-    {
-        "id":"1-2_8",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_8a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_8b.wav",
-        "answer":"h"
-    },
-    {
-        "id":"1-2_9",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_9a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_9b.wav",
-        "answer":"i"
-    },  
-    {
-        "id":"1-2_10",
-        "question":"Identify the dimension and direction to change sound A into sound B.",
-        "soundASource": "static/TE_sounds/task1.2_sounds/1.2_10a.wav",
-        "soundBSource": "static/TE_sounds/task1.2_sounds/1.2_10b.wav",
-        "answer":"i"
-    }  
-]
+// Questions in the following JSON format:
+//
+//let questionsTest1 = [
+//    {
+//        "id":"",
+//        "question":"",
+//        "soundASource": "",
+//        "soundBSource": "",
+//        "answer":""
+//    },...  
+//
+// Obfuscated to protect integrity of the study
+
+const _0x52f1=['Identify\x20the\x20dimension\x20and\x20direction\x20to\x20change\x20sound\x20A\x20into\x20sound\x20B.','static/TE_sounds/task1.2_sounds/1.2_9a.wav','static/TE_sounds/task1.2_sounds/1.2_9b.wav','static/TE_sounds/task1.2_sounds/1.2_5b.wav','static/TE_sounds/task1.2_sounds/1.2_8b.wav','static/TE_sounds/task1.2_sounds/1.2_3a.wav','668958VWMczd','1-2_10','251144jqzVrE','static/TE_sounds/task1.2_sounds/1.2_8a.wav','static/TE_sounds/task1.2_sounds/1.2_5a.wav','static/TE_sounds/task1.2_sounds/1.2_6b.wav','1439ZRnfNT','static/TE_sounds/task1.2_sounds/1.2_4b.wav','static/TE_sounds/task1.2_sounds/1.2_10a.wav','1-2_7','1-2_9','2Vfxlja','static/TE_sounds/task1.2_sounds/1.2_2b.wav','static/TE_sounds/task1.2_sounds/1.2_10b.wav','4327APunMD','1-2_1','971925fuTYiK','17AhsEBI','476318NVLlkn','1-2_5','static/TE_sounds/task1.2_sounds/1.2_1a.wav','static/TE_sounds/task1.2_sounds/1.2_4a.wav','861830gNRClV','static/TE_sounds/task1.2_sounds/1.2_6a.wav'];const _0x1a545f=_0x1915;function _0x1915(_0x5f23a7,_0x26b071){return _0x1915=function(_0x52f11f,_0x191580){_0x52f11f=_0x52f11f-0xf8;let _0x314c7c=_0x52f1[_0x52f11f];return _0x314c7c;},_0x1915(_0x5f23a7,_0x26b071);}(function(_0x1067e6,_0x5cfa16){const _0x283224=_0x1915;while(!![]){try{const _0x5e309c=-parseInt(_0x283224(0x103))*-parseInt(_0x283224(0xfe))+parseInt(_0x283224(0x108))+parseInt(_0x283224(0x106))*parseInt(_0x283224(0x109))+parseInt(_0x283224(0xfa))+-parseInt(_0x283224(0x10a))+parseInt(_0x283224(0xf8))+-parseInt(_0x283224(0x10e));if(_0x5e309c===_0x5cfa16)break;else _0x1067e6['push'](_0x1067e6['shift']());}catch(_0x1ffe88){_0x1067e6['push'](_0x1067e6['shift']());}}}(_0x52f1,0x99e2c));let questionsTest1=[{'id':_0x1a545f(0x107),'question':_0x1a545f(0x110),'soundASource':_0x1a545f(0x10c),'soundBSource':'static/TE_sounds/task1.2_sounds/1.2_1b.wav','answer':'a'},{'id':'1-2_2','question':_0x1a545f(0x110),'soundASource':'static/TE_sounds/task1.2_sounds/1.2_2a.wav','soundBSource':_0x1a545f(0x104),'answer':'b'},{'id':'1-2_3','question':'Identify\x20the\x20dimension\x20and\x20direction\x20to\x20change\x20sound\x20A\x20into\x20sound\x20B.','soundASource':_0x1a545f(0x115),'soundBSource':'static/TE_sounds/task1.2_sounds/1.2_3b.wav','answer':'c'},{'id':'1-2_4','question':'Identify\x20the\x20dimension\x20and\x20direction\x20to\x20change\x20sound\x20A\x20into\x20sound\x20B.','soundASource':_0x1a545f(0x10d),'soundBSource':_0x1a545f(0xff),'answer':'d'},{'id':_0x1a545f(0x10b),'question':_0x1a545f(0x110),'soundASource':_0x1a545f(0xfc),'soundBSource':_0x1a545f(0x113),'answer':'e'},{'id':'1-2_6','question':'Identify\x20the\x20dimension\x20and\x20direction\x20to\x20change\x20sound\x20A\x20into\x20sound\x20B.','soundASource':_0x1a545f(0x10f),'soundBSource':_0x1a545f(0xfd),'answer':'f'},{'id':_0x1a545f(0x101),'question':_0x1a545f(0x110),'soundASource':'static/TE_sounds/task1.2_sounds/1.2_7a.wav','soundBSource':'static/TE_sounds/task1.2_sounds/1.2_7b.wav','answer':'g'},{'id':'1-2_8','question':_0x1a545f(0x110),'soundASource':_0x1a545f(0xfb),'soundBSource':_0x1a545f(0x114),'answer':'h'},{'id':_0x1a545f(0x102),'question':_0x1a545f(0x110),'soundASource':_0x1a545f(0x111),'soundBSource':_0x1a545f(0x112),'answer':'i'},{'id':_0x1a545f(0xf9),'question':_0x1a545f(0x110),'soundASource':_0x1a545f(0x100),'soundBSource':_0x1a545f(0x105),'answer':'i'}];
 
 // Declare variables
 const questionTest1 = document.getElementById("questionTest1");

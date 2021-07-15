@@ -15,23 +15,23 @@ export default class extends AbstractView {
                 </p>
                 <h2 class="secondTitle">Keyboard Controls</h2>
                 <p>
-                    To trigger notes, use the bottom 2 rows of the keyboard, the ones starting with ASDF and ZXC. As seen on the right, these rows form a piano 
-                    roll, with each key triggering the corresponding note when pressed/held. For example, the “Z” key triggers a C note, with the “,” key 
-                    triggering the C an octave up. The “A”, “F”, “K” and apostrophe/quotation marks do not trigger notes, representing the space between black keys 
+                    To trigger notes, use the bottom 2 rows of the keyboard, the ones starting with <i>'ASDF'</i> and <i>'ZXC'</i>. As seen on the right, these rows form a piano 
+                    roll, with each key triggering the corresponding note when pressed/held. For example, the <i>'Z'</i> key triggers a <i>'C'</i> note, with the <i>','</i> key 
+                    triggering the <i>'C'</i> an octave up. The <i>'A', 'F', 'K'</i> and apostrophe do not trigger notes, representing the space between black keys 
                     on the piano. You can play up to 4 notes at the same time. 
                     <br><br>
-                    If the notes being played are too loud or too quiet, their volume can be adjusted using the range slider element on the right, labeled 
-                    “Volume”. Click and drag the slider until the volume is as desired.
+                    If the notes being played are too loud or too quiet, their volume can be adjusted using the 'Volume' slider in the bottom right of the window. Click and drag 
+                    the slider until the volume is at the desired level.
                     <br><br>
                     To change which octave the piano roll plays, use the left and right arrow keys. 
                     <br><br>
-                    Before moving on the next section, press any key to start the Web-Audio processing engine. (this should turn on the (red) graph on the top left).     
+                    Before moving on the next section, press any key to start the Web-Audio processing engine. This should turn on the red graph on the top left.     
                 </p>
                 <h2 class="secondTitle">Timbre Controls</h2>
                 <p>
-                    To control the timbre dimensions, use the 4 (colored) range sliders at the top of the screen, which can be clicked and dragged to be changed.  
+                    To control the timbre dimensions, use the 4 range sliders at the top of the screen, which can be clicked and dragged to be changed.  
                     <br><br>
-                    We will now go through each dimension to hear its effect on the final sound. You can also see the effect that each slider has on the sound by observing the 
+                    We will now go through each dimension to hear its effect on the final sound. You can also see the effect that each slider has on the final sound by observing the 
                     black graph on the right (the result of a Fourier Transform on the sound). 
                     <br>
                     First reset the dimensions using the “Submit” button on the bottom 

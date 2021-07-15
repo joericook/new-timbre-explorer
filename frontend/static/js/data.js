@@ -79,7 +79,7 @@ function saveConclusion() {
             body: JSON.stringify(response),
         };
         fetch("/api/store-response", requestOptions).then( () => {
-            console.log("presets/email saved to DB");
+            console.log("Presets/email saved");
         });
     } 
 }
@@ -106,6 +106,6 @@ function sendData() {
         body: JSON.stringify(response),
     };
     fetch("/api/store-response", requestOptions).then( () => {
-        console.log("user data saved to DB");
+        console.log("Participant data saved");
     });
 }

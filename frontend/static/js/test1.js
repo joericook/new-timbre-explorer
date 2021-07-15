@@ -193,7 +193,7 @@ const getNewQuestionTest1 = () => {
                 setTimeout(() => {
                     clickedAnswer.parentElement.classList.remove(classToApply);
                     acceptingAnswers = true;
-                }, 1500);
+                }, 1000);
                 return;
             }
             else {
@@ -229,9 +229,14 @@ hideModal = () => {
     modal.style.display = "none"
 }
 
-//Shows task complete modal 
+// Shows task complete modal 
 displayModalTest1 = () => {
     const modal = document.getElementById("taskCompleteModal");
+    // Display test score
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerHTML = /*html*/`
+                            Task Complete! &emsp;&emsp;&emsp;&emsp;&emsp; You scored: ${scoreTest1} / 30 
+                        `
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
                             <p>

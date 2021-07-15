@@ -524,6 +524,11 @@ hideModal = () => {
 //Shows task complete modal 
 displayModalTest3 = () => {
     const modal = document.getElementById("taskCompleteModal");
+    // Display test score
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerHTML = /*html*/`
+                            Task Complete! &emsp;&emsp;&emsp;&emsp;&emsp; You scored: ${scoreTest3} / 36 
+                        `
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
                             <p>

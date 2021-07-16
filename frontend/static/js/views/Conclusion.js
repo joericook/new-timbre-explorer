@@ -11,7 +11,7 @@ export default class extends AbstractView {
             <div class="infoContainer">
                 <h2 class="secondTitle">Thank you for your Participation!</h2>
                 <p>
-                    This study is now concluded. <br> Before you close this page, Do you have any suggestions for a combination of settings that resemble the timbre
+                    This study is now concluded and your responses have been saved. <br> Before you close this page, Do you have any suggestions for a combination of settings that resemble the timbre
                     of a real-world instrument? If so, please provide the Timbre Explorer settings in the following format: s1, b2, a1, e1, name1; s2, b2, a2, e2, name2...etc. 
                 </p>
                 <form id="conclusionForm">
@@ -29,7 +29,7 @@ export default class extends AbstractView {
                         <!-- Prevent default behaviour and save to Data object -->
                         <button onclick="event.preventDefault(); saveConclusion();" id="conclusionSubmit" class="submit-button">Submit</button>
                         <div class="submit-warning" id="conclusionWarning">
-                            <p style="margin: 0.3em 0.5em 0 0.5em;">Please enter a valid email address...</p>
+                            <p style="margin: 0.3em 0.5em 0 0.5em;">You must enter a valid email address to be entered into the draw...</p>
                         </div>
                     </div>
                 </form>

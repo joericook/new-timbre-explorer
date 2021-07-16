@@ -29,13 +29,14 @@ export default class extends AbstractView {
                 </p>
                 <h2 class="secondTitle">Timbre Controls</h2>
                 <p>
-                    To control the timbre dimensions, use the 4 range sliders at the top of the screen, which can be clicked and dragged to be changed.  
+                    The Timbre Explorer breaks timbre up into 4 separate dimensions. To control the timbre dimensions, use the 4 range sliders at the top of the screen, which can 
+                    be clicked and dragged to be changed.  
                     <br><br>
                     We will now go through each dimension to hear its effect on the final sound. You can also see the effect that each slider has on the final sound by observing the 
                     black graph on the right (the result of a Fourier Transform on the sound). 
                     <br>
-                    First reset the dimensions using the “Submit” button on the bottom 
-                    left (the drop-down menu above it should say “Reset”). The timbre sliders should all return to their center positions. 
+                    If you have already moved the sliders, reset the dimensions using the “Submit” button on the bottom 
+                    right (the drop-down menu above it should say “Reset”). The timbre sliders should all return to their center positions. 
                     <br><br>
 
                     For the <mark class="red">Spectrum</mark> dimension, hold down any key that triggers a note. You should hear a continuous note. While still holding down the key, use 

@@ -19,7 +19,7 @@ export default class extends AbstractView {
                     <br><br> 
                     It is strongly recommended that you use <strong>Google Chrome</strong> for this study and avoid refreshing or leaving the page, as doing so will lose your progress.
                     <br><br>
-                    This study involves sound. Please make sure that you can listen to audio either through headphones or speakers. Also, for your own safety, start with a low volume level.
+                    This study involves sound. Please make sure that you can listen to audio through headphones. Also, for your own safety, start with a low volume level.
                 </p>
                 <br>
                 <div class="nextButton">

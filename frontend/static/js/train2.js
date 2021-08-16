@@ -205,6 +205,10 @@ hideModal = () => {
 //Shows task complete modal 
 displayModalTrain2 = () => {
     const modal = document.getElementById("taskCompleteModal");
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerHTML = /*html*/`
+                            Task Complete!
+                        `
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = /*html*/`
                             <p>
